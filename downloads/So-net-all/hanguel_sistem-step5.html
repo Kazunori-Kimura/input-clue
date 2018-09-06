@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD; HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 15.0.11.0 for Windows">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>はじめての韓国語　ハングル練習帳</title>
+<script type="text/javascript">
+<!--
+//グローバル変数定義
+var code_point;
+var result1;
+var shosei=0;
+var chusei=0;
+var shusei=0;
+
+function sel()//textareaの末尾に挿入ポイント（キャレット）を移動させる
+{
+tRNG=document.form1.text1.createTextRange();
+tRNG.move("character",document.form1.text1.value.length);
+tRNG.select();
+}
+
+
+function mess(msg)
+{
+parent.mainFrame.document.open("text/html");
+parent.mainFrame.document.write(msg);
+parent.mainFrame.document.close();
+}
+//-->
+</script> <script language="JavaScript">
+    <!--
+function getresult(shosei,chusei,shusei){//文字引数を受け取り、文字に変換
+code_point=44032+(shosei*28*21)+(chusei*28)+shusei; //44302=0xac01
+result1=String.fromCharCode(code_point)
+document.form1.text1.value=result1;
+i_result1=result1
+i_shosei=shosei;
+i_chusei=chusei;
+}
+
+function getfinal(shosei,chusei,shusei){//文字引数を受け取り、文字に変換
+code_point=44032+(shosei*28*21)+(chusei*28)+shusei; //44302=0xac01
+result1=String.fromCharCode(code_point)
+
+ document.getElementById('text1').innerHTML += result1;
+i_result1=result1
+i_shosei=shosei;
+i_chusei=chusei;
+}
+
+
+
+function sel()//textareaの末尾に挿入ポイント（キャレット）を移動させる
+{
+tRNG=document.form1.text2.createTextRange();
+tRNG.move("character",document.form1.text1.value.length);
+//tRNG.move("character",-pos);
+tRNG.select();
+}
+
+    function textcopy() {
+        obj = document.form1.text2.createTextRange();
+        obj.execCommand("Copy");
+        alert("クリップボードにコピーしました。");
+    }
+//-->
+
+ <!--
+    function foc(){    //テキストエリア内が初期文字列の場合　クリア
+        if(document.form1.text2.value == document.form1.text2.defaultValue) {
+            document.form1.text2.value ="";
+        }
+    }
+	function CLR(){
+document.form1.text2.value="";
+	}
+ 
+
+function fncInsertText(){
+ document.getElementById('text2').innerHTML += i_result1;
+}
+
+function openwin() {
+	window.open("http://www9.plala.or.jp/oyoyon/html/script/newwin.html", "new", "width=500,height=400");
+}
+
+//-->
+
+    </script> </head>
+<body bgcolor="#FFFFFF">
+<div id="target"></div>
+<p><font size="3"><b>はじめての韓国語【ハングル練習帳】</b></font></p>
+<form name="form1" action="" method=""><textarea name="text1" style="font-size : 20px;font-family : " ＭＳ Ｐゴシック";"color : blue;background-color : lime;" cols="4" rows="2"></textarea> 　　</form>
+<form name="form1" action="" method="">ここに文字を確定ボタンで移します。<textarea name="text2" style="font-size : 18px;font-family : " ＭＳ Ｐゴシック";"color : blue;background-color : lime;" cols="40" rows="3" onfocus="foc()"></textarea><br>
+　　　　　　 　　<input type="button" value="全コピー" style="WIDTH: 60px; HEIGHT: 20px" onclick="textcopy()"> 　<input type="button" value="全消去" style="WIDTH: 60px; HEIGHT: 20px" onclick="CLR()"> 　<input type="button" value="    確 定    " style="WIDTH: 100px; HEIGHT: 20px" onclick="fncInsertText()">　　　　　　 　　　<font size="-1"><a href="hanguel_pad-picker.html" target="_blank">HELP</a></font> <br>
+</form>
+<form name="form1" action="" method=""></form>
+<form>初声 19 ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ<br>
+<table border="1" width="100%" summary="colum_shosei" bgcolor="#008080">
+  <tbody>
+    <tr>
+      <td>&nbsp;k <input type="button" value="ᄀ" onclick="getresult(shusei,chusei,shusei)"></td>
+      <td>&nbsp;ʔk <input type="button" value="ᄁ" onclick="getresult(1,chusei,shusei)" </td></td>
+      <td>&nbsp;n <input type="button" value="ᄂ" onclick="getresult(2,chusei,shusei)" </td></td>
+      <td>&nbsp;t <input type="button" value="ᄃ" onclick="getresult(3,chusei,shusei)" </td></td>
+      <td>&nbsp;ʔt <input type="button" value="ᄄ" onclick="getresult(4,chusei,shusei)" </td></td>
+      <td>&nbsp;r <input type="button" value="ᄅ" onclick="getresult(5,chusei,shusei)" </td></td>
+      <td>&nbsp;m <input type="button" value="ᄆ" onclick="getresult(6,chusei,shusei)" </td></td>
+      <td>&nbsp;p <input type="button" value="ᄇ" onclick="getresult(7,chusei,shusei)" </td></td>
+      <td>&nbsp;ʔp <input type="button" value="ᄈ" onclick="getresult(8,chusei,shusei)" </td></td>
+      <td>&nbsp;s <input type="button" value="ᄉ" onclick="getresult(9,chusei,shusei)" </td></td>
+    </tr>
+    <tr>
+      <td>&nbsp;ʔs <input type="button" value="ᄊ" onclick="getresult(10,chusei,shusei)" </td></td>
+      <td>&nbsp; <input type="button" value="ᄋ" onclick="getresult(11,chusei,shusei)" </td></td>
+      <td>&nbsp;ʧ <input type="button" value="ᄌ" onclick="getresult(12,chusei,shusei)" </td></td>
+      <td>&nbsp;ʔʨ <input type="button" value="ᄍ" onclick="getresult(13,chusei,shusei)" </td></td>
+      <td>&nbsp;ʧh <input type="button" value="ᄎ" onclick="getresult(14,chusei,shusei)" </td></td>
+      <td>&nbsp;kh <input type="button" value="ᄏ" onclick="getresult(15,chusei,shusei)" </td></td>
+      <td>&nbsp;ˀt <input type="button" value="ᄐ" onclick="getresult(16,chusei,shusei)" </td></td>
+      <td>&nbsp;ph <input type="button" value="ᄑ" onclick="getresult(17,chusei,shusei)" </td></td>
+      <td>&nbsp;h <input type="button" value="ᄒ" onclick="getresult(18,chusei,shusei)" </td></td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+中声 21ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ<br>
+<table border="1" width="100%" summary="colum_chusei" bgcolor="#008080">
+  <tbody>
+    <tr>
+      <td>&nbsp;a <input type="button" value="ㅏ" style="background-color:#ff6868" onclick="getresult(i_shosei,0,shusei)" </td></td>
+      <td>&nbsp;ɛ <input type="button" value="ㅐ" style="background-color:#ff6868" onclick="getresult(i_shosei,1,shusei)" </td></td>
+      <td>&nbsp;ya <input type="button" value="ㅑ" style="background-color:#ff6868" onclick="getresult(i_shosei,2,shusei)" </td></td>
+      <td>&nbsp;yɛ <input type="button" value="ㅒ" style="background-color:#ff6868" onclick="getresult(i_shosei,3,shusei)" </td></td>
+      <td>&nbsp;ɔ <input type="button" value="ㅓ" style="background-color:#2864f0" onclick="getresult(i_shosei,4,shusei)" </td></td>
+      <td>&nbsp;e <input type="button" value="ㅔ" style="background-color:#2864f0" onclick="getresult(i_shosei,5,shusei)" </td></td>
+      <td>&nbsp;yɔ <input type="button" value="ㅕ" style="background-color:#2864f0" onclick="getresult(i_shosei,6,shusei)" </td></td>
+      <td>&nbsp;ye <input type="button" value="ㅖ" style="background-color:#2864f0" onclick="getresult(i_shosei,7,shusei)" </td></td>
+      <td>&nbsp;o <input type="button" value="ㅗ" style="background-color:#ff6868" onclick="getresult(i_shosei,8,shusei)" </td></td>
+      <td>&nbsp;wa <input type="button" value="ㅘ" style="background-color:#ff6868" onclick="getresult(i_shosei,9,shusei)" </td></td>
+      <td>&nbsp;wɛ <input type="button" value="ㅙ" style="background-color:#ff6868" onclick="getresult(i_shosei,10,shusei)" </td></td>
+    </tr>
+    <tr>
+      <td>&nbsp;we <input type="button" value="ㅚ" style="background-color:#ff6868" onclick="getresult(i_shosei,11,shusei)" </td></td>
+      <td>&nbsp;yo <input type="button" value="ㅛ" style="background-color:#ff6868" onclick="getresult(i_shosei,12,shusei)" </td></td>
+      <td>&nbsp;u <input type="button" value="ㅜ" style="background-color:#2864f0" onclick="getresult(i_shosei,13,shusei)" </td></td>
+      <td>&nbsp;wɔ <input type="button" value="ㅝ" style="background-color:#2864f0" onclick="getresult(i_shosei,14,shusei)" </td></td>
+      <td>&nbsp;we <input type="button" value="ㅞ" style="background-color:#2864f0" onclick="getresult(i_shosei,15,shusei)" </td></td>
+      <td>&nbsp;wi <input type="button" value="ㅟ" style="background-color:#2864f0" onclick="getresult(i_shosei,16,shusei)" </td></td>
+      <td>&nbsp;yu <input type="button" value="ㅠ" style="background-color:#2864f0" onclick="getresult(i_shosei,17,shusei)" </td></td>
+      <td>&nbsp;ɯ <input type="button" value="ㅡ" onclick="getresult(i_shosei,18,shusei)" </td></td>
+      <td>&nbsp;ɯi <input type="button" value="ㅢ" onclick="getresult(i_shosei,19,shusei)" </td></td>
+      <td>&nbsp;i <input type="button" value="ㅣ" onclick="getresult(i_shosei,20,shusei)" </td></td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+終声 28 _ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ<br>
+<table border="1" width="100%" summary="colum_shusei" bgcolor="#008080">
+  <tbody>
+    <tr>
+      <td>&nbsp;Sil<input type="button" value="__" onclick="getresult(i_shosei,i_chusei,0)" </td></td>
+      <td>&nbsp;kʔ<input type="button" value="ㄱ" onclick="getresult(i_shosei,i_chusei,1)" </td></td>
+      <td>&nbsp;kʔ<input type="button" value="ㄲ" onclick="getresult(i_shosei,i_chusei,2)" </td></td>
+      <td>&nbsp;kʔ<input type="button" value="ㄳ" onclick="getresult(i_shosei,i_chusei,3)" </td></td>
+      <td>&nbsp;nʔ<input type="button" value="ㄴ" onclick="getresult(i_shosei,i_chusei,4)" </td></td>
+      <td>&nbsp;nʔ<input type="button" value="ㄵ" onclick="getresult(i_shosei,i_chusei,5)" </td></td>
+      <td>&nbsp;nʔ<input type="button" value="ㄶ" onclick="getresult(i_shosei,i_chusei,6)" </td></td>
+      <td>&nbsp;tʔ<input type="button" value="ㄷ" onclick="getresult(i_shosei,i_chusei,7)" </td></td>
+      <td>&nbsp;lʔ<input type="button" value="ㄹ" onclick="getresult(i_shosei,i_chusei,8)" </td></td>
+      <td>&nbsp;kʔ<input type="button" value="ㄺ" onclick="getresult(i_shosei,i_chusei,9)" </td></td>
+    </tr>
+    <tr>
+      <td>&nbsp;mʔ<input type="button" value="ㄻ" onclick="getresult(i_shosei,i_chusei,10)" </td></td>
+      <td>&nbsp;lʔ<input type="button" value="ㄼ" onclick="getresult(i_shosei,i_chusei,11)" </td></td>
+      <td>&nbsp;lʔ<input type="button" value="ㄽ" onclick="getresult(i_shosei,i_chusei,12)" </td></td>
+      <td>&nbsp;lʔ<input type="button" value="ㄾ" onclick="getresult(i_shosei,i_chusei,13)" </td></td>
+      <td>&nbsp;pʔ<input type="button" value="ㄿ" onclick="getresult(i_shosei,i_chusei,14)" </td></td>
+      <td>&nbsp;lʔ<input type="button" value="ㅀ" onclick="getresult(i_shosei,i_chusei,15)" </td></td>
+      <td>&nbsp;mʔ<input type="button" value="ㅁ" onclick="getresult(i_shosei,i_chusei,16)" </td></td>
+      <td>&nbsp;pʔ<input type="button" value="ㅂ" onclick="getresult(i_shosei,i_chusei,17)" </td></td>
+      <td>&nbsp;pʔ<input type="button" value="ㅄ" onclick="getresult(i_shosei,i_chusei,18)" </td></td>
+      <td>&nbsp;tʔ<input type="button" value="ㅅ" onclick="getresult(i_shosei,i_chusei,19)" </td></td>
+    </tr>
+    <tr>
+      <td>&nbsp;tʔ<input type="button" value="ㅆ" onclick="getresult(i_shosei,i_chusei,20)" </td></td>
+      <td>&nbsp;ŋʔ<input type="button" value="ㅇ" onclick="getresult(i_shosei,i_chusei,21)" </td></td>
+      <td>&nbsp;tʔ<input type="button" value="ㅈ" onclick="getresult(i_shosei,i_chusei,22)" </td></td>
+      <td>&nbsp;tʔ<input type="button" value="ㅊ" onclick="getresult(i_shosei,i_chusei,23)" </td></td>
+      <td>&nbsp;kʔ<input type="button" value="ㅋ" onclick="getresult(i_shosei,i_chusei,24)" </td></td>
+      <td>&nbsp;tʔ<input type="button" value="ㅌ" onclick="getresult(i_shosei,i_chusei,25)" </td></td>
+      <td>&nbsp;pʔ<input type="button" value="ㅍ" onclick="getresult(i_shosei,i_chusei,26)" </td></td>
+      <td>&nbsp;tʔ<input type="button" value="ㅎ" onclick="getresult(i_shosei,i_chusei,27)" </td></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+</form>
+<form name="form1" action="" method=""></form>
+</body>
+</html>

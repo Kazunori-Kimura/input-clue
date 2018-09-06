@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 15.0.11.0 for Windows">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>速攻入力　タイ語語</title>
+<head>
+<script type="text/Javascript" src="new_type_load.js"></script>
+<script type="text/Javascript" src="new_kmer_type_load.js"></script>
+<script type="text/Javascript" src="!google3.js"></script>
+<script type="text/Javascript" src="!googletrans.js"></script>
+<script type="text/Javascript" src="!weblio.js"></script>
+<script type="text/Javascript" src="!tyakusu.js"></script>
+<script type="text/Javascript" src="!YouTube.js"></script>
+</head>
+
+
+<body onLoad="document.form.text2.focus()"; bgcolor="#ffa07a">
+<form name="form" action="method = "mouseover='pos()'; onmousup='pos()'; onkeyup='pos()';">
+
+<Div Align="center">
+
+
+<textarea cols="42" rows="2" wrap="soft" id="area" name="text2" style="font-size :24px; padding4px; margin:4px; background-color: #ffffff;";></textarea>
+
+<br />
+<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-size : 10px;"; value="All Copy" style="WIDTH: 150px; HEIGHT: 28px; font-size : 12px;"onclick="textcopy(); onmouseup='moo()';">
+
+<input type="button" value="Reset" style="WIDTH: 70px; HEIGHT: 40px; font-size : 10px;"; onclick="CLR(); onmouseup='moo()';">
+<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="Space" onclick="getresult(0,0,0,32);ins(i_result1);">
+<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;"value="BackSpace" onclick='debef()';">
+<BR>
+<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff99;" value="Google" onclick="button_Google();">
+<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff66;" value="Translate" onclick="button_Googletrans();">
+<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;" value="Weblio_Dic" onclick="button_weblio();">
+<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;" value="tyakusu" onclick="button_tyakusu();">
+<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;" value="YouTube" onclick="button_YouTube();">
+<br>
+<br />
+
+
+<!--☆段//-->
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="&#95;" onclick="getresult(0,0,0,95);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 13px;" value="&#3653;" onclick="getresult(0,0,0,3653);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="/" onclick="getresult(0,0,0,47);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="-" onclick="getresult(0,0,0,45);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ภ" onclick="getresult(0,0,0,3616);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ถ" onclick="getresult(0,0,0,3606);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3640;" onclick="getresult(0,0,0,3640);ins(i_result1);">
+        <input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3638;" onclick="getresult(0,0,0,3638);ins(i_result1);">
+        <input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ค" onclick="getresult(0,0,0,3588);ins(i_result1);">
+        <input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ต" onclick="getresult(0,0,0,3605);ins(i_result1);">
+        <input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="จ" onclick="getresult(0,0,0,3592);ins(i_result1);">
+        <input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ข" onclick="getresult(0,0,0,3586);ins(i_result1);">
+        <input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ช" onclick="getresult(0,0,0,3594);ins(i_result1);"><BR>
+
+
+<!--Line2//-->
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ๆ" onclick="getresult(0,0,0,3654);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ไ" onclick="getresult(0,0,0,3652);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="&#3635;" onclick="getresult(0,0,0,3635);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="พ" onclick="getresult(0,0,0,3614);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="&#3632;" onclick="getresult(0,0,0,3632);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3633" onclick="getresult(0,0,0,3633);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3637" onclick="getresult(0,0,0,3637);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ร" onclick="getresult(0,0,0,3619);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="น" onclick="getresult(0,0,0,3609);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ย" onclick="getresult(0,0,0,3618);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="บ" onclick="getresult(0,0,0,3610);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ล" onclick="getresult(0,0,0,3621);ins(i_result1);">
+<BR><!--Line3//-->
+    
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฟ" onclick="getresult(0,0,0,3615);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ห" onclick="getresult(0,0,0,3627);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ก" onclick="getresult(0,0,0,3585);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#00ff99;"" value="ด" onclick="getresult(0,0,0,3604);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="เ" onclick="getresult(0,0,0,3648);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3657;" onclick="getresult(0,0,0,3657);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#00ff99;" value="&#3656;" onclick="getresult(0,0,0,3656);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="า" onclick="getresult(0,0,0,3634);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ส" onclick="getresult(0,0,0,3626);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ว" onclick="getresult(0,0,0,3623);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ง" onclick="getresult(0,0,0,3591);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฃ" onclick="getresult(0,0,0,3587);ins(i_result1);">
+<BR><!--Line4//-->
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ผ" onclick="getresult(0,0,0,3612);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ป" onclick="getresult(0,0,0,3611);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="แ" onclick="getresult(0,0,0,3649);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="อ" onclick="getresult(0,0,0,3629);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3636" onclick="getresult(0,0,0,3636);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3639" onclick="getresult(0,0,0,3639);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ท" onclick="getresult(0,0,0,3607);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ม" onclick="getresult(0,0,0,3617);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ใ" onclick="getresult(0,0,0,3651);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฝ" onclick="getresult(0,0,0,3613);ins(i_result1);">
+
+<HR><!--Line5//-->      
+ 	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="&#37;" onclick="getresult(0,0,0,37);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="&#43;" onclick="getresult(0,0,0,43);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="๑" onclick="getresult(0,0,0,3665);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="๒" onclick="getresult(0,0,0,3666);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="๓" onclick="getresult(0,0,0,3667);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="๔" onclick="getresult(0,0,0,3668);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3641" onclick="getresult(0,0,0,3641);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="฿" onclick="getresult(0,0,0,3647);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="๕" onclick="getresult(0,0,0,3669);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="๖" onclick="getresult(0,0,0,3670);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="๗" onclick="getresult(0,0,0,3671);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="๘" onclick="getresult(0,0,0,3672);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="๙" onclick="getresult(0,0,0,3673);ins(i_result1);">
+<BR><!--Line6//-->
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="๐" onclick="getresult(0,0,0,3664);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="&#34;" onclick="getresult(0,0,0,34);ins(i_result1);"
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฎ" onclick="getresult(0,0,0,3598);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฑ" onclick="getresult(0,0,0,3601);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ธ" onclick="getresult(0,0,0,3608);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3661" onclick="getresult(0,0,0,3661);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3658" onclick="getresult(0,0,0,3658);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ณ" onclick="getresult(0,0,0,3603);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฯ" onclick="getresult(0,0,0,3631);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ญ" onclick="getresult(0,0,0,3597);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฐ" onclick="getresult(0,0,0,3600);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="&#44;" onclick="getresult(0,0,0,44);ins(i_result1);">
+<BR><!--Line7//-->
+
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฤ" onclick="getresult(0,0,0,3620);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฆ" onclick="getresult(0,0,0,3590);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฏ" onclick="getresult(0,0,0,3599);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="โ" onclick="getresult(0,0,0,3650);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฌ" onclick="getresult(0,0,0,3596);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3655" onclick="getresult(0,0,0,3655);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3659" onclick="getresult(0,0,0,3659);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ษ" onclick="getresult(0,0,0,3625);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ศ" onclick="getresult(0,0,0,3624);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="&#3595;"onclick="getresult(0,0,0,3595);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="." onclick="getresult(0,0,0,46);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฅ" onclick="getresult(0,0,0,3589);ins(i_result1);">
+<BR><!--Line8//-->
+<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="(" onclick="getresult(0,0,0,40);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value=")" onclick="getresult(0,0,0,41);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฉ" onclick="getresult(0,0,0,3593);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฮ" onclick="getresult(0,0,0,3630);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; padding-bottom: 6px;background-color:#ffffff;" value="&#3642" onclick="getresult(0,0,0,3642);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px; background-color:#ffffff;" value="&#3660" onclick="getresult(0,0,0,3660);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="?" onclick="getresult(0,0,0,63);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฒ" onclick="getresult(0,0,0,3602);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฬ" onclick="getresult(0,0,0,3628);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="ฦ" onclick="getresult(0,0,0,3622);ins(i_result1);">
+<BR><!--Line9//-->
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="1" onclick="getresult(0,0,0,49);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="2" onclick="getresult(0,0,0,50);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="3" onclick="getresult(0,0,0,51);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="4" onclick="getresult(0,0,0,52);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="5" onclick="getresult(0,0,0,53);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="6" onclick="getresult(0,0,0,54);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="7" onclick="getresult(0,0,0,55);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="8" onclick="getresult(0,0,0,56);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="9" onclick="getresult(0,0,0,57);ins(i_result1);">
+	<input type="button" style="WIDTH: 36px; HEIGHT: 36px; font-size : 18px;" value="0" onclick="getresult(0,0,0,48);ins(i_result1);">
+<BR>
+<font size="2">©Ikko Kurosawa Mail: pdicthai@pdicthai.com</font>
+ </Div>
+</form>
+</body>
+
+</html>
+
