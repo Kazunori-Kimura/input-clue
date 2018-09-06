@@ -25,3 +25,17 @@ export const onWordClick = word => ({
   type: actionTypes.SELECT_WORD,
   word,
 });
+
+export const fetchDictionary = () => ({
+  type: actionTypes.FETCH_DICTIONARY_REQUESTED,
+});
+
+export const fetchDictionarySucceeded = payload => ({
+  type: actionTypes.FETCH_DICTIONARY_SUCCEEDED,
+  payload,
+});
+
+export const fetchDictionaryFailed = payload => ({
+  type: actionTypes.FETCH_DICTIONARY_FAILED,
+  payload,
+});
