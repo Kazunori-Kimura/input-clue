@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 class WordListItem extends Component {
   constructor(props) {
@@ -16,14 +18,15 @@ class WordListItem extends Component {
   render() {
     const { word } = this.props;
     return (
-      <div>
-        <button
-          type="button"
-          onClick={this.handleClick}
-        >
-          {word}
-        </button>
-      </div>
+      <TableRow
+        hover
+        onClick={this.handleClick}
+      >
+        <TableCell>{word}</TableCell>
+        <TableCell />
+        <TableCell />
+        <TableCell />
+      </TableRow>
     );
   }
 }
