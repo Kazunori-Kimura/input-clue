@@ -51,6 +51,12 @@ class MainContainer extends Component {
     this.handleWordSelect = this.handleWordSelect.bind(this);
   }
 
+  componentDidMount() {
+    const { actions } = this.props;
+    // 辞書の読み込み
+    actions.fetchDictionary();
+  }
+
   handleChange(word) {
     const { actions } = this.props;
     actions.onChangeWord(word);

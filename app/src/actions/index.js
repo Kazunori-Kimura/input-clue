@@ -30,6 +30,10 @@ export const fetchDictionary = () => ({
   type: actionTypes.FETCH_DICTIONARY_REQUESTED,
 });
 
+export const fetchDictionaryStart = () => ({
+  type: actionTypes.FETCH_DICTIONARY_START,
+});
+
 export const fetchDictionarySucceeded = payload => ({
   type: actionTypes.FETCH_DICTIONARY_SUCCEEDED,
   payload,
