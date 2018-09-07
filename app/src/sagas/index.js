@@ -1,6 +1,27 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
+import XLSX from 'xlsx';
 import { fetchDictionaryStart, fetchDictionarySucceeded, fetchDictionaryFailed } from '../actions';
 import { FETCH_DICTIONARY_REQUESTED } from '../utils/actionTypes';
+
+/**
+ * ExcelシートをJSONに変換する
+ * @param {ArrayBuffer} buff
+ */
+function parseXlsxToJson(buff) {
+  const arr = new Uint8Array(buff);
+  const book = XLSX.read(arr, { type: 'array' });
+  const sheetName = book.SheetNames[0];
+  const sheet = book.Sheets[sheetName];
+  return XLSX.utils.sheet_to_json(sheet);
+}
+
+function getArrayBufferAsync(res) {
+  return new Promise((resolve, reject) => {
+    res.arrayBuffer()
+      .then(data => resolve(data))
+      .catch(err => reject(err));
+  });
+}
 
 /**
  * fetchして結果をstoreに反映する
@@ -12,12 +33,14 @@ function* fetchDictionary() {
     // fetch
     const request = new Request('./dictionary/PdicThai-JP-092U.xlsx');
     const response = yield call(fetch, request);
-    console.log(response);
     // responseをarrayBufferで受け取る
-    const buff = response.arrayBuffer();
+    const buff = yield call(getArrayBufferAsync, response);
 
     const status = response.status;
-    const data = new Uint8Array(buff);
+    // ArrayBufferをJSONに変換
+    const data = parseXlsxToJson(buff);
+    console.log(data);
+
     yield put(fetchDictionarySucceeded({ status, data }));
   } catch (err) {
     yield put(fetchDictionaryFailed({ error: err }));
