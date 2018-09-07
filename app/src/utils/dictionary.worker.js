@@ -13,27 +13,51 @@ self.addEventListener('message', (evt) => {
     });
 });
 
+async function getModified(url) {
+  const res = await fetch(url, {
+    cache: 'no-cache',
+    method: 'HEAD',
+  });
+
+  const modified = res.headers.get('last-modified');
+  return Date.parse(modified);
+}
+
 async function parseDictionary(url) {
-  // fetch
-  const req = new Request(url);
-  const res = await fetch(req);
-
-  // response to arrayBuffer
-  const buff = await res.arrayBuffer();
-  // buffer to Uint8Array
-  const arr = new Uint8Array(buff);
-  // Workbook
-  const book = XLSX.read(arr, { type: 'array' });
-  // WorkSheet
-  const name = book.SheetNames[0];
-  const sheet = book.Sheets[name];
-  // toJson
-  const data = sheetToJson(sheet);
-
-  // IndexedDBに追加
   const db = new Database();
   await db.openAsync();
-  await db.addAsync(data);
+
+  // 辞書ファイルの更新日を取得
+  const lastModified = await getModified(url);
+  const dbModified = await db.getModifiedAsync(url);
+
+  // バージョンチェックを行う
+  if (dbModified !== lastModified) {
+    // fetch
+    const res = await fetch(url, {
+      cache: 'no-cache',
+      method: 'GET',
+    });
+    // 最終更新日時を保持
+    const modified = res.headers.get('last-modified');
+    const value = Date.parse(modified);
+    await db.setModifiedAsync(url, value);
+
+    // response to arrayBuffer
+    const buff = await res.arrayBuffer();
+    // buffer to Uint8Array
+    const arr = new Uint8Array(buff);
+    // Workbook
+    const book = XLSX.read(arr, { type: 'array' });
+    // WorkSheet
+    const name = book.SheetNames[0];
+    const sheet = book.Sheets[name];
+    // toJson
+    const data = sheetToJson(sheet);
+
+    // IndexedDBに追加
+    await db.addAsync(data);
+  }
 }
 
 /**

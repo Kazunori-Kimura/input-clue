@@ -1,13 +1,55 @@
 // IndexedDBのラッパークラス
 const DATABASE_NAME = 'dictionary'; // database名
-const VERSION = 1; // databaseバージョン
-const STORE_NAME = 'words';
+const VERSION = 1;
+const STORE_WORDS = 'words';
+const STORE_FILES = 'files';
 
 class Database {
   constructor() {
     this.db = null;
-    this.transaction = null;
     this.isOpen = false;
+  }
+
+  async getModifiedAsync(uri) {
+    return new Promise((resolve, reject) => {
+      const request = this.db.transaction([STORE_FILES])
+        .objectStore(STORE_FILES)
+        .get(uri);
+      
+      request.onerror = (evt) => {
+        reject(evt);
+      };
+
+      request.onsuccess = () => {
+        let value = 0;
+        try {
+          if (request.result.modified) {
+            value = parseInt(request.result.modified, 10);
+          }
+        } catch (err) {
+          console.warn(err);
+        }
+        resolve(value);
+      };
+    });
+  }
+
+  async setModifiedAsync(uri, modified) {
+    new Promise((resolve, reject) => {
+      const transaction = this.db.transaction([STORE_FILES], 'readwrite');
+      // すべて完了
+      transaction.oncomplete = () => {
+        resolve();
+      };
+      // エラー
+      transaction.onerror = (ev) => {
+        reject(ev);
+      };
+
+      // 登録処理
+      const store = transaction.objectStore(STORE_FILES);
+      store.put({ uri, modified });
+    });
   }
 
   async openAsync() {
@@ -36,29 +78,34 @@ class Database {
       request.onupgradeneeded = (ev) => {
         this.db = ev.target.result;
         // objectStoreの作成
-        const objectStore = this.db.createObjectStore(STORE_NAME, { autoIncrement: true });
+        const objectStore = this.db.createObjectStore(STORE_WORDS, { autoIncrement: true });
         // kanaにindexを作成する (重複可能)
         objectStore.createIndex('kana', 'kana', { unique: false });
+
+        // 最終更新日時を格納するobjectStore
+        this.db.createObjectStore(STORE_FILES, { keyPath: 'uri' });
       };
     });
   }
 
+  /**
+   * 単語登録
+   * @param {object} items { kana, word, mean }
+   */
   async addAsync(items) {
     new Promise((resolve, reject) => {
-      if (this.transaction === null) {
-        this.transaction = this.db.transaction([STORE_NAME], 'readwrite');
-      }
+      const transaction = this.db.transaction([STORE_WORDS], 'readwrite');
+
       // すべて完了
-      this.transaction.oncomplete = () => {
-        this.transaction = null;
+      transaction.oncomplete = () => {
         resolve();
       };
       // エラー
-      this.transaction.onerror = (ev) => {
+      transaction.onerror = (ev) => {
         reject(ev);
       };
 
-      const store = this.transaction.objectStore(STORE_NAME);
+      const store = transaction.objectStore(STORE_WORDS);
       for (let i = 0; i < items.length; i += 1) {
         store.add(items[i]);
       }
