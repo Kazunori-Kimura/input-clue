@@ -2,7 +2,6 @@ import * as actionTypes from '../utils/actionTypes';
 
 const initialState = {
   data: null,
-  status: null,
   error: null,
   requesting: false,
 };
@@ -18,8 +17,6 @@ const dictionary = (state = initialState, action) => {
     // 成功
     return {
       ...state,
-      data: action.payload.data,
-      status: action.payload.status,
       error: null,
       requesting: false,
     };
@@ -27,8 +24,6 @@ const dictionary = (state = initialState, action) => {
     // 失敗
     return {
       ...state,
-      data: null,
-      status: 400,
       error: action.payload.error,
       requesting: false,
     };

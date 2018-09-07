@@ -1,48 +1,42 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import XLSX from 'xlsx';
 import { fetchDictionaryStart, fetchDictionarySucceeded, fetchDictionaryFailed } from '../actions';
 import { FETCH_DICTIONARY_REQUESTED } from '../utils/actionTypes';
+import Worker from 'worker-loader!../utils/dictionary.worker'; // eslint-disable-line
 
 /**
- * ExcelシートをJSONに変換する
- * @param {ArrayBuffer} buff
+ * Web Workerを実行する
+ * @param {string} url 
  */
-function parseXlsxToJson(buff) {
-  const arr = new Uint8Array(buff);
-  const book = XLSX.read(arr, { type: 'array' });
-  const sheetName = book.SheetNames[0];
-  const sheet = book.Sheets[sheetName];
-  return XLSX.utils.sheet_to_json(sheet);
-}
-
-function getArrayBufferAsync(res) {
+function runWorkerAsync(url) {
   return new Promise((resolve, reject) => {
-    res.arrayBuffer()
-      .then(data => resolve(data))
-      .catch(err => reject(err));
+    const worker = new Worker();
+
+    worker.onmessage = (evt) => {
+      const { data } = evt;
+      if (data.status === 'ok') {
+        resolve();
+      } else {
+        reject({ error: data.error });
+      }
+    };
+
+    worker.postMessage(url);
   });
 }
 
 /**
- * fetchして結果をstoreに反映する
+ * Worker起動して結果をstoreに反映する
  */
 function* fetchDictionary() {
   try {
     // 開始
     yield put(fetchDictionaryStart());
-    // fetch
-    const request = new Request('./dictionary/PdicThai-JP-092U.xlsx');
-    const response = yield call(fetch, request);
-    // responseをarrayBufferで受け取る
-    const buff = yield call(getArrayBufferAsync, response);
-
-    const status = response.status;
-    // ArrayBufferをJSONに変換
-    const data = parseXlsxToJson(buff);
-    console.log(data);
-
-    yield put(fetchDictionarySucceeded({ status, data }));
+    // workerをキック
+    yield call(runWorkerAsync, './dictionary/PdicThai-JP-092U.xlsx');
+    // 成功
+    yield put(fetchDictionarySucceeded());
   } catch (err) {
+    // 失敗
     yield put(fetchDictionaryFailed({ error: err }));
   }
 }
