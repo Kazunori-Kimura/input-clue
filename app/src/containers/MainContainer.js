@@ -64,10 +64,9 @@ class MainContainer extends Component {
 
   handleSearch() {
     const { translate: { word }, actions } = this.props;
-    actions.onTranslateClick(word);
-    // if (/^[ぁ-ん]+$/.test(word)) {
-    //   actions.onTranslateClick(word);
-    // }
+    if (/^[ぁ-ん]+$/.test(word)) {
+      actions.onTranslateClick(word);
+    }
   }
 
   handleWordSelect(word) {
@@ -82,7 +81,7 @@ class MainContainer extends Component {
         <CssBaseline />
         <AppBar
           position="absolute"
-          color="default"
+          color="primary"
           className={classes.appBar}
         >
           <Toolbar>

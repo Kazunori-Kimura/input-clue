@@ -12,31 +12,38 @@ class WordListItem extends Component {
 
   handleClick() {
     const { word, onClick } = this.props;
-    onClick(word);
+    onClick(word.word);
   }
 
   render() {
-    const { word } = this.props;
+    const { word: { kana, word, mean } } = this.props;
     return (
       <TableRow
         hover
         onClick={this.handleClick}
       >
+        <TableCell>{kana}</TableCell>
         <TableCell>{word}</TableCell>
-        <TableCell />
-        <TableCell />
-        <TableCell />
+        <TableCell>{mean}</TableCell>
       </TableRow>
     );
   }
 }
 
 WordListItem.defaultProps = {
-  word: '',
+  word: {
+    kana: '',
+    word: '',
+    mean: '',
+  },
 };
 
 WordListItem.propTypes = {
-  word: PropTypes.string,
+  word: PropTypes.shape({
+    kana: PropTypes.string,
+    word: PropTypes.string,
+    mean: PropTypes.string,
+  }),
   onClick: PropTypes.func.isRequired,
 };
 

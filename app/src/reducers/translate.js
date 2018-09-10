@@ -3,11 +3,8 @@ import * as actionTypes from '../utils/actionTypes';
 const initialState = {
   word: '',
   list: [],
-  dictionary: [
-    'foo',
-    'bar',
-    'hoge',
-  ],
+  requesting: false,
+  error: null,
 };
 
 const translate = (state = initialState, action) => {
@@ -17,16 +14,31 @@ const translate = (state = initialState, action) => {
       ...state,
       word: action.word,
     };
-  } else if (action.type === actionTypes.TRANSLATE_WORD) {
-    // 翻訳
-    let list = [];
-    if (action.word) {
-      list = state.dictionary.filter(item => (item.indexOf(action.word) >= 0));
-    }
-
+  } else if (action.type === actionTypes.TRANSLATE_WORD_START) {
+    // 翻訳開始
+    return {
+      ...state,
+      list: [],
+      requesting: true,
+      error: null,
+    };
+  } else if (action.type === actionTypes.TRANSLATE_WORD_SUCCEEDED) {
+    // 成功
+    const { list } = action.payload;
     return {
       ...state,
       list,
+      requesting: false,
+      error: null,
+    };
+  } else if (action.type === actionTypes.TRANSLATE_WORD_FAILED) {
+    // 失敗
+    const { error } = action.payload;
+    return {
+      ...state,
+      list: [],
+      requesting: false,
+      error,
     };
   } else if (action.type === actionTypes.SELECT_WORD) {
     // 選択

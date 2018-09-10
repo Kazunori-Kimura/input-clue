@@ -17,6 +17,20 @@ export const onTranslateClick = word => ({
   word,
 });
 
+export const translateStart = () => ({
+  type: actionTypes.TRANSLATE_WORD_START,
+});
+
+export const translateSucceeded = payload => ({
+  type: actionTypes.TRANSLATE_WORD_SUCCEEDED,
+  payload,
+});
+
+export const translateFailed = payload => ({
+  type: actionTypes.TRANSLATE_WORD_FAILED,
+  payload,
+});
+
 /**
  * 単語選択
  * @param {string} word 

@@ -10,6 +10,10 @@ class Database {
     this.isOpen = false;
   }
 
+  /**
+   * 更新日時を取得
+   * @param {string} uri 
+   */
   async getModifiedAsync(uri) {
     return new Promise((resolve, reject) => {
       const request = this.db.transaction([STORE_FILES])
@@ -34,6 +38,11 @@ class Database {
     });
   }
 
+  /**
+   * 更新日時の更新
+   * @param {string} uri 
+   * @param {number} modified 
+   */
   async setModifiedAsync(uri, modified) {
     new Promise((resolve, reject) => {
       const transaction = this.db.transaction([STORE_FILES], 'readwrite');
@@ -52,6 +61,9 @@ class Database {
     });
   }
 
+  /**
+   * IndexedDBを開く
+   */
   async openAsync() {
     return new Promise((resolve, reject) => {
       const request = indexedDB.open(DATABASE_NAME, VERSION);
@@ -109,6 +121,43 @@ class Database {
       for (let i = 0; i < items.length; i += 1) {
         store.add(items[i]);
       }
+    });
+  }
+
+  /**
+   * 単語を取得 (前方一致検索)
+   * @param {string} search
+   */
+  async getWordsAsync(search) {
+    return new Promise((resolve, reject) => {
+      // 返却する配列
+      const list = [];
+
+      // rangeを作成
+      const nextWord = search.slice(0, -1)
+        + String.fromCharCode(search.slice(-1).charCodeAt() + 1);
+      console.log('range:', search, nextWord);
+      const range = IDBKeyRange.bound(search, nextWord, false, true);
+
+      // 検索処理
+      const request = this.db.transaction([STORE_WORDS])
+        .objectStore(STORE_WORDS)
+        .index('kana')
+        .openCursor(range);
+      
+      request.onerror = (evt) => {
+        reject(evt);
+      };
+
+      request.onsuccess = () => {
+        const cursor = request.result;
+        if (cursor) {
+          list.push(cursor.value);
+          cursor.continue();
+        } else {
+          resolve(list);
+        }
+      };
     });
   }
 

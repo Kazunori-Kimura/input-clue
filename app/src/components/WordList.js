@@ -38,16 +38,15 @@ const WordList = (props) => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Word 1</TableCell>
-                <TableCell>Word 2</TableCell>
-                <TableCell>Word 3</TableCell>
-                <TableCell>Word 4</TableCell>
+                <TableCell>かな</TableCell>
+                <TableCell>単語</TableCell>
+                <TableCell>意味</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {list.map(item => (
                 <WordListItem
-                  key={`key_${item}`}
+                  key={`key_${item.kana}`}
                   word={item}
                   onClick={onSelect}
                 />
@@ -62,7 +61,7 @@ const WordList = (props) => {
 };
 
 WordList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.string).isRequired,
+  list: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   onSelect: PropTypes.func.isRequired,
   classes: PropTypes.shape().isRequired,
 };
