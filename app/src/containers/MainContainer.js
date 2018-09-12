@@ -9,6 +9,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import CustomTextArea from '../components/CustomTextArea';
 import FunctionButton from '../components/FunctionButton';
@@ -39,9 +40,25 @@ const styles = theme => ({
       padding: theme.spacing.unit * 3,
     },
   },
+  indicatorContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  indicator: {
+    marginRight: theme.spacing.unit * 2,
+  },
 });
 
-
+/**
+ * main container
+ */
 class MainContainer extends Component {
   constructor(props) {
     super(props);
@@ -72,6 +89,26 @@ class MainContainer extends Component {
   handleWordSelect(word) {
     const { actions } = this.props;
     actions.onWordClick(word);
+  }
+
+  renderIndicator() {
+    const { dictionary, classes } = this.props;
+    if (dictionary.requesting) {
+      return (
+        <div className={classes.indicatorContainer}>
+          <CircularProgress
+            className={classes.indicator}
+            size={50}
+            thickness={5}
+          />
+          <Typography variant="display1" noWrap>
+            辞書データ読み込み中...
+          </Typography>
+        </div>
+      );
+    }
+
+    return null;
   }
 
   render() {
@@ -112,6 +149,7 @@ class MainContainer extends Component {
             />
           </Paper>
         </main>
+        {this.renderIndicator()}
       </React.Fragment>
     );
   }
@@ -119,12 +157,14 @@ class MainContainer extends Component {
 
 MainContainer.propTypes = {
   translate: PropTypes.shape().isRequired,
+  dictionary: PropTypes.shape().isRequired,
   actions: PropTypes.shape().isRequired,
   classes: PropTypes.shape().isRequired,
 };
 
 const mapStateToProps = state => ({
   translate: state.translate,
+  dictionary: state.dictionary,
 });
 
 const mapDispatchToProps = dispatch => ({
