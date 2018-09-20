@@ -1,0 +1,15 @@
+{
+  "name": "format-keycode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "thai.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "kazunori-kimura <kazunori.kimura.js@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^7.0.0"
+  }
+}

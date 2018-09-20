@@ -14,6 +14,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import CustomTextArea from '../components/CustomTextArea';
 import FunctionButton from '../components/FunctionButton';
 import WordList from '../components/WordList';
+import Keyboard from '../components/Keyboard';
 import * as actions from '../actions';
 
 const styles = theme => ({
@@ -147,6 +148,7 @@ class MainContainer extends Component {
               list={translate.list}
               onSelect={this.handleWordSelect}
             />
+            <Keyboard />
           </Paper>
         </main>
         {this.renderIndicator()}
