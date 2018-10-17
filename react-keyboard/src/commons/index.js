@@ -2,7 +2,7 @@
 export const version = '1.0.0';
 
 /**
- * 言語定義
+ * キーボードの言語定義
  */
 export const languages = {
   // タイ語
@@ -16,3 +16,11 @@ export const languages = {
     keycode: '', // 文字コード定義ファイル
   },
 };
+
+/**
+ * インターフェイスの言語定義
+ */
+export const interfaceLanguages = [
+  'ja', // 日本語
+  'en', // 英語
+];
