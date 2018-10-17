@@ -1,0 +1,12 @@
+{
+  "app_name": "WebKeyboard",
+  "languages": {
+    "thai": "タイ語",
+    "korean": "韓国語"
+  },
+  "interface": {
+    "placeholder": "言語",
+    "en": "English",
+    "ja": "日本語"
+  }
+}
