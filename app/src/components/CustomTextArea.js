@@ -10,6 +10,7 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 3,
   },
   textArea: {
+    fontSize: '3rem',
     width: '100%',
   },
   functions: {
@@ -32,6 +33,14 @@ class CustomTextArea extends Component {
     this.handleCopy = this.handleCopy.bind(this);
     this.handleSpace = this.handleSpace.bind(this);
     this.setCaret = this.setCaret.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { inputBuffers } = nextProps;
+
+    if (inputBuffers.length > 0) {
+      this.insert(inputBuffers.join(''));
+    }
   }
 
   /**
@@ -79,8 +88,8 @@ class CustomTextArea extends Component {
       // 値を更新
       onChange(newValue);
 
-      // カーソル位置を戻す
-      this.setCaret(selection.start + 1);
+      // カーソル位置を更新
+      this.setCaret(selection.start + char.length);
     }
   }
 
@@ -88,6 +97,10 @@ class CustomTextArea extends Component {
     if (this.inputRef) {
       const { onChange } = this.props;
       const selection = this.getSelection();
+      if (selection.start === 0) {
+        // 先頭なら何もしない
+        return;
+      }
       const value = this.inputRef.value;
       // selection.startより前部分
       const prefix = value.slice(0, selection.start - 1);
@@ -138,7 +151,7 @@ class CustomTextArea extends Component {
   }
 
   render() {
-    const { word, classes } = this.props;
+    const { value, classes } = this.props;
     return (
       <form
         noValidate
@@ -147,11 +160,11 @@ class CustomTextArea extends Component {
       >
         <TextField
           className={classes.textArea}
-          multiline
-          rows="4"
-          value={word}
+          value={value}
           inputRef={input => this.inputRef = input}
           onChange={this.handleChange}
+          rows={2}
+          multiline
         />
         <div>
           <Button
@@ -193,11 +206,13 @@ class CustomTextArea extends Component {
 }
 
 CustomTextArea.defaultProps = {
-  word: '',
+  value: '',
+  inputBuffers: [],
 };
 
 CustomTextArea.propTypes = {
-  word: PropTypes.string,
+  value: PropTypes.string,
+  inputBuffers: PropTypes.arrayOf(PropTypes.string),
   onChange: PropTypes.func.isRequired,
   classes: PropTypes.shape().isRequired,
 };

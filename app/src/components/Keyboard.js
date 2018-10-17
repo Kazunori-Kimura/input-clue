@@ -39,7 +39,10 @@ class Keyboard extends Component {
   }
 
   handleClick(key) {
-    console.log(key);
+    const { onClick } = this.props;
+    const ch = String.fromCharCode(key.code[3]);
+    // console.log(ch);
+    onClick(ch);
   }
 
   renderRow(row, index) {
@@ -74,6 +77,7 @@ class Keyboard extends Component {
 
 Keyboard.propTypes = {
   classes: PropTypes.shape().isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(Keyboard);

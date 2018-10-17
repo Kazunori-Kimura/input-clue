@@ -64,9 +64,15 @@ class MainContainer extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      value: '',
+      inputBuffers: [],
+    };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleWordSelect = this.handleWordSelect.bind(this);
+    this.handleKeyboardClick = this.handleKeyboardClick.bind(this);
   }
 
   componentDidMount() {
@@ -75,9 +81,19 @@ class MainContainer extends Component {
     actions.fetchDictionary();
   }
 
-  handleChange(word) {
-    const { actions } = this.props;
-    actions.onChangeWord(word);
+  handleChange(value) {
+    // const { actions } = this.props;
+    // actions.onChangeWord(word);
+    this.setState({
+      value,
+    });
+  }
+
+  handleKeyboardClick(char) {
+    const { inputBuffers } = this.state;
+    this.setState({
+      inputBuffers: [...inputBuffers, char],
+    });
   }
 
   handleSearch() {
@@ -114,6 +130,8 @@ class MainContainer extends Component {
 
   render() {
     const { translate, classes } = this.props;
+    const { value, inputBuffers } = this.state;
+
     return (
       <React.Fragment>
         <CssBaseline />
@@ -133,7 +151,8 @@ class MainContainer extends Component {
             <Grid container spacing={24}>
               <Grid item xs={10}>
                 <CustomTextArea
-                  word={translate.word}
+                  value={value}
+                  inputBuffers={inputBuffers}
                   onChange={this.handleChange}
                 />
               </Grid>
@@ -148,7 +167,9 @@ class MainContainer extends Component {
               list={translate.list}
               onSelect={this.handleWordSelect}
             />
-            <Keyboard />
+            <Keyboard
+              onClick={this.handleKeyboardClick}
+            />
           </Paper>
         </main>
         {this.renderIndicator()}
