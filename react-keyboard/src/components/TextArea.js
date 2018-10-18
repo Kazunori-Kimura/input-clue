@@ -41,9 +41,9 @@ class TextArea extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { caret } = nextProps;
-    const currentCaret = this.getCaret();
+    const { prevCaret } = this.state;
 
-    if (this.compareCaret(currentCaret, caret)) {
+    if (prevCaret && !this.compareCaret(prevCaret, caret)) {
       this.setCaret(caret);
     }
   }
@@ -90,6 +90,7 @@ class TextArea extends Component {
         });
       }
 
+      input.focus();
       return position;
     }
     return null;
@@ -116,8 +117,9 @@ class TextArea extends Component {
     this.setState({
       input,
     });
-
-    ['select', 'focus', 'change', 'click', 'keyup'].forEach(type => input.addEventListener(type, this.getCaret));
+    ['select', 'focus', 'change', 'click', 'keyup'].forEach(
+      type => input.addEventListener(type, this.getCaret),
+    );
   };
 
   /**
@@ -178,6 +180,7 @@ class TextArea extends Component {
               input: classes.textArea,
             }}
             value={value}
+            autoFocus
             fullWidth
             rows={3}
             multiline

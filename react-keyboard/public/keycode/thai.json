@@ -8,11 +8,11 @@
     { "code": [0,0,0,3606] },
     {
       "code": [0,0,0,3640],
-      "color": "white"
+      "color": "#ffffff"
     },
     {
       "code": [0,0,0,3638],
-      "color": "white"
+      "color": "#ffffff"
     },
     { "code": [0,0,0,3588] },
     { "code": [0,0,0,3605] },
@@ -28,11 +28,11 @@
     { "code": [0,0,0,3632] },
     {
       "code": [0,0,0,3633],
-      "color": "white"
+      "color": "#ffffff"
     },
     {
       "code": [0,0,0,3637],
-      "color": "white"
+      "color": "#ffffff"
     },
     { "code": [0,0,0,3619] },
     { "code": [0,0,0,3609] },
@@ -46,16 +46,16 @@
     { "code": [0,0,0,3585] },
     {
       "code": [0,0,0,3604],
-      "color": "green"
+      "color": "#00ff99"
     },
     { "code": [0,0,0,3648] },
     {
       "code": [0,0,0,3657],
-      "color": "white"
+      "color": "#ffffff"
     },
     {
       "code": [0,0,0,3656],
-      "color": "green"
+      "color": "#00ff99"
     },
     { "code": [0,0,0,3634] },
     { "code": [0,0,0,3626] },
@@ -70,11 +70,11 @@
     { "code": [0,0,0,3629] },
     {
       "code": [0,0,0,3636],
-      "color": "white"
+      "color": "#ffffff"
     },
     {
       "code": [0,0,0,3639],
-      "color": "white"
+      "color": "#ffffff"
     },
     { "code": [0,0,0,3607] },
     { "code": [0,0,0,3617] },
@@ -90,7 +90,7 @@
     { "code": [0,0,0,3668] },
     {
       "code": [0,0,0,3641],
-      "color": "white"
+      "color": "#ffffff"
     },
     { "code": [0,0,0,3647] },
     { "code": [0,0,0,3669] },
@@ -107,11 +107,11 @@
     { "code": [0,0,0,3608] },
     {
       "code": [0,0,0,3661],
-      "color": "white"
+      "color": "#ffffff"
     },
     {
       "code": [0,0,0,3658],
-      "color": "white"
+      "color": "#ffffff"
     },
     { "code": [0,0,0,3603] },
     { "code": [0,0,0,3631] },
@@ -127,11 +127,11 @@
     { "code": [0,0,0,3596] },
     {
       "code": [0,0,0,3655],
-      "color": "white"
+      "color": "#ffffff"
     },
     {
       "code": [0,0,0,3659],
-      "color": "white"
+      "color": "#ffffff"
     },
     { "code": [0,0,0,3625] },
     { "code": [0,0,0,3624] },
@@ -146,11 +146,11 @@
     { "code": [0,0,0,3630] },
     {
       "code": [0,0,0,3642],
-      "color": "white"
+      "color": "#ffffff"
     },
     {
       "code": [0,0,0,3660],
-      "color": "white"
+      "color": "#ffffff"
     },
     { "code": [0,0,0,63] },
     { "code": [0,0,0,3602] },

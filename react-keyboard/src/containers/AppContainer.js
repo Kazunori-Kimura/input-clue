@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Header from '../components/Header';
 import TextArea from '../components/TextArea';
+import Keyboard from '../components/Keyboard';
 import { languages } from '../commons';
 
 const styles = theme => ({
@@ -33,6 +34,7 @@ class AppContainer extends Component {
       end: 0,
       direction: 'none',
     },
+    keycode: '',
   };
 
   componentWillMount() {
@@ -42,7 +44,12 @@ class AppContainer extends Component {
     if (typeof languages[lang] === 'undefined') {
       // Not Found
       history.push('/nocontent');
+      return;
     }
+
+    this.setState({
+      keycode: languages[lang].keycode,
+    });
   }
 
   handleChangeValue = (value) => {
@@ -57,9 +64,81 @@ class AppContainer extends Component {
     });
   };
 
+  insert = (char) => {
+    const { value, caret } = this.state;
+    const newCaret = {};
+
+    if (value === '') {
+      this.setState({
+        value: char,
+        caret: {
+          start: char.length,
+          end: char.length,
+          direction: 'none',
+        },
+      });
+      return;
+    }
+
+    const before = value.slice(0, caret.start);
+    const after = value.slice(caret.end);
+    newCaret.start = caret.start + char.length;
+    newCaret.end = caret.start + char.length;
+    newCaret.direction = 'none';
+
+    this.setState({
+      value: `${before}${char}${after}`,
+      caret: newCaret,
+    });
+  };
+
+  handleKeyboardClick = (code) => {
+    // TODO: 韓国語の考慮
+    const char = String.fromCharCode(code[3]);
+    this.insert(char);
+  };
+
+  handleKeyboardBackspaceClick = () => {
+    const { value, caret } = this.state;
+    if (value === '') {
+      // 値が空なら何もしない
+      return;
+    }
+
+    if (caret.start === 0 && caret.end === 0) {
+      // 先頭なら何もしない
+      return;
+    }
+
+    let before = '';
+    let after = '';
+    const newCaret = {};
+    if (caret.start === caret.end) {
+      // 未選択の場合はcaretの前1文字を削除
+      before = value.slice(0, caret.start - 1);
+      after = value.slice(caret.end);
+      newCaret.start = caret.start - 1;
+      newCaret.end = caret.start - 1;
+      newCaret.direction = 'none';
+    } else {
+      // 選択範囲を削除
+      before = value.slice(0, caret.start);
+      after = value.slice(caret.end);
+      newCaret.start = caret.start;
+      newCaret.end = caret.start;
+      newCaret.direction = 'none';
+    }
+
+    // stateの更新
+    this.setState({
+      value: `${before}${after}`,
+      caret: newCaret,
+    });
+  };
+
   render() {
     const { match: { params: { lang } }, classes } = this.props;
-    const { value, caret } = this.state;
+    const { value, caret, keycode } = this.state;
 
     return (
       <React.Fragment>
@@ -73,6 +152,11 @@ class AppContainer extends Component {
               caret={caret}
               onChangeValue={this.handleChangeValue}
               onChangeCaret={this.handleChangeCaret}
+            />
+            <Keyboard
+              keycode={keycode}
+              onClick={this.handleKeyboardClick}
+              onBackspaceClick={this.handleKeyboardBackspaceClick}
             />
           </div>
         </div>
