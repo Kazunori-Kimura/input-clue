@@ -2,7 +2,11 @@
   "app_name": "WebKeyboard",
   "languages": {
     "thai": "Thai",
-    "korean": "Korean"
+    "korean": "Korean",
+    "thai_pho": "タイ語&発音記号",
+    "pinyin": "中国語ピンイン",
+    "vietnam": "ベトナム語",
+    "lao": "ラオス語"
   },
   "interface": {
     "placeholder": "language",

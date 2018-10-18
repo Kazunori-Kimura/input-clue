@@ -1,13 +1,15 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD; HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta name="GENERATOR" content="JustSystems Homepage Builder Version 15.0.11.0 for Windows">
-<meta name="robots" content="index,follow">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<title>速攻入力　韓国語初級</title>
-<head>
-<script type="text/Javascript">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="GENERATOR" content="JustSystems Homepage Builder Version 15.0.11.0 for Windows">
+	<meta name="robots" content="index,follow">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<title>速攻入力　韓国語初級</title>
+
+	<head>
+		<script type="text/Javascript">
 //ハングル取得<PART!1>
 var code_point;
 var result1;
@@ -23,166 +25,271 @@ var chusei=0;
 var shusei=0;
 var overi=0
 </script>
-<script type="text/Javascript" src="koreanload.js";></script>
-<script type="text/Javascript" src="new_type_load.js"></script>
-<script type="text/Javascript" src="new_kmer_type_load.js"></script>
-<script type="text/Javascript" src="!google3.js"></script>
-<script type="text/Javascript" src="!googletrans.js"></script>
-<script type="text/Javascript" src="!weblio_k.js"></script>
-<script type="text/Javascript" src="!YouTube.js"></script>
-</head>
+		<script type="text/Javascript" src="koreanload.js"></script>
+		<script type="text/Javascript" src="new_type_load.js"></script>
+		<script type="text/Javascript" src="new_kmer_type_load.js"></script>
+		<script type="text/Javascript" src="!google3.js"></script>
+		<script type="text/Javascript" src="!googletrans.js"></script>
+		<script type="text/Javascript" src="!weblio_k.js"></script>
+		<script type="text/Javascript" src="!YouTube.js"></script>
+	</head>
 
 
-<body onLoad="document.form.text2.focus()"; bgcolor="#ffa07a">
-<form name="form" action="#"; method="";>
-<Div Align="center">
+<body onLoad="document.form.text2.focus()" bgcolor="#ffa07a">
+	<form name="form" action="#" method="">
+		<Div Align="center">
+			<!--'Doulos SIL'-->
+			<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff99;" value="Google" onclick="button_Google();" />
+			<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff66;" value="Translate" onclick="button_Googletrans();" />
+			<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;" value="Weblio_Dic" onclick="button_weblio_k();" />
+			<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;" value="YouTube" onclick="button_YouTube();">
+			<br>
 
-<!--'Doulos SIL'-->
+			<!--☆段//-->
+			<textarea cols="46" rows="2" wrap="soft" id="area" name="text2"
+				style="padding-left: 6px; background-color: #99fffd; font-size :18px; font-weight:600"
+				onmouseup='moo()'>
+			</textarea>
+			<br>
 
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff99;" value="Google" onclick="button_Google();"/>
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff66;" value="Translate" onclick="button_Googletrans();"/>
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;" value="Weblio_Dic" onclick="button_weblio_k();"/>
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;" value="YouTube" onclick="button_YouTube();">
-<br />
-<!--☆段//--><textarea cols="46" rows="2"  wrap="soft" id="area" name="text2" style="padding-left: 6px; background-color: #99fffd; font-size :18px; font-weight:600"; onmouseup='moo()';></textarea>
-<br/>
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="All Copy" onclick="textcopy()";>
-  <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="Reset" onclick="CLR()";>
-<input type="button" Id='hungeularea'; name="textbox"; style= "WIDTH:70px; HEIGHT:40px; font-size :18px; font-weight:580; background-color: #E6E6FA; border-color:#FF0000;" onclick="insk();">
+			<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="All Copy" onclick="textcopy()">
+			<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="Reset" onclick="CLR()">
+			<input type="button" Id='hungeularea' name="textbox" style="WIDTH:70px; HEIGHT:40px; font-size :18px; font-weight:580; background-color: #E6E6FA; border-color:#FF0000;" onclick="insk();">
 
-  <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="Space" onclick="getresult(0,0,0,32);ins(i_result1)";>
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;"value="BackSpace" onclick='debef()';">    
-<BR><font size="2">안녕하세요? ©2013 やり直しのきく「くるくるハングル」</font>
-  
-<BR><font size="2">{初声 19}</font>
-<BR>
-       k/g<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#4352;" onclick="getresult_k(shuseik,chuseik,shuseik)"; onmouseup='moo()';>
-       
-      n<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄂ" onclick="getresult_k(2,chuseik,shuseik)"; onmouseup='moo()';> 
-      t/d<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄃ" onclick="getresult_k(3,chuseik,shuseik)"; onmouseup='moo()';> 
-      
-      l <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄅ" onclick="getresult_k(5,chuseik,shuseik)"; onmouseup='moo()';> 
-      m<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄆ" onclick="getresult_k(6,chuseik,shuseik)"; onmouseup='moo()';> 
-      p/b<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄇ" onclick="getresult_k(7,chuseik,shuseik)"; onmouseup='moo()';> 
-       
-      s/&#643 <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄉ" onclick="getresult_k(9,chuseik,shuseik)"; onmouseup='moo()';> 
-	 _ <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄋ" onclick="getresult_k(11,chuseik,shuseik)"; onmouseup='moo()';> 
-     ʧ/&#676<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄌ" onclick="getresult_k(12,chuseik,shuseik)"; onmouseup='moo()';> 
-<BR>
-	k&#688<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄏ" onclick="getresult_k(15,chuseik,shuseik)"; onmouseup='moo()';> 
-      t&#688<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄐ" onclick="insk();getresult_k(16,chuseik,shuseik)"; onmouseup='moo()';> 
-      p&#688;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄑ" onclick="getresult_k(17,chuseik,shuseik)"; onmouseup='moo()';> 
-	ʧ&#688<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄎ" onclick="getresult_k(14,chuseik,shuseik)"; onmouseup='moo()';> 
-      h<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄒ" onclick="getresult_k(18,chuseik,shuseik)"; onmouseup='moo()';>   
-	&#704;k<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄁ" onclick="getresult_k(1,chuseik,shuseik)"; onmouseup='moo()';>
-	 &#704;t<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄄ" onclick="getresult_k(4,chuseik,shuseik)"; onmouseup='moo()';>
-	&#704;p<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄈ" onclick="getresult_k(8,chuseik,shuseik)"; onmouseup='moo()';> 
-	&#704;s/&#704;&#643<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄊ" onclick="getresult_k(10,chuseik,shuseik)"; onmouseup='moo()';>
-      &#704;ʧ/&#658<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄍ" onclick="getresult_k(13,chuseik,shuseik)"; onmouseup='moo()';> 
+			<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="Space" onclick="getresult(0,0,0,32);ins(i_result1)">
+			<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="BackSpace" onclick='debef()'>
+			<BR>
+			<font size="2">안녕하세요? ©2013 やり直しのきく「くるくるハングル」</font>
+
+			<BR>
+			<font size="2">{初声 19}</font>
+			<BR>
+			k/g<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#4352;" onclick="getresult_k(shuseik,chuseik,shuseik)"
+			 onmouseup='moo()'>
+
+			n<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄂ" onclick="getresult_k(2,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			t/d<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄃ" onclick="getresult_k(3,chuseik,shuseik)"
+			 onmouseup='moo()'>
+
+			l <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄅ" onclick="getresult_k(5,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			m<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄆ" onclick="getresult_k(6,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			p/b<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄇ" onclick="getresult_k(7,chuseik,shuseik)"
+			 onmouseup='moo()'>
+
+			s/&#643 <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄉ" onclick="getresult_k(9,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			_ <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄋ" onclick="getresult_k(11,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			ʧ/&#676<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄌ" onclick="getresult_k(12,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			<BR>
+			k&#688<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄏ" onclick="getresult_k(15,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			t&#688<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄐ" onclick="insk();getresult_k(16,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			p&#688;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄑ" onclick="getresult_k(17,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			ʧ&#688<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄎ" onclick="getresult_k(14,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			h<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄒ" onclick="getresult_k(18,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			&#704;k<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄁ" onclick="getresult_k(1,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			&#704;t<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄄ" onclick="getresult_k(4,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			&#704;p<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄈ" onclick="getresult_k(8,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			&#704;s/&#704;&#643<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄊ" onclick="getresult_k(10,chuseik,shuseik)"
+			 onmouseup='moo()'>
+			&#704;ʧ/&#658<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ᄍ" onclick="getresult_k(13,chuseik,shuseik)"
+			 onmouseup='moo()'>
 
 
-<BR><font size="2">{中声 21}</font>
-<BR>
-	<input type="button" style="WIDTH: 32px; HEIGHT: 34px; font-size : 18px;" value="&#63;" onclick="getresult(0,0,0,63);ins(i_result1)";>
-	a<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅏ" onclick="getresult_k(i_shoseik,0,shuseik)"; onmouseup='moo()';> 
-	ya<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅑ" onclick="getresult_k(i_shoseik,2,shuseik)"; onmouseup='moo()';> 
-	ɔ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅓ" onclick="getresult_k(i_shoseik,4,shuseik)"; onmouseup='moo()';> 
-	yɔ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅕ" onclick="getresult_k(i_shoseik,6,shuseik)"; onmouseup='moo()';> 
-	o<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅗ" onclick="getresult_k(i_shoseik,8,shuseik)"; onmouseup='moo()';> 
-	yo<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅛ" onclick="getresult_k(i_shoseik,12,shuseik)"; onmouseup='moo()';> 
-	u<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅜ" onclick="getresult_k(i_shoseik,13,shuseik)"; onmouseup='moo()';> 
-	yu<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅠ" onclick="getresult_k(i_shoseik,17,shuseik)"; onmouseup='moo()';> 
-	ɯ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅡ" onclick="getresult_k(i_shoseik,18,shuseik)"; onmouseup='moo()';> 
-	i <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅣ" onclick="getresult_k(i_shoseik,20,shuseik)"; onmouseup='moo()';> 
-	ɛ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅐ" onclick="getresult_k(i_shoseik,1,shuseik)"; onmouseup='moo()';> 
+			<BR>
+			<font size="2">{中声 21}</font>
+			<BR>
+			<input type="button" style="WIDTH: 32px; HEIGHT: 34px; font-size : 18px;" value="&#63;" onclick="getresult(0,0,0,63);ins(i_result1)"
+			>
+			a<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅏ" onclick="getresult_k(i_shoseik,0,shuseik)"
+			 onmouseup='moo()'>
+			ya<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅑ" onclick="getresult_k(i_shoseik,2,shuseik)"
+			 onmouseup='moo()'>
+			ɔ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅓ" onclick="getresult_k(i_shoseik,4,shuseik)"
+			 onmouseup='moo()'>
+			yɔ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅕ" onclick="getresult_k(i_shoseik,6,shuseik)"
+			 onmouseup='moo()'>
+			o<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅗ" onclick="getresult_k(i_shoseik,8,shuseik)"
+			 onmouseup='moo()'>
+			yo<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅛ" onclick="getresult_k(i_shoseik,12,shuseik)"
+			 onmouseup='moo()'>
+			u<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅜ" onclick="getresult_k(i_shoseik,13,shuseik)"
+			 onmouseup='moo()'>
+			yu<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅠ" onclick="getresult_k(i_shoseik,17,shuseik)"
+			 onmouseup='moo()'>
+			ɯ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅡ" onclick="getresult_k(i_shoseik,18,shuseik)"
+			 onmouseup='moo()'>
+			i <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅣ" onclick="getresult_k(i_shoseik,20,shuseik)"
+			 onmouseup='moo()'>
+			ɛ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅐ" onclick="getresult_k(i_shoseik,1,shuseik)"
+			 onmouseup='moo()'>
 
-<BR>
-	yɛ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅒ" onclick="getresult_k(i_shoseik,3,shuseik)"; onmouseup='moo()';> 
-	e<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅔ" onclick="getresult_k(i_shoseik,5,shuseik)"; onmouseup='moo()';> 
-	ye<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅖ" onclick="getresult_k(i_shoseik,7,shuseik)"; onmouseup='moo()';> 
-	wa<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅘ" onclick="getresult_k(i_shoseik,9,shuseik)"; onmouseup='moo()';> 
-	wɛ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅙ" onclick="getresult_k(i_shoseik,10,shuseik)"; onmouseup='moo()';> 
-	we<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅚ" onclick="getresult_k(i_shoseik,11,shuseik)"; onmouseup='moo()';> 
-	wɔ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅝ" onclick="getresult_k(i_shoseik,14,shuseik)"; onmouseup='moo()';> 
-	we<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅞ" onclick="getresult_k(i_shoseik,15,shuseik)"; onmouseup='moo()';> 
-	wi <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅟ" onclick="getresult_k(i_shoseik,16,shuseik)"; onmouseup='moo()';> 
-	ɯi <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅢ" onclick="getresult_k(i_shoseik,19,shuseik)"; onmouseup='moo()';> 
-      
-<BR><font size="2">{終声 27}</font><BR>
+			<BR>
+			yɛ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅒ" onclick="getresult_k(i_shoseik,3,shuseik)"
+			 onmouseup='moo()'>
+			e<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅔ" onclick="getresult_k(i_shoseik,5,shuseik)"
+			 onmouseup='moo()'>
+			ye<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅖ" onclick="getresult_k(i_shoseik,7,shuseik)"
+			 onmouseup='moo()'>
+			wa<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅘ" onclick="getresult_k(i_shoseik,9,shuseik)"
+			 onmouseup='moo()'>
+			wɛ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅙ" onclick="getresult_k(i_shoseik,10,shuseik)"
+			 onmouseup='moo()'>
+			we<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅚ" onclick="getresult_k(i_shoseik,11,shuseik)"
+			 onmouseup='moo()'>
+			wɔ<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅝ" onclick="getresult_k(i_shoseik,14,shuseik)"
+			 onmouseup='moo()'>
+			we<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅞ" onclick="getresult_k(i_shoseik,15,shuseik)"
+			 onmouseup='moo()'>
+			wi <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅟ" onclick="getresult_k(i_shoseik,16,shuseik)"
+			 onmouseup='moo()'>
+			ɯi <input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅢ" onclick="getresult_k(i_shoseik,19,shuseik)"
+			 onmouseup='moo()'>
 
-     	k&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12593;" onclick="getresult_k(i_shoseik,i_chuseik,1)"; onmouseup='moo()';> 
-      	k&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12594;" onclick="getresult_k(i_shoseik,i_chuseik,2)"; onmouseup='moo()';> 
-      	k&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12595;" onclick="getresult_k(i_shoseik,i_chuseik,3)"; onmouseup='moo()'; onmouseup='moo()';> 
-      	n&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12596;" onclick="getresult_k(i_shoseik,i_chuseik,4)"; onmouseup='moo()';> 
-      	n&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄵ" onclick="getresult_k(i_shoseik,i_chuseik,5)"; onmouseup='moo()';> 
-      	n&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄶ" onclick="getresult_k(i_shoseik,i_chuseik,6)"; onmouseup='moo()';> 
-      	t&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12599;" onclick="getresult_k(i_shoseik,i_chuseik,7)"; onmouseup='moo()';> 
-      	l&#704;<input type="button" style="width: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12601;" onclick="getresult_k(i_shoseik,i_chuseik,8)"; onmouseup='moo()';> 
-      	k&#704;<input type="button" style="background-color:#F08080; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄺ" onclick="getresult_k(i_shoseik,i_chuseik,9)"; onmouseup='moo()';> 
-    
-   
-      m&#704;<input type="button" style="background-color:#F08080; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄻ" onclick="getresult_k(i_shoseik,i_chuseik,10)"; onmouseup='moo()';>
- <BR>
+			<BR>
+			<font size="2">{終声 27}</font><BR>
 
-      	l&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄼ" onclick="getresult_k(i_shoseik,i_chuseik,11)"; onmouseup='moo()';> 
-      	l&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄽ" onclick="getresult_k(i_shoseik,i_chuseik,12)"; onmouseup='moo()';> 
-      	l&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄾ" onclick="getresult_k(i_shoseik,i_chuseik,13)"; onmouseup='moo()';> 
-      	p&#704;<input type="button" style="background-color:#F08080; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄿ" onclick="getresult_k(i_shoseik,i_chuseik,14)"; onmouseup='moo()';> 
-      	l&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅀ" onclick="getresult_k(i_shoseik,i_chuseik,15)"; onmouseup='moo()';> 
-      	m&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12609" onclick="getresult_k(i_shoseik,i_chuseik,16)"; onmouseup='moo()';> 
-      	p&#704;<input type="button" style="background-color : #FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12610" onclick="getresult_k(i_shoseik,i_chuseik,17)"; onmouseup='moo()';> 
-      	p&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅄ" onclick="getresult_k(i_shoseik,i_chuseik,18)"; onmouseup='moo()';> 
-      	t&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12613;" onclick="getresult_k(i_shoseik,i_chuseik,19)"; onmouseup='moo()';> 
-      	t&#704;<input type="button" style="background-color:#FFDEAD;  WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅆ " onclick="getresult_k(i_shoseik,i_chuseik,20)"; onmouseup='moo()';> 
-<BR>
-	ŋ&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅇ" onclick="getresult_k(i_shoseik,i_chuseik,21)"; onmouseup='moo()';> 
-	t&#704;<input type="button" style="; WIDTH: 34px; HEIGHT: 34px; font-size : 14px; background-color:#FFDEAD" value="ㅈ" onclick="getresult_k(i_shoseik,i_chuseik,22)"; onmouseup='moo()';> 
-      	t&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅊ" onclick="getresult_k(i_shoseik,i_chuseik,23)"; onmouseup='moo()';> 
-      	k&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅋ" onclick="getresult_k(i_shoseik,i_chuseik,24)"; onmouseup='moo()';> 
-      	t&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅌ" onclick="getresult_k(i_shoseik,i_chuseik,25)"; onmouseup='moo()';> 
-      	p&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅍ" onclick="getresult_k(i_shoseik,i_chuseik,26)"; onmouseup='moo()';> 
-      	t&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅎ" onclick="getresult_k(i_shoseik,i_chuseik,27)" onmouseup='moo()';;> 
+			k&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12593;"
+			 onclick="getresult_k(i_shoseik,i_chuseik,1)" onmouseup='moo()'>
+			k&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12594;"
+			 onclick="getresult_k(i_shoseik,i_chuseik,2)" onmouseup='moo()'>
+			k&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12595;" onclick="getresult_k(i_shoseik,i_chuseik,3)"
+			 onmouseup='moo()' onmouseup='moo()'>
+			n&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12596;"
+			 onclick="getresult_k(i_shoseik,i_chuseik,4)" onmouseup='moo()'>
+			n&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄵ" onclick="getresult_k(i_shoseik,i_chuseik,5)"
+			 onmouseup='moo()'>
+			n&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄶ" onclick="getresult_k(i_shoseik,i_chuseik,6)"
+			 onmouseup='moo()'>
+			t&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12599;"
+			 onclick="getresult_k(i_shoseik,i_chuseik,7)" onmouseup='moo()'>
+			l&#704;<input type="button" style="width: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12601;" onclick="getresult_k(i_shoseik,i_chuseik,8)"
+			 onmouseup='moo()'>
+			k&#704;<input type="button" style="background-color:#F08080; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄺ"
+			 onclick="getresult_k(i_shoseik,i_chuseik,9)" onmouseup='moo()'>
 
-<!--JOSHI段//-->
-<BR>{主要助詞}<BR>
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#45716;" onclick="getresult(0,0,0,45716);ins(i_result1)";>
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51008;" onclick="getresult(0,0,0,51008);ins(i_result1)";>~は|
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#44032;" onclick="getresult(0,0,0,44032);ins(i_result1)";>
-       	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51060" onclick="getresult(0,0,0,51060);ins(i_result1)";>~が|
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#47484;" onclick="getresult(0,0,0,47484);ins(i_result1)";>
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51012;" onclick="getresult(0,0,0,51012);ins(i_result1)";>~を|
-	<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#54616&#44256;" onclick="getresult(0,0,44256,54616);ins(i_result1)";>
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#50752;" onclick="getresult(0,0,0,50752);ins(i_result1)";>
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#44284;" onclick="getresult(0,0,0,44284);ins(i_result1)";>~と|
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#46993;" onclick="getresult(0,0,0,46993);ins(i_result1)";>
-        <input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51060&#46993;" onclick="getresult(0,0,46993,51060);ins(i_result1)";>~と|
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#46020;" onclick="getresult(0,0,0,46020);ins(i_result1)";>~も|
-<BR>
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#50640;" onclick="getresult(0,0,0,50640);ins(i_result1)";>
-        <input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#50640&#44172;" onclick="getresult(0,0,44172,50640);ins(i_result1)";>~に|
-	<input type="button" style="WIDTH: 56px; HEIGHT: 28px; font-size : 14px;" value="&#50640&#44172&#49436;" onclick="getresult(0,49436,44172,50640);ins(i_result1)";>
-        <input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#54620&#53580;" onclick="getresult(0,0,53580,54620);ins(i_result1)";>
- 	<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#50640&#49436;" onclick="getresult(0,0,49436,50640);ins(i_result1)";>
-	<input type="button" style="WIDTH: 56px; HEIGHT: 28px; font-size : 14px;" value="&#54620&#53580&#49436;" onclick="getresult(0,49463,53580,54620);ins(i_result1)";>
-	<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#48512&#53552;" onclick="getresult(0,0,53552,48512);ins(i_result1)";>~から|
 
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#47196;" onclick="getresult(0,0,0,47196);ins(i_result1)";>
-       	<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51004&#47196;" onclick="getresult(0,0,47196,51004);ins(i_result1)";>~で|
-<BR>
-       	<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#48372&#45796;" onclick="getresult(0,0,45796,48372);ins(i_result1)";>~より|
+			m&#704;<input type="button" style="background-color:#F08080; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄻ"
+			 onclick="getresult_k(i_shoseik,i_chuseik,10)" onmouseup='moo()'>
+			<BR>
 
-	<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#44620&#51648;" onclick="getresult(0,0,51648,44620);ins(i_result1)";>~まで|
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#51032;" onclick="getresult(0,0,0,51032);ins(i_result1)";>~の|
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#47564;" onclick="getresult(0,0,0,47564);ins(i_result1)";>~だけ|
-	<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#47564&#53372;" onclick="getresult(0,0,53372,47564);ins(i_result1)";>~ぐらい|
-	<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#46972&#46020;" onclick="getresult(0,0,46020,46972);ins(i_result1)";>
-	<input type="button" style="WIDTH: 56px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51060&#46972&#46020;" onclick="getresult(0,46020,46972,51060);ins(i_result1)";>~でも|
-<BR>
+			l&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄼ" onclick="getresult_k(i_shoseik,i_chuseik,11)"
+			 onmouseup='moo()'>
+			l&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄽ" onclick="getresult_k(i_shoseik,i_chuseik,12)"
+			 onmouseup='moo()'>
+			l&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄾ" onclick="getresult_k(i_shoseik,i_chuseik,13)"
+			 onmouseup='moo()'>
+			p&#704;<input type="button" style="background-color:#F08080; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㄿ"
+			 onclick="getresult_k(i_shoseik,i_chuseik,14)" onmouseup='moo()'>
+			l&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅀ" onclick="getresult_k(i_shoseik,i_chuseik,15)"
+			 onmouseup='moo()'>
+			m&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12609"
+			 onclick="getresult_k(i_shoseik,i_chuseik,16)" onmouseup='moo()'>
+			p&#704;<input type="button" style="background-color : #FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12610"
+			 onclick="getresult_k(i_shoseik,i_chuseik,17)" onmouseup='moo()'>
+			p&#704;<input type="button" style=" WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅄ" onclick="getresult_k(i_shoseik,i_chuseik,18)"
+			 onmouseup='moo()'>
+			t&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="&#12613;"
+			 onclick="getresult_k(i_shoseik,i_chuseik,19)" onmouseup='moo()'>
+			t&#704;<input type="button" style="background-color:#FFDEAD;  WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅆ "
+			 onclick="getresult_k(i_shoseik,i_chuseik,20)" onmouseup='moo()'>
+			<BR>
+			ŋ&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅇ"
+			 onclick="getresult_k(i_shoseik,i_chuseik,21)" onmouseup='moo()'>
+			t&#704;<input type="button" style="; WIDTH: 34px; HEIGHT: 34px; font-size : 14px; background-color:#FFDEAD" value="ㅈ"
+			 onclick="getresult_k(i_shoseik,i_chuseik,22)" onmouseup='moo()'>
+			t&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅊ"
+			 onclick="getresult_k(i_shoseik,i_chuseik,23)" onmouseup='moo()'>
+			k&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅋ"
+			 onclick="getresult_k(i_shoseik,i_chuseik,24)" onmouseup='moo()'>
+			t&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅌ"
+			 onclick="getresult_k(i_shoseik,i_chuseik,25)" onmouseup='moo()'>
+			p&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅍ"
+			 onclick="getresult_k(i_shoseik,i_chuseik,26)" onmouseup='moo()'>
+			t&#704;<input type="button" style="background-color:#FFDEAD; WIDTH: 34px; HEIGHT: 34px; font-size : 18px;" value="ㅎ"
+			 onclick="getresult_k(i_shoseik,i_chuseik,27)" onmouseup='moo()' >
 
-</div>
-</form>
+			<!--JOSHI段//-->
+			<BR>{主要助詞}<BR>
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#45716;" onclick="getresult(0,0,0,45716);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51008;"
+			 onclick="getresult(0,0,0,51008);ins(i_result1)">~は|
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#44032;" onclick="getresult(0,0,0,44032);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51060"
+			 onclick="getresult(0,0,0,51060);ins(i_result1)">~が|
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#47484;" onclick="getresult(0,0,0,47484);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51012;"
+			 onclick="getresult(0,0,0,51012);ins(i_result1)">~を|
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#54616&#44256;" onclick="getresult(0,0,44256,54616);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#50752;" onclick="getresult(0,0,0,50752);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#44284;"
+			 onclick="getresult(0,0,0,44284);ins(i_result1)">~と|
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#46993;" onclick="getresult(0,0,0,46993);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51060&#46993;"
+			 onclick="getresult(0,0,46993,51060);ins(i_result1)">~と|
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#46020;" onclick="getresult(0,0,0,46020);ins(i_result1)"
+			>~も|
+			<BR>
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#50640;" onclick="getresult(0,0,0,50640);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#50640&#44172;" onclick="getresult(0,0,44172,50640);ins(i_result1)"
+			>~に|
+			<input type="button" style="WIDTH: 56px; HEIGHT: 28px; font-size : 14px;" value="&#50640&#44172&#49436;" onclick="getresult(0,49436,44172,50640);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#54620&#53580;" onclick="getresult(0,0,53580,54620);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#50640&#49436;" onclick="getresult(0,0,49436,50640);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 56px; HEIGHT: 28px; font-size : 14px;" value="&#54620&#53580&#49436;" onclick="getresult(0,49463,53580,54620);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#48512&#53552;" onclick="getresult(0,0,53552,48512);ins(i_result1)"
+			>~から|
+
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#47196;" onclick="getresult(0,0,0,47196);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51004&#47196;"
+			 onclick="getresult(0,0,47196,51004);ins(i_result1)">~で|
+			<BR>
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#48372&#45796;" onclick="getresult(0,0,45796,48372);ins(i_result1)"
+			>~より|
+
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#44620&#51648;" onclick="getresult(0,0,51648,44620);ins(i_result1)"
+			>~まで|
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#51032;" onclick="getresult(0,0,0,51032);ins(i_result1)"
+			>~の|
+			<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 14px;" value="&#47564;" onclick="getresult(0,0,0,47564);ins(i_result1)"
+			>~だけ|
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#47564&#53372;" onclick="getresult(0,0,53372,47564);ins(i_result1)"
+			>~ぐらい|
+			<input type="button" style="WIDTH: 44px; HEIGHT: 28px; font-size : 14px;" value="&#46972&#46020;" onclick="getresult(0,0,46020,46972);ins(i_result1)"
+			>
+			<input type="button" style="WIDTH: 56px; HEIGHT: 28px; font-size : 14px; background-color:#FFDEAD;" value="&#51060&#46972&#46020;"
+			 onclick="getresult(0,46020,46972,51060);ins(i_result1)">~でも|
+			<BR>
+
+		</div>
+	</form>
 </body>
 
-<Div align="center"><font size="3">©2013 Ikko Kurosawa</font>
-</html>
+<Div align="center">
+	<font size="3">©2013 Ikko Kurosawa</font>
 
+</html>

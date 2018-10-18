@@ -1,269 +1,507 @@
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
+
 <head>
-<script type="text/Javascript" src="new_type_load.js"></script>
-<script type="text/Javascript" src="new_kmer_type_load.js"></script>
-<script type="text/Javascript" src="!google3.js"></script>
-<script type="text/Javascript" src="!googletrans.js"></script>
-<script type="text/Javascript" src="!glosbe_lao.js"></script>
-<script type="text/Javascript" src="!YouTube.js"></script>
+  <script type="text/Javascript" src="new_type_load.js"></script>
+  <script type="text/Javascript" src="new_kmer_type_load.js"></script>
+  <script type="text/Javascript" src="!google3.js"></script>
+  <script type="text/Javascript" src="!googletrans.js"></script>
+  <script type="text/Javascript" src="!glosbe_lao.js"></script>
+  <script type="text/Javascript" src="!YouTube.js"></script>
 </head>
 
 
-<body onLoad="document.form.text2.focus()"; bgcolor="#ffa07a">
-<form name="form" action="method = "mouseover='pos()'; onmousup='pos()'; onkeyup='pos()';">
-
-<Div Align="center">
-
-
-<textarea cols="42" rows="2" id="area" name="text2" style="font-size :24px; padding4px; margin:4px; background-color: #ffffff;";>အက</textarea>
-
-<br />
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-size : 10px;"; value="All Copy" style="WIDTH: 150px; HEIGHT: 28px; font-size : 12px;"onclick="textcopy(); onmouseup='moo()';">
-
-<input type="button" value="Reset" style="WIDTH: 70px; HEIGHT: 40px; font-size : 10px;"; onclick="CLR(); onmouseup='moo()';">
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="Space" onclick="getresult(0,0,0,32);ins(i_result1);">
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;"value="BackSpace" onclick='debef()';">
-<BR>
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff99;" value="Google" onclick="button_Google();"/>
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff66;" value="Translate" onclick="button_Googletrans();"/>
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;" value="Glosbe-Dic" onclick="button_lao();"/>
-<input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;" value="YouTube" onclick="button_YouTube();">
-<br>
-</SCRIPT>
-<head>
-
-<body type= onLoad="document.form.text2.focus()"; bgcolor="#ffa07a"; Zawgyi-One,Serif;>
-<form name="form" action="" method="" onmouseover="'moo()'; onmouseup='moo()'; onkeyup='moo()'";>
-<Div Align="center";>
-<font size="1";><b>速攻入力　ミャンマー語入門</b>
-<br /> 
-
-<!--☆段//-->
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#96;" name="B1" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,1)' onmouseout='msgH0()' onclick="getresult(0,0,0,96);ins(i_result1);msgH0();">
- 	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4161;" name="B2" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,2)' onmouseout='msgH0()' onclick="getresult(0,0,0,4161);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4162;" name="B3" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,3)' onmouseout='msgH0()' onclick="getresult(0,0,0,4162);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4163;" name="B4" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,4)' onmouseout='msgH0()' onclick="getresult(0,0,0,4163);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4164;" name="B5" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,5)' onmouseout='msgH0()' onclick="getresult(0,0,0,4164);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4165;" name="B6" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,6)' onmouseout='msgH0()' onclick="getresult(0,0,0,4165);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4166;" name="B7" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,7)' onmouseout='msgH0()' onclick="getresult(0,0,0,4166);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4167;" name="B8" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,8)' onmouseout='msgH0()' onclick="getresult(0,0,0,4167);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4168;" name="B9" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,9)' onmouseout='msgH0()' onclick="getresult(0,0,0,4168);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4169;" name="B10" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,10)' onmouseout='msgH0()' onclick="getresult(0,0,0,4169);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4160;" name="B11" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,11)' onmouseout='msgH0()' onclick="getresult(0,0,0,1776);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#45;" name="B12" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,12)' onmouseout='msgH0()' onclick="getresult(0,0,0,45);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;" value="&#61;" name="B13" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,13)' onmouseout='msgH0()' onclick="getresult(0,0,0,61);ins(i_result1);msgH0();"><BR>
-<!--1//-->【子母音33】<BR>無気音
-	<input type="button" style="WID7TH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4096"; name="B14"; LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,14)' onmouseout='msgH0()' onclick="getresult(0,0,0,4096);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4098" name="B15" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,15)'; onmouseout='msgH0()'; onclick="getresult(0,0,0,4098);ins(i_result1);msgH0();">
-      	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4101;" name="B16" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,16)' onmouseout='msgH0()' onclick="getresult(0,0,0,4101);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4103;" name="B17" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,17)' onmouseout='msgH0()' onclick="getresult(0,0,0,4103);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4107;" name="B18" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,18)' onmouseout='msgH0()' onclick="getresult(0,0,0,4107);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4109;" name="B19" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,19)' onmouseout='msgH0()' onclick="getresult(0,0,0,4109);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4112;" name="B20" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,20)' onmouseout='msgH0()' onclick="getresult(0,0,0,4112);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4114;" name="B21" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,21)' onmouseout='msgH0()' onclick="getresult(0,0,0,4114);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4117;" name="B22" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,22)' onmouseout='msgH0()' onclick="getresult(0,0,0,4117);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4119;" name="B23" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,23)' onmouseout='msgH0()' onclick="getresult(0,0,0,4119);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4122;" name="B24" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,24)' onmouseout='msgH0()' onclick="getresult(0,0,0,4122);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4124;" name="B25" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,25)' onmouseout='msgH0()' onclick="getresult(0,0,0,4124);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4128;" name="B26" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,26)' onmouseout='msgH0()' onclick="getresult(0,0,0,4128);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F" value="&#4171;" name="B27" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,27)' onmouseout='msgH0()' onclick="getresult(0,0,0,4171);ins(i_result1);msgH0();">
-  
-
-<BR><!--2//-->有気音
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4097;" name="B28" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,28)' onmouseout='msgH0()' onclick="getresult(0,0,0,4097);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4099;" name="B29" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,29)' onmouseout='msgH0()' onclick="getresult(0,0,0,4099);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4102;" name="B30" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,30)' onmouseout='msgH0()' onclick="getresult(0,0,0,4102);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;"value="&#4104" name="B31" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,31)' onmouseout='msgH0()' onclick="getresult(0,0,0,3499);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4108;" name="B32" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,32)' onmouseout='msgH0()' onclick="getresult(0,0,0,4108);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4110;" name="B33" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,33)' onmouseout='msgH0()' onclick="getresult(0,0,0,4110);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4113;" name="B34" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,34)' onmouseout='msgH0()' onclick="getresult(0,0,0,4113);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4115;" name="B35" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,35)' onmouseout='msgH0()' onclick="getresult(0,0,0,4115);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4118;" name="B36" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,36)' onmouseout='msgH0()' onclick="getresult(0,0,0,4118);ins(i_result1);msgH0();"> 
-
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4126;" name="B37" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,37)' onmouseout='msgH0()' onclick="getresult(0,0,0,4126);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:'Zawgyi-One'; padding-left:2px;" value="&#4123;" name="B38" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,38)' onmouseout='msgH0()' onclick="getresult(0,0,0,3507);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4125;" name="B39" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,39)' onmouseout='msgH0()' onclick="getresult(0,0,0,4125);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129;" name="B40" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,40)' onmouseout='msgH0()' onclick="getresult(0,0,0,4129);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4127;" name="B41" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,41)' onmouseout='msgH0()' onclick="getresult(0,0,0,4127);ins(i_result1);msgH0();">
-
-
-<BR><!--3//-->鼻音
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4100;" name="B42" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,42)' onmouseout='msgH0()' onclick="getresult(0,0,0,4100);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4106;" name="B43" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,43)' onmouseout='msgH0()' onclick="getresult(0,0,0,4106);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;" value="&#4111;" name="B44" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,44)' onmouseout='msgH0()' onclick="getresult(0,0,0,4111);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4116;" name="B45" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,45)' onmouseout='msgH0()' onclick="getresult(0,0,0,4116);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4121;" name="B46" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,46)' onmouseout='msgH0()' onclick="getresult(0,0,0,4121);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4126;" name="B47" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,47)' onmouseout='msgH0()' onclick="getresult(0,0,0,4126);ins(i_result1);msgH0();">
-介子音４
- <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;" value="&#4154;" name="B48" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,48)' onmouseout='msgH0()' onclick="getresult(0,0,0,4154);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 10px; padding-left: 2px; font-family:Zawgyi-One; background-color:#AAD8E6;" value="&#4155;" name="B49" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,49)' onmouseout='msgH0()' onclick="getresult(0,0,0,4155);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4156;" name="B50" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,50)' onmouseout='msgH0()' onclick="getresult(0,0,0,4156);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4157;" name="B51" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,51)' onmouseout='msgH0()' onclick="getresult(0,0,0,4157);ins(i_result1);msgH0();">
-<br>基本母音12<br>
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;" value="&#4129;" name="B52" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,52)' onmouseout='msgH0()' onclick="getresult(0,0,0,4129);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;" value="&#4129&#4140;" name="B53" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,53)' onmouseout='msgH0()' onclick="getresult(0,0,4140,4129);ins(i_result1);msgH0();">
- <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4131;" name="B84" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,84)' onmouseout='msgH0()' onclick="getresult(0,0,0,4131);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4132;" name="B85" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,85)' onmouseout='msgH0()' onclick="getresult(0,0,0,4132);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4133;" name="B86" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,86)' onmouseout='msgH0()' onclick="getresult(0,0,0,4133);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;" value="&#4134;" name="B87" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,87)' onmouseout='msgH0()' onclick="getresult(0,0,0,4134);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4135;" name="B89" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,89)' onmouseout='msgH0()' onclick="getresult(0,0,0,4135);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4146;" name="B54" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,54)' onmouseout='msgH0()' onclick="getresult(0,0,4146,4129);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px" value="&#4137;" name="B90" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,90)' onmouseout='msgH0()' onclick="getresult(0,0,0,4137);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 36px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px" value="&#4138;" name="B91" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,91)' onmouseout='msgH0()' onclick="getresult(0,0,0,4138);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4150;" name="B55" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,55)' onmouseout='msgH0()' onclick="getresult(0,0,4150,4129);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4141&#4143;" name="B56" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,56)' onmouseout='msgH0()' onclick="getresult(0,4143,4141,4129);ins(i_result1);msgH0();">
+<body onLoad="document.form.text2.focus()" ; bgcolor="#ffa07a">
+  <form name="form" action="method = " mouseover='pos()' ; onmousup='pos()' ; onkeyup='pos()' ;">
+
+    <Div Align="center">
+
+
+      <textarea cols="42" rows="2" id="area" name="text2" style="font-size :24px; padding4px; margin:4px; background-color: #ffffff;"
+        ;>အက</textarea>
+
+      <br />
+      <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-size : 10px;" ; value="All Copy" style="WIDTH: 150px; HEIGHT: 28px; font-size : 12px;"
+        onclick="textcopy(); onmouseup='moo()';">
+
+      <input type="button" value="Reset" style="WIDTH: 70px; HEIGHT: 40px; font-size : 10px;" ; onclick="CLR(); onmouseup='moo()';">
+      <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="Space"
+        onclick="getresult(0,0,0,32);ins(i_result1);">
+      <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="BackSpace"
+        onclick='debef()' ;">
+      <BR>
+      <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff99;"
+        value="Google" onclick="button_Google();" />
+      <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff66;"
+        value="Translate" onclick="button_Googletrans();" />
+      <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;"
+        value="Glosbe-Dic" onclick="button_lao();" />
+      <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;"
+        value="YouTube" onclick="button_YouTube();">
+      <br>
+      </SCRIPT>
+
+      <head>
+
+      <body type=onLoad="document.form.text2.focus()" ; bgcolor="#ffa07a" ; Zawgyi-One,Serif;>
+        <form name="form" action="" method="" onmouseover="'moo()'; onmouseup='moo()'; onkeyup='moo()'" ;>
+          <Div Align="center" ;>
+            <font size="1" ;><b>速攻入力　ミャンマー語入門</b>
+              <br />
+
+              <!--☆段//-->
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#96;"
+                name="B1" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,1)' onmouseout='msgH0()' onclick="getresult(0,0,0,96);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4161;"
+                name="B2" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,2)' onmouseout='msgH0()' onclick="getresult(0,0,0,4161);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4162;"
+                name="B3" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,3)' onmouseout='msgH0()' onclick="getresult(0,0,0,4162);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4163;"
+                name="B4" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,4)' onmouseout='msgH0()' onclick="getresult(0,0,0,4163);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4164;"
+                name="B5" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,5)' onmouseout='msgH0()' onclick="getresult(0,0,0,4164);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4165;"
+                name="B6" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,6)' onmouseout='msgH0()' onclick="getresult(0,0,0,4165);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4166;"
+                name="B7" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,7)' onmouseout='msgH0()' onclick="getresult(0,0,0,4166);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4167;"
+                name="B8" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,8)' onmouseout='msgH0()' onclick="getresult(0,0,0,4167);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4168;"
+                name="B9" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,9)' onmouseout='msgH0()' onclick="getresult(0,0,0,4168);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4169;"
+                name="B10" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,10)' onmouseout='msgH0()' onclick="getresult(0,0,0,4169);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4160;"
+                name="B11" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,11)' onmouseout='msgH0()' onclick="getresult(0,0,0,1776);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#45;"
+                name="B12" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,12)' onmouseout='msgH0()' onclick="getresult(0,0,0,45);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;"
+                value="&#61;" name="B13" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,13)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,61);ins(i_result1);msgH0();"><BR>
+              <!--1//-->【子母音33】<BR>無気音
+              <input type="button" style="WID7TH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4096"
+                ; name="B14" ; LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,14)' onmouseout='msgH0()' onclick="getresult(0,0,0,4096);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4098"
+                name="B15" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,15)' ; onmouseout='msgH0()' ; onclick="getresult(0,0,0,4098);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4101;"
+                name="B16" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,16)' onmouseout='msgH0()' onclick="getresult(0,0,0,4101);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4103;"
+                name="B17" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,17)' onmouseout='msgH0()' onclick="getresult(0,0,0,4103);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4107;"
+                name="B18" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,18)' onmouseout='msgH0()' onclick="getresult(0,0,0,4107);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4109;"
+                name="B19" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,19)' onmouseout='msgH0()' onclick="getresult(0,0,0,4109);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4112;"
+                name="B20" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,20)' onmouseout='msgH0()' onclick="getresult(0,0,0,4112);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4114;"
+                name="B21" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,21)' onmouseout='msgH0()' onclick="getresult(0,0,0,4114);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4117;"
+                name="B22" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,22)' onmouseout='msgH0()' onclick="getresult(0,0,0,4117);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4119;" name="B23" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,23)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4119);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4122;" name="B24" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,24)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4122);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4124;"
+                name="B25" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,25)' onmouseout='msgH0()' onclick="getresult(0,0,0,4124);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4128;"
+                name="B26" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,26)' onmouseout='msgH0()' onclick="getresult(0,0,0,4128);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F"
+                value="&#4171;" name="B27" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,27)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4171);ins(i_result1);msgH0();">
+
+
+              <BR>
+              <!--2//-->有気音
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4097;"
+                name="B28" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,28)' onmouseout='msgH0()' onclick="getresult(0,0,0,4097);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4099;"
+                name="B29" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,29)' onmouseout='msgH0()' onclick="getresult(0,0,0,4099);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4102;"
+                name="B30" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,30)' onmouseout='msgH0()' onclick="getresult(0,0,0,4102);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4104"
+                name="B31" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,31)' onmouseout='msgH0()' onclick="getresult(0,0,0,3499);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4108;"
+                name="B32" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,32)' onmouseout='msgH0()' onclick="getresult(0,0,0,4108);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4110;"
+                name="B33" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,33)' onmouseout='msgH0()' onclick="getresult(0,0,0,4110);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4113;"
+                name="B34" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,34)' onmouseout='msgH0()' onclick="getresult(0,0,0,4113);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4115;"
+                name="B35" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,35)' onmouseout='msgH0()' onclick="getresult(0,0,0,4115);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4118;"
+                name="B36" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,36)' onmouseout='msgH0()' onclick="getresult(0,0,0,4118);ins(i_result1);msgH0();">
+
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4126;"
+                name="B37" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,37)' onmouseout='msgH0()' onclick="getresult(0,0,0,4126);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:'Zawgyi-One'; padding-left:2px;"
+                value="&#4123;" name="B38" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,38)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,3507);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4125;"
+                name="B39" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,39)' onmouseout='msgH0()' onclick="getresult(0,0,0,4125);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129;"
+                name="B40" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,40)' onmouseout='msgH0()' onclick="getresult(0,0,0,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4127;"
+                name="B41" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,41)' onmouseout='msgH0()' onclick="getresult(0,0,0,4127);ins(i_result1);msgH0();">
+
+
+              <BR>
+              <!--3//-->鼻音
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4100;"
+                name="B42" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,42)' onmouseout='msgH0()' onclick="getresult(0,0,0,4100);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4106;"
+                name="B43" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,43)' onmouseout='msgH0()' onclick="getresult(0,0,0,4106);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;"
+                value="&#4111;" name="B44" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,44)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4111);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4116;"
+                name="B45" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,45)' onmouseout='msgH0()' onclick="getresult(0,0,0,4116);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4121;"
+                name="B46" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,46)' onmouseout='msgH0()' onclick="getresult(0,0,0,4121);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4126;"
+                name="B47" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,47)' onmouseout='msgH0()' onclick="getresult(0,0,0,4126);ins(i_result1);msgH0();">
+              介子音４
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;"
+                value="&#4154;" name="B48" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,48)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4154);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 10px; padding-left: 2px; font-family:Zawgyi-One; background-color:#AAD8E6;"
+                value="&#4155;" name="B49" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,49)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4155);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4156;"
+                name="B50" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,50)' onmouseout='msgH0()' onclick="getresult(0,0,0,4156);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4157;"
+                name="B51" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,51)' onmouseout='msgH0()' onclick="getresult(0,0,0,4157);ins(i_result1);msgH0();">
+              <br>基本母音12<br>
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;"
+                value="&#4129;" name="B52" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,52)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;"
+                value="&#4129&#4140;" name="B53" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,53)' onmouseout='msgH0()'
+                onclick="getresult(0,0,4140,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4131;" name="B84" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,84)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4131);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4132;" name="B85" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,85)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4132);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4133;"
+                name="B86" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,86)' onmouseout='msgH0()' onclick="getresult(0,0,0,4133);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;"
+                value="&#4134;" name="B87" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,87)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4134);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4135;"
+                name="B89" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,89)' onmouseout='msgH0()' onclick="getresult(0,0,0,4135);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4146;"
+                name="B54" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,54)' onmouseout='msgH0()' onclick="getresult(0,0,4146,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px"
+                value="&#4137;" name="B90" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,90)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4137);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 36px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px"
+                value="&#4138;" name="B91" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,91)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4138);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4150;"
+                name="B55" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,55)' onmouseout='msgH0()' onclick="getresult(0,0,4150,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4141&#4143;"
+                name="B56" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,56)' onmouseout='msgH0()' onclick="getresult(0,4143,4141,4129);ins(i_result1);msgH0();">
+
+              <BR>
+              <!--4//-->母音24<BR>
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4129;" name="B59" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,59)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;"
+                value="&#4129&#4140;" name="B60" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,60)' onmouseout='msgH0()'
+                onclick="getresult(0,0,4140,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;"
+                value="&#4129&#4140&#4152;" name="B61" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,61)'
+                onmouseout='msgH0()' onclick="getresult(0,4152,4140,4129);ins(i_result1);msgH0();">
+              |
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4129&#4141;" name="B62" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,62)' onmouseout='msgH0()'
+                onclick="getresult(0,0,4141,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4129&#4142" name="B63" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,63)' onmouseout='msgH0()'
+                onclick="getresult(0,0,4142,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4129&#4142&#4152" name="B64" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,64)'
+                onmouseout='msgH0()' onclick="getresult(0,4152,4142,4129);ins(i_result1);msgH0();">
+              |
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4143;"
+                name="B65" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,65)' onmouseout='msgH0()' onclick="getresult(0,0,4143,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;"
+                value="&#4129&#4144;" name="B66" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,66)' onmouseout='msgH0()'
+                onclick="getresult(0,0,4144,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;"
+                value="&#4129&#4144&#4152;" name="B67" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,67)'
+                onmouseout='msgH0()' onclick="getresult(0,4152,4144,4129);ins(i_result1);msgH0();">
+              |<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;"
+                value="&#4145&#4129;" name="B68" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,68)' onmouseout='msgH0()'
+                onclick="getresult(0,0,4129,4145);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px"
+                value="&#4145&#4129&#4151;" name="B69" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,69)'
+                onmouseout='msgH0()' onclick="getresult(0,4151,4129,4145);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px"
+                value="&#4145&#4129&#4152;" name="B70" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,70)'
+                onmouseout='msgH0()' onclick="getresult(0,415,4129,4145);ins(i_result1);msgH0();">
+              <BR>
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4146;"
+                name="B71" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,71)' onmouseout='msgH0()' onclick="getresult(0,0,4146,4129);ins(i_result1);msgH0();">
+
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px"
+                value="&#4129&#4146&#4151;" name="B72" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,72)'
+                onmouseout='msgH0()' onclick="getresult(0,4151,4146,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px"
+                value="&#4129&#4146&#4152;" name="B73" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,73)'
+                onmouseout='msgH0()' onclick="getresult(0,4152,4146,4129);ins(i_result1);msgH0();">
+              |<input type="button" style="WIDTH: 32px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px"
+                value="&#4145&#4129&#4140&#4151;" name="B74" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,74)'
+                onmouseout='msgH0()' onclick="getresult(4151,4140,4129,4145);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 32px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px"
+                value="&#4145&#4129&#4140;" name="B75" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,75)'
+                onmouseout='msgH0()' onclick="getresult(0,4140,4129,4145);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 32px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px"
+                value="&#4145&#4129&#4140&#4153;" name="B76" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,76)'
+                onmouseout='msgH0()' onclick="getresult(4153,4140,4129,4145);ins(i_result1);msgH0();">
+              |<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4141&#4143&#4244;"
+                name="B77" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,77)' onmouseout='msgH0()' onclick="getresult(4244,4143,4141,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px"
+                value="&#4129&#4141&#4143;" name="B78" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,78)'
+                onmouseout='msgH0()' onclick="getresult(0,4143,4141,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 30px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px"
+                value="&#4129&#4141&#4143&#4152;" name="B79" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,79)'
+                onmouseout='msgH0()' onclick="getresult(4152,4143,4141,4129);ins(i_result1);msgH0();">
+              | <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;"
+                value="&#4129&#4150&#4151;" name="B80" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,80)'
+                onmouseout='msgH0()' onclick="getresult(0,4151,4150,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;"
+                value="&#4129&#4150;" name="B81" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,81)' onmouseout='msgH0()'
+                onclick="getresult(0,0,4150,4129);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;"
+                value="&#4129&#4150&#4152;" name="B82" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,82)'
+                onmouseout='msgH0()' onclick="getresult(0,4152,4150,4129);ins(i_result1);msgH0();">
+              <br>特殊文字<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4175;" name="B83" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,83)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4175);ins(i_result1);msgH0();">
+
+
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;"
+                value="&#4134&#4152;" name="B88" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,88)' onmouseout='msgH0()'
+                onclick="getresult(0,0,4152,4134);ins(i_result1);msgH0();">
+
+
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4172;" name="B92" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,92)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4172);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4173;" name="B93" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,93)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4173);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 34px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;"
+                value="&#4174;" name="B94" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,94)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4174);ins(i_result1);msgH0();">
+              <BR>母音符号<BR>
+              下声<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;"
+                value="&#32;" name="B95" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,95)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,32);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#32;"
+                name="B96" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,96)' onmouseout='msgH0()' onclick="getresult(0,0,0,32);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F"
+                value="&#4141;" name="B97" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,97)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4141);ins(i_result1);msgH0();">|
+
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F"
+                value="&#4143;" name="B98" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,98)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4143);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F"
+                value="&#4147;" name="B99" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,99)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4147);ins(i_result1);msgH0();">
+
+              { <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#AAD8E6;"
+                value="&#4145;" name="B100" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,100)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;"
+                value="&#4244;" name="B100" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,100)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4244);ins(i_result1);msgH0();">}
+
+
+
+
+              {<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;"
+                value="&#4145;" name="B101" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,101)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;"
+                value="&#4139&#4244;" name="B101" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,101)'
+                onmouseout='msgH0()' onclick="getresult(0,0,4244,4139);ins(i_result1);msgH0();">
+              }
+
+
+
+
+
+
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4146&#4151;"
+                name="B102" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,102)' onmouseout='msgH0()' onclick="getresult(0,0,4151,4146);ins(i_result1);msgH0();">
+
+              { <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;"
+                value="&#4145" name="B103" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,103)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;"
+                value="&#4140&#4244;" name="B103" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,103)'
+                onmouseout='msgH0()' onclick="getresult(0,0,4244,4140);ins(i_result1);msgH0();">
+
+
+
+
+
+              } <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4141&#4143&#4244;"
+                name="B104" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,104)' onmouseout='msgH0()' onclick="getresult(0,4244,4143,4141);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4150&#4151;"
+                name="B105" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,105)' onmouseout='msgH0()' onclick="getresult(0,0,4151,4150);ins(i_result1);msgH0();">
+
+
+
+              <BR>低声
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;"
+                value="&#4140;" name="B108" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,106)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4140);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;"
+                value="&#4139;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4139);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;"
+                value="&#4142;" name="B108" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,108)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4142);ins(i_result1);msgH0();">|<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;"
+                value="&#4144;" name="B109" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,109)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4144);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;"
+                value="&#4148;" name="B110" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,110)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4148);ins(i_result1);msgH0();">
+
+
+
+              {<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;"
+                value="&#4145;" name="B111" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,111)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;"
+                value="&#32;" name="B111" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,111)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,0);ins(i_result1);msgH0();">
+
+
+
+              }{<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;"
+                value="&#4145" name="B112" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,112)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#ADFF2F"
+                value="&#4186" name="B112" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,112)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4186);ins(i_result1);msgH0();">
+              }
+
+
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;"
+                value="&#4146&#4151;" name="B113" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,113)'
+                onmouseout='msgH0()' onclick="getresult(0,0,4151,4146);ins(i_result1);msgH0();">
+
+
+              {<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;"
+                value="&#4145;" name="B114" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,114)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#ADFF2F"
+                value="&#4140;" name="B114" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,114)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4140);ins(i_result1);msgH0();">
+
+
+              }
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;"
+                value="&#4141&#4143;" name="B115" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,115)'
+                onmouseout='msgH0()' onclick="getresult(0,0,4143,4141);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;"
+                value="&#4150;" name="B116" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,116)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4150);ins(i_result1);msgH0();">
+
+
+
+              <BR>高声
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;"
+                value="&#4140&#4152;" name="B117" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,117)'
+                onmouseout='msgH0()' onclick="getresult(0,0,4152,4140);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4139&#4152;"
+                name="B118" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,118)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4139);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4142&#4152;"
+                name="B119" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,119)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4142);ins(i_result1);msgH0();">
+              |<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4144&#4152;"
+                name="B120" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,120)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4144);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4148&#4152;"
+                name="B121" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,121)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4148);ins(i_result1);msgH0();">
+
+
+              {<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;"
+                value="&#4145" name="B122" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,122)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#ADFF2F;"
+                value="&#4152;" name="B122" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,122)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4152);ins(i_result1);msgH0();">
+
+
+              }{
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;"
+                value="&#4145" name="B123" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,123)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#ADFF2F;"
+                value="&#4139;" name="B123" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,123)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4139);ins(i_result1);msgH0();">
+
+
+
+              }
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4146&#4152;"
+                name="B124" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,124)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4146);ins(i_result1);msgH0();">
+
+              {<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px; background-color:#AAD8E6;"
+                value="&#4145" name="B125" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,125)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;"
+                value="&#4140&#4153;" name="B125" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,125)'
+                onmouseout='msgH0()' onclick="getresult(0,0,4153,4140);ins(i_result1);msgH0();">
+              }
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4141&#4143&#4152;"
+                name="B126" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,126)' onmouseout='msgH0()' onclick="getresult(0,4152,4143,4141);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4150&#4152;"
+                name="B127" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,127)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4150);ins(i_result1);msgH0();">
+
+              <BR>
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F"
+                value="&#4151;" name="B106" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,106)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4151);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;"
+                value="&#4142;" name="B106" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,106)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4142);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F; padding-right:0px;"
+                value="&#4153;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4153);ins(i_result1);msgH0();">
+
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-right:0px; background-color:#ADFF2F"
+                value="&#4244;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4244);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F"
+                value="&#4150;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4150);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;"
+                value="&#4146;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4146);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#AAD8E6;"
+                value="&#4145;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#ADFF2F"
+                value="&#4152;" name="B122" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,122)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4152);ins(i_result1);msgH0();">
+              <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F"
+                value="&#4171;" name="B27" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,27)' onmouseout='msgH0()'
+                onclick="getresult(0,0,0,4171);ins(i_result1);msgH0();">
+
+
+              <BR>
+              <!--★☆☆☆☆☆段//-->
+
+
+          </div>
+          <DIV id="m0" style="position:absolute;padding:10px"></DIV>
+          <Div align="center">©Ikko Kurosawa Mail: akione@pg.highway.ne.jp<br>
+            Font Zawgyi-One only available. Use the font to other apli.
+
+          </div>
+      </body>
+  </form>
 
-<BR><!--4//-->母音24<BR>
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4129;" name="B59" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,59)' onmouseout='msgH0()' onclick="getresult(0,0,0,4129);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;" value="&#4129&#4140;" name="B60" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,60)' onmouseout='msgH0()' onclick="getresult(0,0,4140,4129);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;" value="&#4129&#4140&#4152;" name="B61" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,61)' onmouseout='msgH0()' onclick="getresult(0,4152,4140,4129);ins(i_result1);msgH0();">
-|
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4129&#4141;" name="B62" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,62)' onmouseout='msgH0()' onclick="getresult(0,0,4141,4129);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4129&#4142" name="B63" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,63)' onmouseout='msgH0()' onclick="getresult(0,0,4142,4129);ins(i_result1);msgH0();">
- <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4129&#4142&#4152" name="B64" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,64)' onmouseout='msgH0()' onclick="getresult(0,4152,4142,4129);ins(i_result1);msgH0();">
-|
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4143;" name="B65" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,65)' onmouseout='msgH0()' onclick="getresult(0,0,4143,4129);ins(i_result1);msgH0();">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;" value="&#4129&#4144;" name="B66" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,66)' onmouseout='msgH0()' onclick="getresult(0,0,4144,4129);ins(i_result1);msgH0();">         
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;" value="&#4129&#4144&#4152;" name="B67" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,67)' onmouseout='msgH0()' onclick="getresult(0,4152,4144,4129);ins(i_result1);msgH0();">
-|<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;" value="&#4145&#4129;" name="B68" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,68)' onmouseout='msgH0()' onclick="getresult(0,0,4129,4145);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px" value="&#4145&#4129&#4151;" name="B69" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,69)' onmouseout='msgH0()' onclick="getresult(0,4151,4129,4145);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px" value="&#4145&#4129&#4152;" name="B70" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,70)' onmouseout='msgH0()' onclick="getresult(0,415,4129,4145);ins(i_result1);msgH0();">
-<BR>
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4146;" name="B71" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,71)' onmouseout='msgH0()' onclick="getresult(0,0,4146,4129);ins(i_result1);msgH0();">
-
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px" value="&#4129&#4146&#4151;" name="B72" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,72)' onmouseout='msgH0()' onclick="getresult(0,4151,4146,4129);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px" value="&#4129&#4146&#4152;" name="B73" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,73)' onmouseout='msgH0()' onclick="getresult(0,4152,4146,4129);ins(i_result1);msgH0();">
-|<input type="button" style="WIDTH: 32px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px" value="&#4145&#4129&#4140&#4151;" name="B74" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,74)' onmouseout='msgH0()' onclick="getresult(4151,4140,4129,4145);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 32px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px" value="&#4145&#4129&#4140;" name="B75" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,75)' onmouseout='msgH0()' onclick="getresult(0,4140,4129,4145);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 32px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px" value="&#4145&#4129&#4140&#4153;" name="B76" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,76)' onmouseout='msgH0()' onclick="getresult(4153,4140,4129,4145);ins(i_result1);msgH0();">
-|<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4129&#4141&#4143&#4244;" name="B77" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,77)' onmouseout='msgH0()' onclick="getresult(4244,4143,4141,4129);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px" value="&#4129&#4141&#4143;" name="B78" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,78)' onmouseout='msgH0()' onclick="getresult(0,4143,4141,4129);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 30px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 0px" value="&#4129&#4141&#4143&#4152;" name="B79" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,79)' onmouseout='msgH0()' onclick="getresult(4152,4143,4141,4129);ins(i_result1);msgH0();">
-|	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;" value="&#4129&#4150&#4151;" name="B80" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,80)' onmouseout='msgH0()' onclick="getresult(0,4151,4150,4129);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;" value="&#4129&#4150;" name="B81" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,81)' onmouseout='msgH0()' onclick="getresult(0,0,4150,4129);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; padding-left: 2px; font-family:Zawgyi-One;" value="&#4129&#4150&#4152;" name="B82" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,82)' onmouseout='msgH0()' onclick="getresult(0,4152,4150,4129);ins(i_result1);msgH0();">
-<br>特殊文字<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4175;" name="B83" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,83)' onmouseout='msgH0()' onclick="getresult(0,0,0,4175);ins(i_result1);msgH0();">
-
-
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;" value="&#4134&#4152;" name="B88" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,88)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4134);ins(i_result1);msgH0();">         
-
-	
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4172;" name="B92" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,92)' onmouseout='msgH0()' onclick="getresult(0,0,0,4172);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4173;" name="B93" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,93)' onmouseout='msgH0()' onclick="getresult(0,0,0,4173);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 34px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 3px;" value="&#4174;" name="B94" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,94)' onmouseout='msgH0()' onclick="getresult(0,0,0,4174);ins(i_result1);msgH0();">
-<BR>母音符号<BR>
-        下声<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;" value="&#32;" name="B95" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,95)' onmouseout='msgH0()' onclick="getresult(0,0,0,32);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#32;" name="B96" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,96)' onmouseout='msgH0()' onclick="getresult(0,0,0,32);ins(i_result1);msgH0();">
-	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F" value="&#4141;" name="B97" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,97)' onmouseout='msgH0()' onclick="getresult(0,0,0,4141);ins(i_result1);msgH0();">|
-
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F" value="&#4143;" name="B98" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,98)' onmouseout='msgH0()' onclick="getresult(0,0,0,4143);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F" value="&#4147;" name="B99" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,99)' onmouseout='msgH0()' onclick="getresult(0,0,0,4147);ins(i_result1);msgH0();">
-
-{	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#AAD8E6;" value="&#4145;" name="B100" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,100)' onmouseout='msgH0()' onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;" value="&#4244;" name="B100" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,100)' onmouseout='msgH0()' onclick="getresult(0,0,0,4244);ins(i_result1);msgH0();">}
-
-
-
-
-{<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;" value="&#4145;" name="B101" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,101)' onmouseout='msgH0()' onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;" value="&#4139&#4244;" name="B101" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,101)' onmouseout='msgH0()' onclick="getresult(0,0,4244,4139);ins(i_result1);msgH0();">
-}
-
-
-
-
-
-
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4146&#4151;" name="B102" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,102)' onmouseout='msgH0()' onclick="getresult(0,0,4151,4146);ins(i_result1);msgH0();">
-
-{	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;" value="&#4145" name="B103" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,103)' onmouseout='msgH0()' onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;" value="&#4140&#4244;" name="B103" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,103)' onmouseout='msgH0()' onclick="getresult(0,0,4244,4140);ins(i_result1);msgH0();">
-
-
-
-
-
-}	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4141&#4143&#4244;" name="B104" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,104)' onmouseout='msgH0()' onclick="getresult(0,4244,4143,4141);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4150&#4151;" name="B105" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,105)' onmouseout='msgH0()' onclick="getresult(0,0,4151,4150);ins(i_result1);msgH0();">
-
-
-	
-<BR>低声
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;" value="&#4140;" name="B108" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,106)' onmouseout='msgH0()' onclick="getresult(0,0,0,4140);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;" value="&#4139;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()' onclick="getresult(0,0,0,4139);ins(i_result1);msgH0();">
- 	<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;" value="&#4142;" name="B108" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,108)' onmouseout='msgH0()' onclick="getresult(0,0,0,4142);ins(i_result1);msgH0();">|<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;" value="&#4144;" name="B109" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,109)' onmouseout='msgH0()' onclick="getresult(0,0,0,4144);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;" value="&#4148;" name="B110" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,110)' onmouseout='msgH0()' onclick="getresult(0,0,0,4148);ins(i_result1);msgH0();">
-
-
-
-{<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;" value="&#4145;" name="B111" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,111)' onmouseout='msgH0()' onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;" value="&#32;" name="B111" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,111)' onmouseout='msgH0()' onclick="getresult(0,0,0,0);ins(i_result1);msgH0();">
-
-
-
-}{<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;" value="&#4145" name="B112" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,112)' onmouseout='msgH0()' onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#ADFF2F" value="&#4186" name="B112" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,112)' onmouseout='msgH0()' onclick="getresult(0,0,0,4186);ins(i_result1);msgH0();">
-}
-
-
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;" value="&#4146&#4151;" name="B113" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,113)' onmouseout='msgH0()' onclick="getresult(0,0,4151,4146);ins(i_result1);msgH0();">
-
-
-{<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;" value="&#4145;" name="B114" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,114)' onmouseout='msgH0()' onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#ADFF2F" value="&#4140;" name="B114" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,114)' onmouseout='msgH0()' onclick="getresult(0,0,0,4140);ins(i_result1);msgH0();">
-
-
-}
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;" value="&#4141&#4143;" name="B115" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,115)' onmouseout='msgH0()' onclick="getresult(0,0,4143,4141);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;" value="&#4150;" name="B116" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,116)' onmouseout='msgH0()' onclick="getresult(0,0,0,4150);ins(i_result1);msgH0();">
-
-
- 
-<BR>高声
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;" value="&#4140&#4152;" name="B117" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,117)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4140);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4139&#4152;" name="B118" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,118)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4139);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4142&#4152;" name="B119" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,119)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4142);ins(i_result1);msgH0();">
-|<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4144&#4152;" name="B120" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,120)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4144);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4148&#4152;" name="B121" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,121)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4148);ins(i_result1);msgH0();">
-
-
-{<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#AAD8E6;" value="&#4145" name="B122" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,122)' onmouseout='msgH0()' onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#ADFF2F;" value="&#4152;" name="B122" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,122)' onmouseout='msgH0()' onclick="getresult(0,0,0,4152);ins(i_result1);msgH0();">
-
-
-}{
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px;" value="&#4145" name="B123" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,123)' onmouseout='msgH0()' onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#ADFF2F;" value="&#4139;" name="B123" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,123)' onmouseout='msgH0()' onclick="getresult(0,0,0,4139);ins(i_result1);msgH0();">
-
-
-
-}
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4146&#4152;" name="B124" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,124)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4146);ins(i_result1);msgH0();">
-
-{<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px; background-color:#AAD8E6;" value="&#4145" name="B125" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,125)' onmouseout='msgH0()' onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">+<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left: 2px;" value="&#4140&#4153;" name="B125" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,125)' onmouseout='msgH0()' onclick="getresult(0,0,4153,4140);ins(i_result1);msgH0();">
-}
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4141&#4143&#4152;" name="B126" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,126)' onmouseout='msgH0()' onclick="getresult(0,4152,4143,4141);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One;" value="&#4150&#4152;" name="B127" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,127)' onmouseout='msgH0()' onclick="getresult(0,0,4152,4150);ins(i_result1);msgH0();">
-
-<BR>
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F" value="&#4151;" name="B106" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,106)' onmouseout='msgH0()' onclick="getresult(0,0,0,4151);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;" value="&#4142;" name="B106" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,106)' onmouseout='msgH0()' onclick="getresult(0,0,0,4142);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F; padding-right:0px;" value="&#4153;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()' onclick="getresult(0,0,0,4153);ins(i_result1);msgH0();">
-
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-right:0px; background-color:#ADFF2F" value="&#4244;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()' onclick="getresult(0,0,0,4244);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F" value="&#4150;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()' onclick="getresult(0,0,0,4150);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F;" value="&#4146;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()' onclick="getresult(0,0,0,4146);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#AAD8E6;" value="&#4145;" name="B107" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,107)' onmouseout='msgH0()' onclick="getresult(0,0,0,4145);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; padding-left:2px; background-color:#ADFF2F" value="&#4152;" name="B122" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,122)' onmouseout='msgH0()' onclick="getresult(0,0,0,4152);ins(i_result1);msgH0();">
-<input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Zawgyi-One; background-color:#ADFF2F" value="&#4171;" name="B27" LANGUAGE=javascript onmouseover='msgS0(event.x,event.y,27)' onmouseout='msgH0()' onclick="getresult(0,0,0,4171);ins(i_result1);msgH0();">
-
-
-<BR><!--★☆☆☆☆☆段//-->
-
-
-</div>
-  <DIV id="m0" style="position:absolute;padding:10px"></DIV>
-<Div align="center">©Ikko Kurosawa Mail: akione@pg.highway.ne.jp<br>
-Font Zawgyi-One only available. Use the font to other apli.
-
-</div>
-</body>
-</form>
 </html>
-

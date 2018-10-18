@@ -39,7 +39,19 @@ class AppContainer extends Component {
 
   componentWillMount() {
     const { match: { params: { lang } }, history } = this.props;
+    this.handleKeyboardLanguage(lang, history);
+  }
 
+  componentWillReceiveProps(nextProps) {
+    const { match: { params: { lang } }, history } = this.props;
+    const { match: { params: { lang: nextLang } } } = nextProps;
+
+    if (lang !== nextLang) {
+      this.handleKeyboardLanguage(nextLang, history);
+    }
+  }
+
+  handleKeyboardLanguage = (lang, history) => {
     // 未定義の言語がURLに指定されていれば NoContent を表示
     if (typeof languages[lang] === 'undefined') {
       // Not Found
@@ -50,7 +62,7 @@ class AppContainer extends Component {
     this.setState({
       keycode: languages[lang].keycode,
     });
-  }
+  };
 
   handleChangeValue = (value) => {
     this.setState({
@@ -92,9 +104,7 @@ class AppContainer extends Component {
     });
   };
 
-  handleKeyboardClick = (code) => {
-    // TODO: 韓国語の考慮
-    const char = String.fromCharCode(code[3]);
+  handleKeyboardClick = (char) => {
     this.insert(char);
   };
 

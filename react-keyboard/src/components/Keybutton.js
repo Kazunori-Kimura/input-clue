@@ -17,23 +17,28 @@ const styles = () => ({
 class Keybutton extends Component {
   handleClick = () => {
     const { code, onClick } = this.props;
-    onClick(code);
+    onClick(this.getCharFromCode(code));
   }
+
+  getCharFromCode = (code) => {
+    const params = code.filter(c => c !== 0).reverse();
+    return String.fromCharCode(...params);
+  };
 
   render() {
     const { code, color, classes } = this.props;
     // TODO: 韓国語の場合のラベル表示を確認
-    const label = String.fromCharCode(code[3]);
+    const char = this.getCharFromCode(code);
 
     return (
       <Button
         className={classes.key}
         variant="outlined"
-        value={code}
+        value={char}
         style={{ backgroundColor: color }}
         onClick={this.handleClick}
       >
-        {label}
+        {char}
       </Button>
     );
   }

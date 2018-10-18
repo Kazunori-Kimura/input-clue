@@ -78,12 +78,28 @@ class Keyboard extends Component {
     );
   };
 
-  renderKey = ({ code, color = '#cccccc' }) => {
+  renderKey = ({ code, color = '#cccccc', type = 'button', value = '' }, index) => {
     const { onClick } = this.props;
+
+    if (type === 'hr') {
+      return (
+        <hr
+          key={`hr_${index}`}
+          style={{ width: '100%' }}
+        />
+      );
+    }
+    if (type === 'label') {
+      return (
+        <span key={`label_${index}`}>
+          {value}
+        </span>
+      );
+    }
 
     return (
       <Keybutton
-        key={`button_${code.join('')}`}
+        key={`button_${code.join('')}_${index}`}
         code={code}
         color={color}
         onClick={onClick}
