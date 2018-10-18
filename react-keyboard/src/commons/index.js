@@ -7,8 +7,8 @@ export const version = '1.0.0';
 export const languages = {
   // タイ語
   thai: {
-    dictionary: '', // 辞書ファイル
-    keycode: '', // 文字コード定義ファイル
+    dictionary: 'PdicThai-JP-092U.xlsx', // 辞書ファイル
+    keycode: 'thai.json', // 文字コード定義ファイル
   },
   // 韓国語
   korean: {

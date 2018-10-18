@@ -8,5 +8,8 @@
     "placeholder": "language",
     "en": "English",
     "ja": "日本語"
+  },
+  "message": {
+    "copy": "copied!"
   }
 }

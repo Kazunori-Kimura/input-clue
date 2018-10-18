@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -193,7 +193,7 @@ class Header extends Component {
       >
         <Toolbar>
           <Typography
-            variant="title"
+            variant="h6"
             color="inherit"
             className={classes.title}
             component={Link}
@@ -221,4 +221,4 @@ Header.propTypes = {
   language: PropTypes.string.isRequired,
 };
 
-export default translate()(withStyles(styles)(Header));
+export default withNamespaces()(withStyles(styles)(Header));

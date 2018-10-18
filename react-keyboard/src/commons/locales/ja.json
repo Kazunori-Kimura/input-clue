@@ -8,5 +8,8 @@
     "placeholder": "言語",
     "en": "English",
     "ja": "日本語"
+  },
+  "message": {
+    "copy": "コピーしました"
   }
 }
