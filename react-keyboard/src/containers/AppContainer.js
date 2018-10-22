@@ -55,7 +55,7 @@ class AppContainer extends Component {
     // 未定義の言語がURLに指定されていれば NoContent を表示
     if (typeof languages[lang] === 'undefined') {
       // Not Found
-      history.push('/nocontent');
+      history.push('./nocontent');
       return;
     }
 

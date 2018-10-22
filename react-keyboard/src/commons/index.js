@@ -31,6 +31,86 @@ export const languages = {
   lao: {
     keycode: 'lao.json',
   },
+  // ミャンマー語
+  myanmar: {
+    keycode: 'myanmar.json',
+  },
+  // ミャンマー語・標準
+  myanmar_basic: {
+    keycode: 'myanmar_basic.json',
+  },
+  // パシュトゥ語（アフガニスタン）
+  pashto: {
+    keycode: 'pashto.json',
+  },
+  // アッサム語
+  assamese: {
+    keycode: 'assamese.json',
+  },
+  // サンスクリット語
+  sanskrit: {
+    keycode: 'sanskrit.json',
+  },
+  // ベンガル語
+  bengali: {
+    keycode: 'bengali.json',
+  },
+  // クメール・カンボジア語
+  kmer: {
+    keycode: 'kmer.json',
+  },
+  // タミル語
+  tamil: {
+    keycode: 'tamil.json',
+  },
+  // シンハラ語
+  sinhala: {
+    keycode: 'sinhala.json',
+  },
+  // ネパール語
+  napali: {
+    keycode: 'napali.json',
+  },
+  // ヒンディー語
+  hindi: {
+    keycode: 'hindi.json',
+  },
+  // シリア語
+  syrian: {
+    keycode: 'syrian.json',
+  },
+  // トルコ語
+  turkish: {
+    keycode: 'turkish.json',
+  },
+  // トルコ語発音記号
+  turkish_pho: {
+    keycode: 'turkish_pho.json',
+  },
+  // ハンガリー語
+  hangary: {
+    keycode: 'hangary.json',
+  },
+  // 英語発音記号
+  english_pho: {
+    keycode: 'english_pho.json',
+  },
+  // モンゴルキリル
+  cyrillic: {
+    keycode: 'cyrillic.json',
+  },
+  // ロシア語
+  russian: {
+    keycode: 'russian.json',
+  },
+  // スオミ語
+  suomi: {
+    keycode: 'suomi.json',
+  },
+  // フランス語＆IPA
+  french_pho: {
+    keycode: 'french_pho.json',
+  },
 };
 
 /**

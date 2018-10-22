@@ -18,7 +18,7 @@ const App = () => (
   <MuiThemeProvider theme={theme}>
     <Router>
       <Switch>
-        <Route exact path="/" render={() => (<Redirect to={{ pathname: '/thai' }} />)} />
+        <Route exact path="/" render={() => (<Redirect to={{ pathname: './thai' }} />)} />
         <Route path="/:lang" component={AppContainer} />
         <Route exact path="/nocontent" component={NoContent} />
       </Switch>
