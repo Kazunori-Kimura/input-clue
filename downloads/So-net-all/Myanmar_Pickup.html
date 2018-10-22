@@ -33,244 +33,141 @@
   </head>
 
 
-<body onLoad="document.form.text2.focus()" ; bgcolor="#ffa07a">
-  <form name="form" action="method = " mouseover='pos()' ; onmousup='pos()' ; onkeyup='pos()' ;">
+<body onLoad="document.form.text2.focus()" bgcolor="#ffa07a">
+  <form name="form" action="method = " mouseover='pos()' onmousup='pos()' onkeyup='pos()'>
 
     <Div Align="center">
 
 
-      <textarea cols="42" rows="2" wrap="soft" id="area" name="text2" style="font-size :24px; padding4px; margin:4px;// background-color: #ffffff;">အက</textarea>
+      <textarea cols="42" rows="2" wrap="soft" id="area" name="text2">အက</textarea>
 
       <br />
       <P>
-        <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-size : 10px;" ; value="All Copy" style="WIDTH: 150px; HEIGHT: 28px; font-size : 12px;"
-          onclick="textcopy(); onmouseup='moo()';">
+        <input type="button" value="All Copy" onclick="textcopy();" onmouseup='moo()'>
 
-        <input type="button" value="Reset" style="WIDTH: 70px; HEIGHT: 40px; font-size : 10px;" ; onclick="CLR(); onmouseup='moo()';">
-        <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="Space"
-          onclick="getresult(0,0,0,32);ins(i_result1);">
-        <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px;" value="BackSpace"
-          onclick='debef()' ;">
+        <input type="button" value="Reset" onclick="CLR();" onmouseup='moo()'>
+        <input type="button" value="Space" onclick="getresult(0,0,0,32);ins(i_result1);">
+        <input type="button" value="BackSpace" onclick='debef()'>
         <br />
-        <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff99;"
-          value="Google" onclick="button_Google();" />
-        <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff66;"
-          value="Translate" onclick="button_Googletrans();" />
-        <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;"
-          value="Glosbe_Dic" onclick="button_myamaa();" />
-        <input type="button" style="WIDTH: 70px; HEIGHT: 40px; font-style:italic; font-size : 10px; background-color:#99ff33;"
-          value="YouTube" onclick="button_YouTube();" />
+        <input type="button" value="Google" onclick="button_Google();" />
+        <input type="button" value="Translate" onclick="button_Googletrans();" />
+        <input type="button" value="Glosbe_Dic" onclick="button_myamaa();" />
+        <input type="button" value="YouTube" onclick="button_YouTube();" />
         <br>
 
 
 
-        <!--☆段//-->
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-family:Padauk; font-size : 12px;" value="&#12288;"
-          onclick="getresult(0,0,0,12288);ins(i_result1); onmouseover='moo()';; onmouseover='moo()';">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-family:Padauk; font-size : 12px;" value="&#4161;"
-          onclick="getresult(0,0,0,4161);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-family:Padauk; font-size : 12px;" value="&#4162;"
-          onclick="getresult(0,0,0,4162);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4163;"
-          onclick="getresult(0,0,0,4163);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4164;"
-          onclick="getresult(0,0,0,4164);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4165;"
-          onclick="getresult(0,0,0,4165);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4166;"
-          onclick="getresult(0,0,0,4166);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4167;"
-          onclick="getresult(0,0,0,4167);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4168;"
-          onclick="getresult(0,0,0,4168);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4169;"
-          onclick="getresult(0,0,0,4169);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#45;"
-          onclick="getresult(0,0,0,45);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#61;"
-          onclick="getresult(0,0,0,61);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4157;"
-          onclick="getresult(0,0,0,4157);ins(i_result1); onmouseover='moo()';;"><BR>
+        <!--☆段// font-family:Padauk; -->
+        <input type="button" value="&#12288;" onclick="getresult(0,0,0,12288);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4161;" onclick="getresult(0,0,0,4161);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4162;" onclick="getresult(0,0,0,4162);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4163;" onclick="getresult(0,0,0,4163);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4164;" onclick="getresult(0,0,0,4164);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4165;" onclick="getresult(0,0,0,4165);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4166;" onclick="getresult(0,0,0,4166);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4167;" onclick="getresult(0,0,0,4167);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4168;" onclick="getresult(0,0,0,4168);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4169;" onclick="getresult(0,0,0,4169);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#45;" onclick="getresult(0,0,0,45);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#61;" onclick="getresult(0,0,0,61);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4157;" onclick="getresult(0,0,0,4157);ins(i_result1); onmouseover='moo()';;"><BR>
         <!--☆☆段//-->
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4102;"
-          onclick="getresult(0,0,0,4102);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4112;"
-          onclick="getresult(0,0,0,4112);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 26px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4116;"
-          onclick="getresult(0,0,0,4116);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4121;"
-          onclick="getresult(0,0,0,4121);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4129;"
-          onclick="getresult(0,0,0,4129);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4117;"
-          onclick="getresult(0,0,0,4117);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4096;"
-          onclick="getresult(0,0,0,4096);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4100;"
-          onclick="getresult(0,0,0,4100);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4126;"
-          onclick="getresult(0,0,0,4126);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4101;"
-          onclick="getresult(0,0,0,4101);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4127;"
-          onclick="getresult(0,0,0,4127);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#93;"
-          onclick="getresult(0,0,0,93);ins(i_result1); onmouseover='moo()';;"><BR>
+        <input type="button" value="&#4102;" onclick="getresult(0,0,0,4102);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4112;" onclick="getresult(0,0,0,4112);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4116;" onclick="getresult(0,0,0,4116);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4121;" onclick="getresult(0,0,0,4121);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4129;" onclick="getresult(0,0,0,4129);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4117;" onclick="getresult(0,0,0,4117);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4096;" onclick="getresult(0,0,0,4096);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4100;" onclick="getresult(0,0,0,4100);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4126;" onclick="getresult(0,0,0,4126);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4101;" onclick="getresult(0,0,0,4101);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4127;" onclick="getresult(0,0,0,4127);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#93;" onclick="getresult(0,0,0,93);ins(i_result1); onmouseover='moo()';;"><BR>
         <!--☆☆☆段//-->
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4145;"
-          onclick="getresult(0,0,0,4145);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4155;"
-          onclick="getresult(0,0,0,4155);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4141;"
-          onclick="getresult(0,0,0,4141);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; background-color:#00FFFF;"
-          value="&#4154;" onclick="getresult(0,0,0,4154);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4139;"
-          onclick="getresult(0,0,0,4139);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#4151;" onclick="getresult(0,0,0,4151);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; background-color:#00FFFF;"
-          value="&#4156;" onclick="getresult(0,0,0,4156);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4143;"
-          onclick="getresult(0,0,0,4143);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4144;"
-          onclick="getresult(0,0,0,4144);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4152;"
-          onclick="getresult(0,0,0,4152);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4114;"
-          onclick="getresult(0,0,0,4114);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4175;"
-          onclick="getresult(0,0,0,4175);ins(i_result1); onmouseover='moo()';;"><BR>
+        <input type="button" value="&#4145;" onclick="getresult(0,0,0,4145);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4155;" onclick="getresult(0,0,0,4155);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4141;" onclick="getresult(0,0,0,4141);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" style="background-color:#00FFFF;" value="&#4154;" onclick="getresult(0,0,0,4154);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4139;" onclick="getresult(0,0,0,4139);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4151;" onclick="getresult(0,0,0,4151);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" style="background-color:#00FFFF;" value="&#4156;" onclick="getresult(0,0,0,4156);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4143;" onclick="getresult(0,0,0,4143);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4144;" onclick="getresult(0,0,0,4144);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4152;" onclick="getresult(0,0,0,4152);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4114;" onclick="getresult(0,0,0,4114);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4175;" onclick="getresult(0,0,0,4175);ins(i_result1); onmouseover='moo()';;"><BR>
         <!--☆☆☆☆段//-->
-        <input type="button" style="WIDTH: 28px; HEIGHT: 26px; font-size : 12px; font-family:Padauk;" value="&#4118;"
-          onclick="getresult(0,0,0,4118);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4113;"
-          onclick="getresult(0,0,0,4113);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4097;"
-          onclick="getresult(0,0,0,4097);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4124;"
-          onclick="getresult(0,0,0,4124);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4120;"
-          onclick="getresult(0,0,0,4120);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#4106" onclick="getresult(0,0,0,4106);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#4140" onclick="getresult(0,0,0,4140);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4140;"
-          onclick="getresult(0,0,0,4140);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4122;"
-          onclick="getresult(0,0,0,4122);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#47;" onclick="getresult(0,0,0,47);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#65509;" onclick="getresult(0,0,0,65509);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4118;" onclick="getresult(0,0,0,4118);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4113;" onclick="getresult(0,0,0,4113);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4097;" onclick="getresult(0,0,0,4097);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4124;" onclick="getresult(0,0,0,4124);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4120;" onclick="getresult(0,0,0,4120);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4106" onclick="getresult(0,0,0,4106);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4140" onclick="getresult(0,0,0,4140);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4140;" onclick="getresult(0,0,0,4140);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4122;" onclick="getresult(0,0,0,4122);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#47;" onclick="getresult(0,0,0,47);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#65509;" onclick="getresult(0,0,0,65509);ins(i_result1); onmouseover='moo()';;">
         <br><BR>
         <!--★段//-->
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#12288;"
-          onclick="getresult(0,0,0,12288);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4109;"
-          onclick="getresult(0,0,0,4109);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4110;"
-          onclick="getresult(0,0,0,4110);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4107"
-          onclick="getresult(0,0,0,4107);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 38px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4096&#4155&#4117&#4154;"
-          onclick="getresult(4154,4117,4155,4096);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#37;"
-          onclick="getresult(0,0,0,37);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#94;"
-          onclick="getresult(0,0,0,94);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4123;"
-          onclick="getresult(0,0,0,4123);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4098;"
-          onclick="getresult(0,0,0,4098);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#41;"
-          onclick="getresult(0,0,0,41);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#95;"
-          onclick="getresult(0,0,0,95);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#43;"
-          onclick="getresult(0,0,0,43);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#4107&#4153&#4108;" onclick="getresult(0,4108,4153,4107);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#12288;" onclick="getresult(0,0,0,12288);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4109;" onclick="getresult(0,0,0,4109);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4110;" onclick="getresult(0,0,0,4110);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4107" onclick="getresult(0,0,0,4107);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4096&#4155&#4117&#4154;" onclick="getresult(4154,4117,4155,4096);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#37;" onclick="getresult(0,0,0,37);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#94;" onclick="getresult(0,0,0,94);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4123;" onclick="getresult(0,0,0,4123);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4098;" onclick="getresult(0,0,0,4098);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#41;" onclick="getresult(0,0,0,41);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#95;" onclick="getresult(0,0,0,95);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#43;" onclick="getresult(0,0,0,43);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4107&#4153&#4108;" onclick="getresult(0,4108,4153,4107);ins(i_result1); onmouseover='moo()';;">
         <BR>
         <!--★☆段//-->
 
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4137;"
-          onclick="getresult(0,0,0,4137);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4125;"
-          onclick="getresult(0,0,0,4125);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4159;"
-          onclick="getresult(0,0,0,4159);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4131;"
-          onclick="getresult(0,0,0,4131);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4132;"
-          onclick="getresult(0,0,0,4132);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4172;"
-          onclick="getresult(0,0,0,4172);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4105;"
-          onclick="getresult(0,0,0,4105);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4173;"
-          onclick="getresult(0,0,0,4173);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4133;"
-          onclick="getresult(0,0,0,4133);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4111;"
-          onclick="getresult(0,0,0,4111);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#4135;" onclick="getresult(0,0,0,4135);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 26px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#125;"
-          onclick="getresult(0,0,0,125);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4137;" onclick="getresult(0,0,0,4137);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4125;" onclick="getresult(0,0,0,4125);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4159;" onclick="getresult(0,0,0,4159);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4131;" onclick="getresult(0,0,0,4131);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4132;" onclick="getresult(0,0,0,4132);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4172;" onclick="getresult(0,0,0,4172);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4105;" onclick="getresult(0,0,0,4105);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4173;" onclick="getresult(0,0,0,4173);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4133;" onclick="getresult(0,0,0,4133);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4111;" onclick="getresult(0,0,0,4111);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4135;" onclick="getresult(0,0,0,4135);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#125;" onclick="getresult(0,0,0,125);ins(i_result1); onmouseover='moo()';;">
         <BR>
         <!--★☆☆段//-->
 
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#4119;" onclick="getresult(0,0,0,4119);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4158;"
-          onclick="getresult(0,0,0,4158);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4142;"
-          onclick="getresult(0,0,0,4142);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; background-color:#00FFFF;"
-          value="&#4100;&#4154;&#4153;" onclick="getresult(0,4153,4154,4100);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4157"
-          onclick="getresult(0,0,0,4157);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#4150;" onclick="getresult(0,0,0,4150);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 25px; font-size : 12px; font-family:Padauk; background-color:#00FFFF;"
-          value="&#4146;" onclick="getresult(0,0,0,4146);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#4143;" onclick="getresult(0,0,0,4143);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4144;"
-          onclick="getresult(0,0,0,4144);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4139&#4154;"
-          onclick="getresult(0,0,4154,4139);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4115;"
-          onclick="getresult(0,0,0,4115);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4107&#4153&#4108;"
-          onclick="getresult(0,4108,4153,4107);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4119;" onclick="getresult(0,0,0,4119);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4158;" onclick="getresult(0,0,0,4158);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4142;" onclick="getresult(0,0,0,4142);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" style="background-color:#00FFFF;" value="&#4100;&#4154;&#4153;" onclick="getresult(0,4153,4154,4100);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4157" onclick="getresult(0,0,0,4157);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4150;" onclick="getresult(0,0,0,4150);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" style="background-color:#00FFFF;" value="&#4146;" onclick="getresult(0,0,0,4146);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4143;" onclick="getresult(0,0,0,4143);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4144;" onclick="getresult(0,0,0,4144);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4139&#4154;" onclick="getresult(0,0,4154,4139);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4115;" onclick="getresult(0,0,0,4115);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4107&#4153&#4108;" onclick="getresult(0,4108,4153,4107);ins(i_result1); onmouseover='moo()';;">
         <BR>
         <!--★☆☆☆段//-->
 
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#65343;"
-          onclick="getresult(0,0,0,65343);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4103;"
-          onclick="getresult(0,0,0,4103);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4108;"
-          onclick="getresult(0,0,0,4108);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4099;"
-          onclick="getresult(0,0,0,4099);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#4128;" onclick="getresult(0,0,0,4128);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4134;"
-          onclick="getresult(0,0,0,4134);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk; padding:2px;"
-          value="&#4104;" onclick="getresult(0,0,0,4104);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 38px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#4138;"
-          onclick="getresult(0,0,0,4138);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 26px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#60;"
-          onclick="getresult(0,0,0,60);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#62;"
-          onclick="getresult(0,0,0,62);ins(i_result1); onmouseover='moo()';;">
-        <input type="button" style="WIDTH: 28px; HEIGHT: 28px; font-size : 12px; font-family:Padauk;" value="&#63;"
-          onclick="getresult(0,0,0,63);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#65343;" onclick="getresult(0,0,0,65343);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4103;" onclick="getresult(0,0,0,4103);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4108;" onclick="getresult(0,0,0,4108);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4099;" onclick="getresult(0,0,0,4099);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4128;" onclick="getresult(0,0,0,4128);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4134;" onclick="getresult(0,0,0,4134);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4104;" onclick="getresult(0,0,0,4104);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#4138;" onclick="getresult(0,0,0,4138);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#60;" onclick="getresult(0,0,0,60);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#62;" onclick="getresult(0,0,0,62);ins(i_result1); onmouseover='moo()';;">
+        <input type="button" value="&#63;" onclick="getresult(0,0,0,63);ins(i_result1); onmouseover='moo()';;">
 
         <BR>
         <!--★☆☆☆☆段//-->
