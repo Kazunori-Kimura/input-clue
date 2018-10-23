@@ -78,7 +78,7 @@ class Keyboard extends Component {
   };
 
   renderKey = ({ code, color = '#cccccc', type = 'button', value = '' }, index) => {
-    const { onClick } = this.props;
+    const { onClick, fontFamily } = this.props;
 
     if (type === 'hr') {
       return (
@@ -99,6 +99,7 @@ class Keyboard extends Component {
     return (
       <Keybutton
         key={`button_${code.join('')}_${index}`}
+        fontFamily={fontFamily}
         code={code}
         color={color}
         onClick={onClick}
@@ -144,11 +145,16 @@ class Keyboard extends Component {
   }
 }
 
+Keyboard.defaultProps = {
+  fontFamily: '',
+};
+
 Keyboard.propTypes = {
   // material-ui
   classes: PropTypes.shape().isRequired,
   // component props
   keycode: PropTypes.string.isRequired,
+  fontFamily: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   onBackspaceClick: PropTypes.func.isRequired,
 };

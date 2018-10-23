@@ -34,10 +34,12 @@ export const languages = {
   // ミャンマー語
   myanmar: {
     keycode: 'myanmar.json',
+    fontFamily: 'Padauk',
   },
   // ミャンマー語・標準
   myanmar_basic: {
     keycode: 'myanmar_basic.json',
+    fontFamily: 'Padauk',
   },
   // パシュトゥ語（アフガニスタン）
   pashto: {
@@ -78,6 +80,7 @@ export const languages = {
   // シリア語
   syrian: {
     keycode: 'syrian.json',
+    fontFamily: 'Estragelo Edessa',
   },
   // トルコ語
   turkish: {

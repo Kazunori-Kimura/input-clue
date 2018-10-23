@@ -36,6 +36,7 @@ class AppContainer extends Component {
       direction: 'none',
     },
     keycode: '',
+    fontFamily: '',
   };
 
   componentWillMount() {
@@ -62,6 +63,7 @@ class AppContainer extends Component {
 
     this.setState({
       keycode: languages[lang].keycode,
+      fontFamily: languages[lang].fontFamily || '',
     });
   };
 
@@ -149,7 +151,7 @@ class AppContainer extends Component {
 
   render() {
     const { match: { params: { lang } }, classes } = this.props;
-    const { value, caret, keycode } = this.state;
+    const { value, caret, keycode, fontFamily } = this.state;
 
     return (
       <React.Fragment>
@@ -167,6 +169,7 @@ class AppContainer extends Component {
             <FunctionKeys value={value} />
             <Keyboard
               keycode={keycode}
+              fontFamily={fontFamily}
               onClick={this.handleKeyboardClick}
               onBackspaceClick={this.handleKeyboardBackspaceClick}
             />
