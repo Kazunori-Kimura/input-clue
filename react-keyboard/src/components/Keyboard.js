@@ -24,7 +24,6 @@ const styles = theme => ({
   },
   function: {
     margin: theme.spacing.unit,
-    width: 160,
   },
   icon: {
     marginRight: theme.spacing.unit,
@@ -117,6 +116,7 @@ class Keyboard extends Component {
           {/* Space */}
           <Button
             className={classes.function}
+            style={{ flex: 3 }}
             color="default"
             variant="outlined"
             onClick={this.handleSpaceKeyClick}
@@ -126,6 +126,7 @@ class Keyboard extends Component {
           {/* Backspace */}
           <Button
             className={classes.function}
+            style={{ flex: 1 }}
             color="default"
             variant="outlined"
             onClick={onBackspaceClick}

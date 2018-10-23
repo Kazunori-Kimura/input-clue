@@ -35,5 +35,12 @@
   },
   "message": {
     "copy": "copied!"
+  },
+  "functions": {
+    "image": "Image",
+    "trans": "Translate",
+    "weblio": "Weblio",
+    "tyakusu": "TYakusu",
+    "youtube": "YouTube"
   }
 }

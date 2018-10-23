@@ -6,6 +6,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Header from '../components/Header';
 import TextArea from '../components/TextArea';
 import Keyboard from '../components/Keyboard';
+import FunctionKeys from '../components/FunctionKeys';
 import { languages } from '../commons';
 
 const styles = theme => ({
@@ -163,6 +164,7 @@ class AppContainer extends Component {
               onChangeValue={this.handleChangeValue}
               onChangeCaret={this.handleChangeCaret}
             />
+            <FunctionKeys value={value} />
             <Keyboard
               keycode={keycode}
               onClick={this.handleKeyboardClick}
