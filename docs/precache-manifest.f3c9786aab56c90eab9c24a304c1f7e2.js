@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/input-clue/static/js/runtime~main.899e32b7.js"
   },
   {
-    "revision": "a74f086a8d4d56ef04a6",
-    "url": "/input-clue/static/js/main.a74f086a.chunk.js"
+    "revision": "46e0d36f6e89de9898eb",
+    "url": "/input-clue/static/js/main.46e0d36f.chunk.js"
   },
   {
     "revision": "e724d75ac19fd8afc3b9",
     "url": "/input-clue/static/js/1.e724d75a.chunk.js"
   },
   {
-    "revision": "a74f086a8d4d56ef04a6",
+    "revision": "46e0d36f6e89de9898eb",
     "url": "/input-clue/static/css/main.7c373399.chunk.css"
   },
   {
-    "revision": "4b899735b5ed70c663c18f0755a3a55d",
+    "revision": "ab73637bf80c42fb8bfb379814488190",
     "url": "/input-clue/index.html"
   }
 ];
