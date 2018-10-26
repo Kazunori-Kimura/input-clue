@@ -16,7 +16,7 @@ const theme = createMuiTheme({
 
 const App = () => (
   <MuiThemeProvider theme={theme}>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" render={() => (<Redirect to={{ pathname: './thai' }} />)} />
         <Route path="/:lang" component={AppContainer} />
