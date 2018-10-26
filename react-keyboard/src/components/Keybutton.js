@@ -10,9 +10,8 @@ const styles = () => ({
   key: {
     fontSize: '28px',
     minWidth: '40px',
-    minHeight: '20px',
     margin: '3px',
-    padding: '2px',
+    padding: '3px',
     textTransform: 'none',
   },
 });

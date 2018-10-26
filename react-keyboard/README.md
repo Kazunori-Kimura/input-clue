@@ -4,8 +4,8 @@
 - [x] シリア語 Mac GoogleChromeだと表示できない。Safariだと可能。
 - [x] ~~ミャンマー語・標準も一部フォント指定しないと表示できない文字がある。~~
 - [x] ~~buttonの `text-transform: uppercase;` を削除する。~~
-- [ ] 古モンゴル語
-- [ ] ラオス語(拡張版)
+- [x] 古モンゴル語
+- [x] ラオス語(拡張版)
 
 ## memo
 
@@ -20,9 +20,9 @@
 - [x] Thai_Pho_Pickup.html ＜タイ語&amp;発音記号＞
 - [x] Pinyin_Pickup.html ＜中国語ピンイン＞
 - [x] Vietnam_Pickup.html ＜ベトナム語・クォック・グー＞
-- [ ] Mongolian_Pickup.html ＜古モンゴル語＞
+- [x] Mongolian_Pickup.html ＜古モンゴル語＞
 - [x] Lao_Pickup.html ＜ラオス語＞
-- [ ] Lao_Pickup3.html ＜ラオス語 拡張版＞
+- [x] Lao_Pickup3.html ＜ラオス語 拡張版＞
 - [x] Tibetan_Pickup.html ＜チベット語＞
 - [x] Myanmar_Pickup.html ＜ミャンマー語＞
 - [x] Myanmar_Pickup_2.html ＜ミャンマー語・標準＞

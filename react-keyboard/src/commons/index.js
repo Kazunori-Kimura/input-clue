@@ -27,8 +27,17 @@ export const languages = {
   vietnam: {
     keycode: 'vietnam.json',
   },
+  // 古モンゴル語
+  mongolian: {
+    keycode: 'mongolian.json',
+    fontFamily: 'Mongolian Baiti',
+  },
   // ラオス語
   lao: {
+    keycode: 'lao.json',
+  },
+  // ラオス語 拡張版
+  lao_ext: {
     keycode: 'lao.json',
   },
   // ミャンマー語

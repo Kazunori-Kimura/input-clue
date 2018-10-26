@@ -27,7 +27,7 @@ const styles = theme => ({
   buttons: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   },
 });
@@ -193,17 +193,17 @@ class TextArea extends Component {
         </FormControl>
         <div className={classes.buttons}>
           <IconButton
-            aria-label="Copy"
-            onClick={this.handleCopy}
-          >
-            <CopyIcon fontSize="small" />
-          </IconButton>
-          <IconButton
             color="secondary"
             aria-label="Clear"
             onClick={this.handleClear}
           >
             <ClearIcon fontSize="small" />
+          </IconButton>
+          <IconButton
+            aria-label="Copy"
+            onClick={this.handleCopy}
+          >
+            <CopyIcon fontSize="small" />
           </IconButton>
         </div>
       </div>

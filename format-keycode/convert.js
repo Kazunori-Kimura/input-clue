@@ -6,86 +6,96 @@ const HTML_FILE_BASE = '../downloads/So-net-all';
 const re = /getresult\(([0-9,]+)\)/ig;
 
 const files = [
+  // {
+  //   file: 'Myanmar_Pickup.html',
+  //   json: 'myanmar.json',
+  // },
+  // {
+  //   file: 'Myanmar_Pickup_2.html',
+  //   json: 'myanmar_basic.json',
+  // },
+  // {
+  //   file: 'Pashto_Pickup.html',
+  //   json: 'pashto.json',
+  // },
+  // {
+  //   file: 'Assamese_Pickup.html',
+  //   json: 'assamese.json',
+  // },
+  // {
+  //   file: 'Sanskrit_Pickup.html',
+  //   json: 'sanskrit.json',
+  // },
+  // {
+  //   file: 'Bengali_Pickup.html',
+  //   json: 'bengali.json',
+  // },
+  // {
+  //   file: 'kmer_Cambodian.html',
+  //   json: 'kmer.json',
+  // },
+  // {
+  //   file: 'Tamil_Pickup.html',
+  //   json: 'tamil.json',
+  // },
+  // {
+  //   file: 'Sinhala_EM_Pickup.html',
+  //   json: 'sinhala.json',
+  // },
+  // {
+  //   file: 'Napali_Pickup.html',
+  //   json: 'napali.json',
+  // },
+  // {
+  //   file: 'Hindi_Pickup.html',
+  //   json: 'hindi.json',
+  // },
+  // {
+  //   file: 'Syrian_Pickup.html',
+  //   json: 'syrian.json',
+  // },
+  // {
+  //   file: 'Turkish_Pickup.html',
+  //   json: 'turkish.json',
+  // },
+  // {
+  //   file: 'Turkish_Pho_Pickup.html',
+  //   json: 'turkish_pho.json',
+  // },
+  // {
+  //   file: 'Hangary_Pickup.html',
+  //   json: 'hangary.json',
+  // },
+  // {
+  //   file: 'English_Pho_Pickup.html',
+  //   json: 'english_pho.json',
+  // },
+  // {
+  //   file: 'Cyrillic_Pickup.html',
+  //   json: 'cyrillic.json',
+  // },
+  // {
+  //   file: 'Russian_Pickup.html',
+  //   json: 'russian.json',
+  // },
+  // {
+  //   file: 'Suomi_Pickup.html',
+  //   json: 'suomi.json',
+  // },
+  // {
+  //   file: 'French_Pho_Pickup.html',
+  //   json: 'french_pho.json',
+  // },
+  // - [ ] Mongolian_Pickup.html ＜古モンゴル語＞
   {
-    file: 'Myanmar_Pickup.html',
-    json: 'myanmar.json',
+    file: 'Mongolian_Pickup.html',
+    json: 'mongolian.json',
   },
+  // - [ ] Lao_Pickup3.html ＜ラオス語 拡張版＞
   {
-    file: 'Myanmar_Pickup_2.html',
-    json: 'myanmar_basic.json',
-  },
-  {
-    file: 'Pashto_Pickup.html',
-    json: 'pashto.json',
-  },
-  {
-    file: 'Assamese_Pickup.html',
-    json: 'assamese.json',
-  },
-  {
-    file: 'Sanskrit_Pickup.html',
-    json: 'sanskrit.json',
-  },
-  {
-    file: 'Bengali_Pickup.html',
-    json: 'bengali.json',
-  },
-  {
-    file: 'kmer_Cambodian.html',
-    json: 'kmer.json',
-  },
-  {
-    file: 'Tamil_Pickup.html',
-    json: 'tamil.json',
-  },
-  {
-    file: 'Sinhala_EM_Pickup.html',
-    json: 'sinhala.json',
-  },
-  {
-    file: 'Napali_Pickup.html',
-    json: 'napali.json',
-  },
-  {
-    file: 'Hindi_Pickup.html',
-    json: 'hindi.json',
-  },
-  {
-    file: 'Syrian_Pickup.html',
-    json: 'syrian.json',
-  },
-  {
-    file: 'Turkish_Pickup.html',
-    json: 'turkish.json',
-  },
-  {
-    file: 'Turkish_Pho_Pickup.html',
-    json: 'turkish_pho.json',
-  },
-  {
-    file: 'Hangary_Pickup.html',
-    json: 'hangary.json',
-  },
-  {
-    file: 'English_Pho_Pickup.html',
-    json: 'english_pho.json',
-  },
-  {
-    file: 'Cyrillic_Pickup.html',
-    json: 'cyrillic.json',
-  },
-  {
-    file: 'Russian_Pickup.html',
-    json: 'russian.json',
-  },
-  {
-    file: 'Suomi_Pickup.html',
-    json: 'suomi.json',
-  },
-  {
-    file: 'French_Pho_Pickup.html',
-    json: 'french_pho.json',
-  },
+    file: 'Lao_Pickup3.html',
+    json: 'lao_ext.json',
+  }
 ];
 
 async function convert({ file, json }) {
