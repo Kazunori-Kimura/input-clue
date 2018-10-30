@@ -44,5 +44,9 @@
     "weblio": "Weblio",
     "tyakusu": "TYakusu",
     "youtube": "YouTube"
+  },
+  "dictionary": {
+    "placeholder": "辞書検索",
+    "search": "検索"
   }
 }

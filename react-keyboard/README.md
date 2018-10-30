@@ -2,10 +2,6 @@
 ## TODO
 
 - [x] シリア語 Mac GoogleChromeだと表示できない。Safariだと可能。
-- [x] ~~ミャンマー語・標準も一部フォント指定しないと表示できない文字がある。~~
-- [x] ~~buttonの `text-transform: uppercase;` を削除する。~~
-- [x] 古モンゴル語
-- [x] ラオス語(拡張版)
 
 ## memo
 
