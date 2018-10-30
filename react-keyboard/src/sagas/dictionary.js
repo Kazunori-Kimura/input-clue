@@ -3,7 +3,7 @@ import {
   loadDictionaryStart, loadDictionarySucceeded, loadDictionaryFailed,
   LOAD_DICTIONARY,
 } from '../actions';
-import Worker from 'worker-loader!../utils/dictionaryWorker.js'; // eslint-disable-line
+import Worker from 'worker-loader!../utils/dictionary.worker'; // eslint-disable-line
 
 /**
  * WebWorkerを実行する
