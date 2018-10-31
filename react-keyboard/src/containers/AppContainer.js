@@ -97,7 +97,7 @@ class AppContainer extends Component {
 
   loadDictionary = () => {
     const { lang, dictionary } = this.state;
-    console.log(lang, dictionary);
+    // console.log(lang, dictionary);
     
     if (lang && dictionary) {
       // 辞書の読み込み

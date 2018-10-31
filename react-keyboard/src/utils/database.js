@@ -33,7 +33,7 @@ class Database {
             value = parseInt(request.result.modified, 10);
           }
         } catch (err) {
-          console.warn(err);
+          // console.warn(err);
         }
         resolve(value);
       };
@@ -72,7 +72,7 @@ class Database {
       const request = indexedDB.open(DATABASE_NAME, VERSION);
       // error
       request.onerror = (ev) => {
-        console.error(ev);
+        // console.error(ev);
         this.isOpen = false;
         reject(ev);
       };
@@ -144,7 +144,7 @@ class Database {
       // rangeを作成
       const nextWord = search.slice(0, -1)
         + String.fromCharCode(search.slice(-1).charCodeAt() + 1);
-      console.log('range:', search, nextWord);
+      // console.log('range:', search, nextWord);
       const range = IDBKeyRange.bound(search, nextWord, false, true);
 
       // 検索処理
@@ -170,8 +170,8 @@ class Database {
   }
 
   handleError(ev) {
-    console.error(ev);
-    throw new Error('database error.');
+    // console.error(ev);
+    throw new Error(`database error. ${ev}`);
   }
 }
 

@@ -55,8 +55,8 @@ class Keyboard extends Component {
       // JSONをfetchしてstateに保持
       fetch(`./keycode/${keycode}`)
         .then(res => res.json())
-        .then(data => this.setState({ keys: data }))
-        .catch(err => console.error(err));
+        .then(data => this.setState({ keys: data }));
+        // .catch(err => console.error(err));
     }
   }
 

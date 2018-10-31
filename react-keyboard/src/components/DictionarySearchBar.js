@@ -37,8 +37,8 @@ class DictionarySearchBar extends Component {
   };
 
   handleClick = () => {
-    const { value } = this.state;
-    console.log(value);
+    // const { value } = this.state;
+    // console.log(value);
   };
 
   render() {

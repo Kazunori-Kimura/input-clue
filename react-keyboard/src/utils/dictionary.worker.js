@@ -2,7 +2,7 @@ import XLSX from 'xlsx';
 import Database from './database';
 
 // メッセージの受信処理
-self.addEventListener('message', (evt) => {
+self.onmessage = (evt) => {
   const { uri, lang } = evt.data;
 
   // 辞書ファイルの読み込み処理
@@ -13,7 +13,7 @@ self.addEventListener('message', (evt) => {
     .catch((err) => {
       self.postMessage({ status: 'error', error: err });
     });
-});
+};
 
 /**
  * ファイルの最終更新日を取得
