@@ -10,7 +10,7 @@ import saga from './sagas';
 import './index.css';
 import App from './App';
 import i18n from './commons/i18n';
-import * as serviceWorker from './serviceWorker';
+// import * as serviceWorker from './serviceWorker';
 
 // sagaミドルウェアを作成
 const sagaMiddleware = createSagaMiddleware();
@@ -36,4 +36,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorker.unregister();
+// serviceWorker.unregister();

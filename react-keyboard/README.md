@@ -106,8 +106,63 @@ self.onmessage = (evt) => {
 `package.json` の内容が更新され、`npm install` が再実行されます。
 プロジェクトフォルダのルートに `config` と `scripts` というフォルダが作成され、そこに `react-scripts` と各種設定ファイルが展開されます。
 
+`config` フォルダにwebpackの設定が格納されています。
+`output.globalObject` に `'self'` を追加します。
 
+開発用と本番用の2つありますので、両方設定を変更してください。
 
+```js:config/webpack.config.dev.js
+module.exports = {
+  // ...省略
+  output: {
+    // Add /* filename */ comments to generated require()s in the output.
+    pathinfo: true,
+    // This does not produce a real file. It's just the virtual path that is
+    // served by WebpackDevServer in development. This is the JS bundle
+    // containing code from all our entry points, and the Webpack runtime.
+    filename: 'static/js/bundle.js',
+    // There are also additional JS chunk files if you use code splitting.
+    chunkFilename: 'static/js/[name].chunk.js',
+    // This is the URL that app is served from. We use "/" in development.
+    publicPath: publicPath,
+    // Point sourcemap entries to original disk location (format as URL on Windows)
+    devtoolModuleFilenameTemplate: info =>
+      path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
+    // ***********************
+    // Web Worker用に以下を追加
+    // ***********************
+    globalObject: 'self',
+  },
+```
+
+```js:config/webpack.config.prod.js
+module.exports = {
+  // ...省略
+  output: {
+    // The build folder.
+    path: paths.appBuild,
+    // Generated JS file names (with nested folders).
+    // There will be one main bundle, and one file per asynchronous chunk.
+    // We don't currently advertise code splitting but Webpack supports it.
+    filename: 'static/js/[name].[chunkhash:8].js',
+    chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
+    // We inferred the "public path" (such as / or /my-project) from homepage.
+    publicPath: publicPath,
+    // Point sourcemap entries to original disk location (format as URL on Windows)
+    devtoolModuleFilenameTemplate: info =>
+      path
+        .relative(paths.appSrc, info.absoluteResourcePath)
+        .replace(/\\/g, '/'),
+    // ***********************
+    // Web Worker用に以下を追加
+    // ***********************
+    globalObject: 'self',
+  },
+```
+
+設定を変更したら `npm start` して例外が発生せずに Web Worker が呼び出されることを確認します。
+
+---
 
 ## そもそも Web Worker って何？
 
