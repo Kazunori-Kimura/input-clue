@@ -1,5 +1,6 @@
 import {
   TRANSLATE_WORD_START, TRANSLATE_WORD_SUCCEEDED, TRANSLATE_WORD_FAILED,
+  CLEAR_TRANSLATE_LIST,
 } from '../actions';
 
 const initialState = {
@@ -30,6 +31,10 @@ const translate = (state = initialState, action) => {
         list: [],
         requesting: false,
         error: action.payload.error,
+      };
+    case CLEAR_TRANSLATE_LIST:
+      return {
+        ...initialState,
       };
     default:
       return { ...state };

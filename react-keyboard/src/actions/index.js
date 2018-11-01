@@ -15,7 +15,7 @@ export const TRANSLATE_WORD = 'TRANSLATE_WORD';
 export const TRANSLATE_WORD_START = 'TRANSLATE_WORD_START';
 export const TRANSLATE_WORD_SUCCEEDED = 'TRANSLATE_WORD_SUCCEEDED';
 export const TRANSLATE_WORD_FAILED = 'TRANSLATE_WORD_FAILED';
-
+export const CLEAR_TRANSLATE_LIST = 'CLEAR_TRANSLATE_LIST';
 
 // --- ACTION_CREATOR ---
 
@@ -36,6 +36,10 @@ export const translateWordSucceeded = payload => ({
 export const translateWordFailed = payload => ({
   type: TRANSLATE_WORD_FAILED,
   payload,
+});
+
+export const clearTranslateList = () => ({
+  type: CLEAR_TRANSLATE_LIST,
 });
 
 export const loadDictionary = payload => ({

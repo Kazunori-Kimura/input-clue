@@ -48,6 +48,12 @@
   "dictionary": {
     "placeholder": "search dictionary",
     "search": "Search",
-    "loading": "now loading..."
+    "loading": "now loading...",
+    "result": "search result",
+    "header": {
+      "kana": "kana",
+      "word": "word",
+      "mean": "mean"
+    }
   }
 }

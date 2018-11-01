@@ -11,6 +11,7 @@ import Keyboard from '../components/Keyboard';
 import FunctionKeys from '../components/FunctionKeys';
 import LoadingIndicator from '../components/Loading';
 import SearchBar from '../components/DictionarySearchBar';
+import SearchPanel from '../components/DictionarySearchPanel';
 import { languages } from '../commons';
 import * as actions from '../actions';
 
@@ -41,6 +42,7 @@ class AppContainer extends Component {
       end: 0,
       direction: 'none',
     },
+    lang: '',
     keycode: '',
     fontFamily: '',
   };
@@ -196,14 +198,40 @@ class AppContainer extends Component {
     });
   };
 
+  /**
+   * 辞書検索ワード
+   */
   handleSearchBarChange = (value) => {
     this.setState({
       searchWord: value,
     });
   };
 
+  /**
+   * 辞書検索
+   */
   handleSearchBarClick = () => {
-    // TODO: 辞書検索処理
+    const { lang, searchWord } = this.state;
+    const { actions } = this.props;
+    actions.translateWord({ lang, word: searchWord });
+  };
+
+  /**
+   * 辞書検索結果をクリック
+   */
+  handleSearchResultClick = (word) => {
+    this.insert(word);
+  };
+
+  /**
+   * 辞書検索結果を閉じる
+   */
+  handleSearchResultClose = () => {
+    const { actions } = this.props;
+    actions.clearTranslateList();
+    this.setState({
+      searchWord: '',
+    });
   };
 
   render() {
@@ -213,6 +241,9 @@ class AppContainer extends Component {
       dictionary: {
         requesting,
         succeeded,
+      },
+      translate: {
+        list,
       },
     } = this.props;
     const {
@@ -239,13 +270,24 @@ class AppContainer extends Component {
                 onClick={this.handleSearchBarClick}
               />
             )}
-            <FunctionKeys value={value} />
-            <Keyboard
-              keycode={keycode}
-              fontFamily={fontFamily}
-              onClick={this.handleKeyboardClick}
-              onBackspaceClick={this.handleKeyboardBackspaceClick}
-            />
+            {list.length > 0 && (
+              <SearchPanel
+                list={list}
+                onClick={this.handleSearchResultClick}
+                onClose={this.handleSearchResultClose}
+              />
+            )}
+            {list.length === 0 && (
+              <React.Fragment>
+                <FunctionKeys value={value} />
+                <Keyboard
+                  keycode={keycode}
+                  fontFamily={fontFamily}
+                  onClick={this.handleKeyboardClick}
+                  onBackspaceClick={this.handleKeyboardBackspaceClick}
+                />
+              </React.Fragment>
+            )}
           </div>
         </div>
         {requesting && <LoadingIndicator />}
@@ -263,6 +305,7 @@ AppContainer.propTypes = {
   // redux
   actions: PropTypes.shape().isRequired,
   dictionary: PropTypes.shape().isRequired,
+  translate: PropTypes.shape().isRequired,
 };
 
 const mapStateToProps = state => ({
