@@ -47,6 +47,7 @@
   },
   "dictionary": {
     "placeholder": "辞書検索",
-    "search": "検索"
+    "search": "検索",
+    "loading": "辞書ファイル読み込み中..."
   }
 }

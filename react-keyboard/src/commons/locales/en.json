@@ -47,6 +47,7 @@
   },
   "dictionary": {
     "placeholder": "search dictionary",
-    "search": "Search"
+    "search": "Search",
+    "loading": "now loading..."
   }
 }

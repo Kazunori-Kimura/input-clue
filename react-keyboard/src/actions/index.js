@@ -6,6 +6,7 @@ export const LOAD_DICTIONARY = 'LOAD_DICTIONARY';
 export const LOAD_DICTIONARY_START = 'LOAD_DICTIONARY_START';
 export const LOAD_DICTIONARY_SUCCEEDED = 'LOAD_DICTIONARY_SUCCEEDED';
 export const LOAD_DICTIONARY_FAILED = 'LOAD_DICTIONARY_FAILED';
+export const RESET_DICTIONARY_STATUS = 'RESET_DICTIONARY_STATUS';
 
 /**
  * 翻訳
@@ -54,4 +55,8 @@ export const loadDictionarySucceeded = payload => ({
 export const loadDictionaryFailed = payload => ({
   type: LOAD_DICTIONARY_FAILED,
   payload,
+});
+
+export const resetDictionaryStatus = () => ({
+  type: RESET_DICTIONARY_STATUS,
 });

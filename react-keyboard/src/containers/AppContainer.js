@@ -9,6 +9,8 @@ import Header from '../components/Header';
 import TextArea from '../components/TextArea';
 import Keyboard from '../components/Keyboard';
 import FunctionKeys from '../components/FunctionKeys';
+import LoadingIndicator from '../components/Loading';
+import SearchBar from '../components/DictionarySearchBar';
 import { languages } from '../commons';
 import * as actions from '../actions';
 
@@ -33,15 +35,14 @@ const styles = theme => ({
 class AppContainer extends Component {
   state = {
     value: '',
+    searchWord: '',
     caret: {
       start: 0,
       end: 0,
       direction: 'none',
     },
-    lang: '',
     keycode: '',
     fontFamily: '',
-    dictionary: '',
   };
 
   componentWillMount() {
@@ -49,11 +50,8 @@ class AppContainer extends Component {
 
     // キーボードの設定
     this.handleKeyboardLanguage(lang, history);
-  }
-
-  componentDidMount() {
     // 辞書ファイルの読み込み
-    this.loadDictionary();
+    this.loadDictionary(lang);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -64,7 +62,7 @@ class AppContainer extends Component {
       // キーボードの設定
       this.handleKeyboardLanguage(nextLang, history);
       // 辞書ファイルの読み込み
-      this.loadDictionary();
+      this.loadDictionary(nextLang);
     }
   }
 
@@ -95,14 +93,24 @@ class AppContainer extends Component {
     this.setState(newState);
   };
 
-  loadDictionary = () => {
-    const { lang, dictionary } = this.state;
-    // console.log(lang, dictionary);
-    
-    if (lang && dictionary) {
+  /**
+   * 辞書ファイルの読み込み
+   * @param {String} lang
+   */
+  loadDictionary = (lang) => {
+    // 未定義の言語なら無視する
+    if (typeof languages[lang] === 'undefined') {
+      return;
+    }
+
+    // 辞書ファイル名の取得
+    const { dictionary } = languages[lang];
+    const { actions } = this.props;
+    if (dictionary) {
       // 辞書の読み込み
-      const { actions } = this.props;
       actions.loadDictionary({ lang, dictionary });
+    } else {
+      actions.resetDictionaryStatus();
     }
   };
 
@@ -188,9 +196,28 @@ class AppContainer extends Component {
     });
   };
 
+  handleSearchBarChange = (value) => {
+    this.setState({
+      searchWord: value,
+    });
+  };
+
+  handleSearchBarClick = () => {
+    // TODO: 辞書検索処理
+  };
+
   render() {
-    const { match: { params: { lang } }, classes } = this.props;
-    const { value, caret, keycode, fontFamily } = this.state;
+    const {
+      match: { params: { lang } },
+      classes,
+      dictionary: {
+        requesting,
+        succeeded,
+      },
+    } = this.props;
+    const {
+      value, caret, keycode, fontFamily, searchWord,
+    } = this.state;
 
     return (
       <React.Fragment>
@@ -205,6 +232,13 @@ class AppContainer extends Component {
               onChangeValue={this.handleChangeValue}
               onChangeCaret={this.handleChangeCaret}
             />
+            {succeeded && (
+              <SearchBar
+                value={searchWord}
+                onChange={this.handleSearchBarChange}
+                onClick={this.handleSearchBarClick}
+              />
+            )}
             <FunctionKeys value={value} />
             <Keyboard
               keycode={keycode}
@@ -214,6 +248,7 @@ class AppContainer extends Component {
             />
           </div>
         </div>
+        {requesting && <LoadingIndicator />}
       </React.Fragment>
     );
   }
@@ -227,6 +262,7 @@ AppContainer.propTypes = {
   classes: PropTypes.shape().isRequired,
   // redux
   actions: PropTypes.shape().isRequired,
+  dictionary: PropTypes.shape().isRequired,
 };
 
 const mapStateToProps = state => ({

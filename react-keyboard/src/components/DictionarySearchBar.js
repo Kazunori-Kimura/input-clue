@@ -11,12 +11,16 @@ const styles = theme => ({
     width: '100%',
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    padding: theme.spacing.unit,
   },
   textField: {
     flex: 1,
+    marginRight: theme.spacing.unit,
   },
   button: {
-    width: '120px',
+    width: '90px',
   },
   icon: {
     marginRight: theme.spacing.unit,
@@ -27,52 +31,56 @@ const styles = theme => ({
  * 辞書検索バー
  */
 class DictionarySearchBar extends Component {
-  state = {
-    value: '',
-  };
-
   handleChange = (e) => {
+    const { onChange } = this.props;
     const value = e.target.value;
-    this.setState({ value });
+    onChange(value);
   };
 
   handleClick = () => {
-    // const { value } = this.state;
-    // console.log(value);
+    const { onClick, value } = this.props;
+    onClick(value);
   };
 
   render() {
-    const { classes, t } = this.props;
-    const { value } = this.state;
+    const { classes, t, value } = this.props;
 
     return (
       <div className={classes.container}>
         <TextField
-          required
           className={classes.textField}
           id="search"
-          label="search"
+          label={t('dictionary.placeholder')}
           value={value}
           onChange={this.handleChange}
         />
         <Button
           className={classes.button}
           variant="contained"
-          onClick={this.handleChange}
+          size="small"
+          onClick={this.handleClick}
         >
           <SearchIcon className={classes.icon} />
-          {t('search')}
+          {t('dictionary.search')}
         </Button>
       </div>
     );
   }
 }
 
+DictionarySearchBar.defaultProps = {
+  value: '',
+};
+
 DictionarySearchBar.propTypes = {
   // material-ui
   classes: PropTypes.shape().isRequired,
   // react-i18next
   t: PropTypes.func.isRequired,
+  // component props
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default withNamespaces()(withStyles(styles)(DictionarySearchBar));

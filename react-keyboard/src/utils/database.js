@@ -99,7 +99,7 @@ class Database {
         objectStore.createIndex('kana', 'kana', { unique: false });
 
         // 最終更新日時を格納するobjectStore
-        this.db.createObjectStore(STORE_FILES, { keyPath: 'uri' });
+        this.db.createObjectStore(STORE_FILES, { keyPath: 'lang' });
       };
     });
   }
