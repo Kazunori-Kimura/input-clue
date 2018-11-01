@@ -6,6 +6,7 @@ import Input from '@material-ui/core/Input';
 import IconButton from '@material-ui/core/IconButton';
 import ClearIcon from '@material-ui/icons/Clear';
 import CopyIcon from '@material-ui/icons/FileCopy';
+import Tooltip from '@material-ui/core/Tooltip';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { withNamespaces } from 'react-i18next';
 
@@ -192,19 +193,27 @@ class TextArea extends Component {
           </FormHelperText>
         </FormControl>
         <div className={classes.buttons}>
-          <IconButton
-            color="secondary"
-            aria-label="Clear"
-            onClick={this.handleClear}
+          <Tooltip
+            title="Clear"
           >
-            <ClearIcon fontSize="small" />
-          </IconButton>
-          <IconButton
-            aria-label="Copy"
-            onClick={this.handleCopy}
+            <IconButton
+              color="secondary"
+              aria-label="Clear"
+              onClick={this.handleClear}
+            >
+              <ClearIcon fontSize="small" />
+            </IconButton>
+          </Tooltip>
+          <Tooltip
+            title="Copy"
           >
-            <CopyIcon fontSize="small" />
-          </IconButton>
+            <IconButton
+              aria-label="Copy"
+              onClick={this.handleCopy}
+            >
+              <CopyIcon fontSize="small" />
+            </IconButton>
+          </Tooltip>
         </div>
       </div>
     );

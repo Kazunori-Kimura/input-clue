@@ -51,6 +51,7 @@ class DictionarySearchBar extends Component {
           className={classes.textField}
           id="search"
           label={t('dictionary.placeholder')}
+          autoComplete="off"
           value={value}
           onChange={this.handleChange}
         />
