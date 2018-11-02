@@ -62,7 +62,7 @@ class Keyboard extends Component {
 
   handleSpaceKeyClick = () => {
     const { onClick } = this.props;
-    onClick([0, 0, 0, 32]);
+    onClick(' ');
   };
 
   renderRow = (row, index) => {
