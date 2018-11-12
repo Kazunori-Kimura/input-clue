@@ -18,6 +18,7 @@
     "chalk": "2.4.1",
     "classnames": "^2.2.6",
     "css-loader": "1.0.0",
+    "debug": "^4.1.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
     "eslint": "5.6.0",
@@ -38,6 +39,7 @@
     "jest-pnp-resolver": "1.0.1",
     "jest-resolve": "23.6.0",
     "mini-css-extract-plugin": "0.4.3",
+    "moment": "^2.22.2",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.1.0",
     "postcss-flexbugs-fixes": "4.1.0",
@@ -67,6 +69,7 @@
     "xlsx": "^0.14.0"
   },
   "scripts": {
+    "convert": "node --experimental-modules scripts/dictionary.js",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"

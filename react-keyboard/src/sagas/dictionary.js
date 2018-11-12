@@ -41,7 +41,7 @@ function* loadDictionary(action) {
     yield put(loadDictionaryStart());
 
     const { dictionary, lang } = action.payload;
-    const uri = `./dictionary/${dictionary}`;
+    const uri = `./dictionary/${dictionary}/data.json`;
     // workerを実行する
     yield call(runWorkerAsync, { uri, lang });
 
