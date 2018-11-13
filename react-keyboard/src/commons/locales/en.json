@@ -46,14 +46,15 @@
     "youtube": "YouTube"
   },
   "dictionary": {
-    "placeholder": "search dictionary",
+    "placeholder": "search dictionary (ひらがな入力)",
     "search": "Search",
     "loading": "now loading...",
     "result": "search result",
     "header": {
       "kana": "kana",
       "word": "word",
-      "mean": "mean"
+      "mean": "mean",
+      "pro": "pronuciation"
     }
   }
 }

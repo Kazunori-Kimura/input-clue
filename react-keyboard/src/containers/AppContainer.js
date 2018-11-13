@@ -221,6 +221,8 @@ class AppContainer extends Component {
    */
   handleSearchResultClick = (word) => {
     this.insert(word);
+    // 検索結果を閉じる
+    this.handleSearchResultClose();
   };
 
   /**

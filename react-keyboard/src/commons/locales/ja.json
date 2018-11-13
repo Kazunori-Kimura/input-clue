@@ -46,14 +46,15 @@
     "youtube": "YouTube"
   },
   "dictionary": {
-    "placeholder": "辞書検索",
+    "placeholder": "辞書検索 (ひらがな入力)",
     "search": "検索",
     "loading": "辞書ファイル読み込み中...",
     "result": "検索結果",
     "header": {
       "kana": "かな",
       "word": "単語",
-      "mean": "意味"
+      "mean": "意味",
+      "pro": "発音"
     }
   }
 }

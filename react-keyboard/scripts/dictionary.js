@@ -56,6 +56,7 @@ function loadSheet(filename) {
       kana: '',
       word: '',
       mean: '',
+      pro: '', // 発音記号
     };
 
     for (let col = startColumn; col <= endColumn; col += 1) {
@@ -68,6 +69,8 @@ function loadSheet(filename) {
           item.word = cell.v;
         } else if (col === startColumn + 2) {
           item.mean = cell.v;
+        } else if (col === startColumn + 3) {
+          item.pro = cell.v;
         }
       }
     }

@@ -15,7 +15,8 @@ import Database from '../utils/database';
 async function searchWord({ lang, word }) {
   const db = new Database();
   await db.openAsync(lang);
-  const list = await db.getWordsAsync(lang, word);
+  // 前方一致検索
+  const list = await db.searchForwardMatch(lang, word);
   return list;
 }
 

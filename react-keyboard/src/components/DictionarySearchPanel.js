@@ -15,7 +15,6 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
-    padding: theme.spacing.unit,
     marginBottom: theme.spacing.unit,
   },
   toolbar: {
@@ -23,6 +22,7 @@ const styles = theme => ({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    padding: theme.spacing.unit,
   },
   title: {
 
@@ -35,6 +35,19 @@ const styles = theme => ({
     flexDirection: 'row',
     justifyContent: 'flex-end',
     alignItems: 'center',
+  },
+  cell: {
+    padding: 0,
+    textAlign: 'center',
+    borderTopWidth: 1,
+    borderTopColor: theme.palette.divider,
+    borderTopStyle: 'solid',
+    borderRightWidth: 1,
+    borderRightColor: theme.palette.divider,
+    borderRightStyle: 'solid',
+    '&:nth-last-child(1)': {
+      borderRight: 'none',
+    },
   },
 });
 
@@ -80,14 +93,17 @@ class DictionarySearchPanel extends Component {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>
+              <TableCell className={classes.cell}>
                 {t('dictionary.header.kana')}
               </TableCell>
-              <TableCell>
+              <TableCell className={classes.cell}>
                 {t('dictionary.header.word')}
               </TableCell>
-              <TableCell>
+              <TableCell className={classes.cell}>
                 {t('dictionary.header.mean')}
+              </TableCell>
+              <TableCell className={classes.cell}>
+                {t('dictionary.header.pro')}
               </TableCell>
             </TableRow>
           </TableHead>

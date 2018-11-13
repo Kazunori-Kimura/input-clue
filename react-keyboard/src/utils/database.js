@@ -124,18 +124,24 @@ class Database {
       };
 
       const store = transaction.objectStore(storeName);
-      for (let i = 0; i < items.length; i += 1) {
-        store.add(items[i]);
-      }
+      // objectStoreをクリア
+      const request = store.clear();
+      // クリア後に登録処理を実施
+      request.onsuccess = () => {
+        // 登録処理
+        for (let i = 0; i < items.length; i += 1) {
+          store.add(items[i]);
+        }
+      };
     });
   }
 
   /**
-   * 単語を取得 (前方一致検索)
+   * 単語を取得 (前方一致 forward match)
    * @param {string} lang
    * @param {string} search
    */
-  async getWordsAsync(lang, search) {
+  async searchForwardMatch(lang, search) {
     return new Promise((resolve, reject) => {
       const storeName = `${STORE_WORDS}-${lang}`;
       // 返却する配列
@@ -161,6 +167,40 @@ class Database {
         const cursor = request.result;
         if (cursor) {
           list.push(cursor.value);
+          cursor.continue();
+        } else {
+          resolve(list);
+        }
+      };
+    });
+  }
+
+  /**
+   * 部分一致検索
+   * @param {string} lang
+   * @param {string} search
+   */
+  async searchPartialMatch(lang, search) {
+    return new Promise((resolve, reject) => {
+      const storeName = `${STORE_WORDS}-${lang}`;
+      // 返却する配列
+      const list = [];
+
+      // 検索処理
+      const request = this.db.transaction([storeName])
+        .objectStore(storeName)
+        .openCursor();
+      
+      request.onerror = (evt) => {
+        reject(evt);
+      };
+
+      request.onsuccess = () => {
+        const cursor = request.result;
+        if (cursor) {
+          if (cursor.value.kana.includes(search)) {
+            list.push(cursor.value);
+          }
           cursor.continue();
         } else {
           resolve(list);

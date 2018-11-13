@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { TableRow, TableCell } from '@material-ui/core';
 
-const styles = {
+const styles = theme => ({
   cell: {
     width: '33%',
+    borderRightWidth: 1,
+    borderRightColor: theme.palette.divider,
+    borderRightStyle: 'solid',
+    '&:nth-last-child(1)': {
+      borderRight: 'none',
+    },
   },
-};
+  word: {
+    fontSize: 20,
+  },
+});
 
 class Row extends Component {
   handleClick = () => {
@@ -26,11 +36,14 @@ class Row extends Component {
         <TableCell className={classes.cell}>
           {value.kana}
         </TableCell>
-        <TableCell className={classes.cell}>
+        <TableCell className={classnames([classes.cell, classes.word])}>
           {value.word}
         </TableCell>
         <TableCell className={classes.cell}>
           {value.mean}
+        </TableCell>
+        <TableCell className={classes.cell}>
+          {value.pro}
         </TableCell>
       </TableRow>
     );
