@@ -11,12 +11,19 @@ import Database from '../utils/database';
  * @param {Object} payload
  * @param {String} payload.lang 言語
  * @param {String} payload.word 単語
+ * @param {String} payload.matchType 検索方法
  */
-async function searchWord({ lang, word }) {
+async function searchWord({ lang, word, matchType = 'forward' }) {
   const db = new Database();
   await db.openAsync(lang);
-  // 前方一致検索
-  const list = await db.searchForwardMatch(lang, word);
+  let list = [];
+  if (matchType === 'forward') {
+    // 前方一致検索
+    list = await db.searchForwardMatch(lang, word);
+  } else {
+    // 部分一致検索
+    list = await db.searchPartialMatch(lang, word);
+  }
   return list;
 }
 

@@ -49,12 +49,18 @@
     "placeholder": "search dictionary (ひらがな入力)",
     "search": "Search",
     "loading": "now loading...",
+    "requesting": "searching...",
     "result": "search result",
     "header": {
       "kana": "kana",
       "word": "word",
       "mean": "mean",
       "pro": "pronuciation"
+    },
+    "match": {
+      "type": "Matching type",
+      "forward": "Forward match",
+      "partial": "Partial match"
     }
   }
 }

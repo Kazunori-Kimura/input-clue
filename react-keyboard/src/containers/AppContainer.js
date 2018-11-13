@@ -37,6 +37,7 @@ class AppContainer extends Component {
   state = {
     value: '',
     searchWord: '',
+    matchType: 'forward',
     caret: {
       start: 0,
       end: 0,
@@ -199,7 +200,7 @@ class AppContainer extends Component {
   };
 
   /**
-   * 辞書検索ワード
+   * 辞書検索ワードの入力
    */
   handleSearchBarChange = (value) => {
     this.setState({
@@ -208,12 +209,21 @@ class AppContainer extends Component {
   };
 
   /**
+   * 検索方法の変更
+   */
+  handleMatchTypeChange = (value) => {
+    this.setState({
+      matchType: value,
+    });
+  };
+
+  /**
    * 辞書検索
    */
   handleSearchBarClick = () => {
-    const { lang, searchWord } = this.state;
+    const { lang, searchWord, matchType } = this.state;
     const { actions } = this.props;
-    actions.translateWord({ lang, word: searchWord });
+    actions.translateWord({ lang, word: searchWord, matchType });
   };
 
   /**
@@ -245,11 +255,13 @@ class AppContainer extends Component {
         succeeded,
       },
       translate: {
+        requesting: translating,
         list,
       },
     } = this.props;
     const {
-      value, caret, keycode, fontFamily, searchWord,
+      value, caret, keycode, fontFamily,
+      searchWord, matchType,
     } = this.state;
 
     return (
@@ -265,18 +277,21 @@ class AppContainer extends Component {
               onChangeValue={this.handleChangeValue}
               onChangeCaret={this.handleChangeCaret}
             />
-            {succeeded && (
-              <SearchBar
-                value={searchWord}
-                onChange={this.handleSearchBarChange}
-                onClick={this.handleSearchBarClick}
-              />
-            )}
             {list.length > 0 && (
               <SearchPanel
                 list={list}
                 onClick={this.handleSearchResultClick}
                 onClose={this.handleSearchResultClose}
+              />
+            )}
+            {succeeded && (
+              <SearchBar
+                value={searchWord}
+                matchType={matchType}
+                requesting={translating}
+                onChange={this.handleSearchBarChange}
+                onClick={this.handleSearchBarClick}
+                onMatchTypeChange={this.handleMatchTypeChange}
               />
             )}
             {list.length === 0 && (
