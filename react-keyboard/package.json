@@ -72,7 +72,8 @@
     "convert": "node --experimental-modules scripts/dictionary.js",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "deploy": "node scripts/deploy.js"
   },
   "eslintConfig": {
     "extends": "react-app"
