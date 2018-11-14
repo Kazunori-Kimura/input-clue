@@ -1,0 +1,92 @@
+[
+  [
+    { "type": "label", "value": "初音 19" }
+  ],
+  [
+    { "code": { "start":0 }, "label": "k/g", "button": "ㄱ" },
+    { "code": { "start":2 }, "label": "n", "button": "ᄂ" },
+    { "code": { "start":3 }, "label": "t/d", "button": "ᄃ" },
+    { "code": { "start":5 }, "label": "l", "button": "ᄅ" },
+    { "code": { "start":6 }, "label": "m", "button": "ᄆ" },
+    { "code": { "start":7 }, "label": "p/b", "button": "ᄇ" },
+    { "code": { "start":9 }, "label": "s/ʃ", "button": "ᄉ" },
+    { "code": { "start":11 }, "label": "_", "button": "ᄋ" },
+    { "code": { "start":12 }, "label": "ʧ/ʤ", "button": "ᄌ" }
+  ],
+  [
+    { "code": { "start":15 }, "label": "kʰ", "button": "ᄏ" },
+    { "code": { "start":16 }, "label": "tʰ", "button": "ᄐ" },
+    { "code": { "start":17 }, "label": "pʰ", "button": "ᄑ" },
+    { "code": { "start":14 }, "label": "ʧʰ", "button": "ᄎ" },
+    { "code": { "start":18 }, "label": "h", "button": "ᄒ" },
+    { "code": { "start":1  }, "label": "ˀk", "button": "ᄁ" },
+    { "code": { "start":4  }, "label": "ˀt", "button": "ᄄ" },
+    { "code": { "start":8  }, "label": "ˀp", "button": "ᄈ" },
+    { "code": { "start":10 }, "label": "ˀs/ˀʃ", "button": "ᄊ" },
+    { "code": { "start":13 }, "label": "ˀʧ/ʒ", "button": "ᄍ" }
+  ],
+  [
+    { "type": "label", "value": "中音 21" }
+  ],
+  [
+    { "code": { "middle":0 }, "label": "a", "button": "ㅏ" },
+    { "code": { "middle":2 }, "label": "ya", "button": "ㅑ" },
+    { "code": { "middle":4 }, "label": "ɔ", "button": "ㅓ" },
+    { "code": { "middle":6 }, "label": "yɔ", "button": "ㅕ" },
+    { "code": { "middle":8 }, "label": "o", "button": "ㅗ" },
+    { "code": { "middle":12 }, "label": "yo", "button": "ㅛ" },
+    { "code": { "middle":13 }, "label": "u", "button": "ㅜ" },
+    { "code": { "middle":17 }, "label": "yu", "button": "ㅠ" },
+    { "code": { "middle":18 }, "label": "ɯ", "button": "ㅡ" },
+    { "code": { "middle":20 }, "label": "i", "button": "ㅣ" },
+    { "code": { "middle":1 }, "label": "ɛ", "button": "ㅐ" }
+  ],
+  [
+    { "code": { "middle":3 }, "label": "yɛ", "button": "ㅒ" },
+    { "code": { "middle":5 }, "label": "e", "button": "ㅔ" },
+    { "code": { "middle":7 }, "label": "ye", "button": "ㅖ" },
+    { "code": { "middle":9 }, "label": "wa", "button": "ㅘ" },
+    { "code": { "middle":10 }, "label": "wɛ", "button": "ㅙ" },
+    { "code": { "middle":11 }, "label": "we", "button": "ㅚ" },
+    { "code": { "middle":14 }, "label": "wɔ", "button": "ㅝ" },
+    { "code": { "middle":15 }, "label": "we", "button": "ㅞ" },
+    { "code": { "middle":16 }, "label": "wi", "button": "ㅟ" },
+    { "code": { "middle":19 }, "label": "ɯi", "button": "ㅢ" }
+  ],
+  [
+    { "type": "label", "value": "終音 27" }
+  ],
+  [
+    { "code": { "end":1 }, "label": "kˀ", "button": "ㄱ", "color": "#FFDEAD" },
+    { "code": { "end":2 }, "label": "kˀ", "button": "ㄲ", "color": "#FFDEAD" },
+    { "code": { "end":3 }, "label": "kˀ", "button": "ㄳ" },
+    { "code": { "end":4 }, "label": "nˀ", "button": "ㄴ", "color": "#FFDEAD" },
+    { "code": { "end":5 }, "label": "nˀ", "button": "ㄵ" },
+    { "code": { "end":6 }, "label": "nˀ", "button": "ㄶ" },
+    { "code": { "end":7 }, "label": "tˀ", "button": "ㄷ", "color": "#FFDEAD" },
+    { "code": { "end":8 }, "label": "lˀ", "button": "ㄹ" },
+    { "code": { "end":9 }, "label": "kˀ", "button": "ㄺ", "color": "#F08080" },
+    { "code": { "end":10 }, "label": "mˀ", "button": "ㄻ", "color": "#F08080" }
+  ],
+  [
+    { "code": { "end":11 }, "label": "lˀ", "button": "ㄼ" },
+    { "code": { "end":12 }, "label": "lˀ", "button": "ㄽ" },
+    { "code": { "end":13 }, "label": "lˀ", "button": "ㄾ" },
+    { "code": { "end":14 }, "label": "pˀ", "button": "ㄿ", "color": "#F08080" },
+    { "code": { "end":15 }, "label": "lˀ", "button": "ㅀ" },
+    { "code": { "end":16 }, "label": "mˀ", "button": "ㅁ", "color": "#FFDEAD" },
+    { "code": { "end":17 }, "label": "pˀ", "button": "ㅂ", "color": "#FFDEAD" },
+    { "code": { "end":18 }, "label": "pˀ", "button": "ㅄ" },
+    { "code": { "end":19 }, "label": "tˀ", "button": "ㅅ", "color": "#FFDEAD" },
+    { "code": { "end":20 }, "label": "tˀ", "button": "ㅆ", "color": "#FFDEAD" }
+  ],
+  [
+    { "code": { "end":21 }, "label": "ŋˀ", "button": "ㅇ", "color": "#FFDEAD" },
+    { "code": { "end":22 }, "label": "tˀ", "button": "ㅈ", "color": "#FFDEAD" },
+    { "code": { "end":23 }, "label": "tˀ", "button": "ㅊ", "color": "#FFDEAD" },
+    { "code": { "end":24 }, "label": "kˀ", "button": "ㅋ", "color": "#FFDEAD" },
+    { "code": { "end":25 }, "label": "tˀ", "button": "ㅌ", "color": "#FFDEAD" },
+    { "code": { "end":26 }, "label": "pˀ", "button": "ㅍ", "color": "#FFDEAD" },
+    { "code": { "end":27 }, "label": "tˀ", "button": "ㅎ", "color": "#FFDEAD" }
+  ]
+]

@@ -8,6 +8,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Header from '../components/Header';
 import TextArea from '../components/TextArea';
 import Keyboard from '../components/Keyboard';
+import KoreanKeyboard from '../components/KoreanKeyboard';
 import FunctionKeys from '../components/FunctionKeys';
 import LoadingIndicator from '../components/Loading';
 import SearchBar from '../components/DictionarySearchBar';
@@ -297,12 +298,22 @@ class AppContainer extends Component {
             {list.length === 0 && (
               <React.Fragment>
                 <FunctionKeys value={value} />
-                <Keyboard
-                  keycode={keycode}
-                  fontFamily={fontFamily}
-                  onClick={this.handleKeyboardClick}
-                  onBackspaceClick={this.handleKeyboardBackspaceClick}
-                />
+                {lang !== 'korean' && (
+                  <Keyboard
+                    keycode={keycode}
+                    fontFamily={fontFamily}
+                    onClick={this.handleKeyboardClick}
+                    onBackspaceClick={this.handleKeyboardBackspaceClick}
+                  />
+                )}
+                {lang === 'korean' && (
+                  <KoreanKeyboard
+                    keycode={keycode}
+                    fontFamily={fontFamily}
+                    onClick={this.handleKeyboardClick}
+                    onBackspaceClick={this.handleKeyboardBackspaceClick}
+                  />
+                )}
               </React.Fragment>
             )}
           </div>

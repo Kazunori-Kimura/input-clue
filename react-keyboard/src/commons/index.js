@@ -11,10 +11,9 @@ export const languages = {
     keycode: 'thai.json', // 文字コード定義ファイル
   },
   // 韓国語
-  // korean: {
-  //   dictionary: '', // 辞書ファイル
-  //   keycode: '', // 文字コード定義ファイル
-  // },
+  korean: {
+    keycode: 'korean.json',
+  },
   // タイ語&発音記号
   thai_pho: {
     keycode: 'thai_pho.json',

@@ -87,15 +87,33 @@ const files = [
   //   json: 'french_pho.json',
   // },
   // - [ ] Mongolian_Pickup.html ＜古モンゴル語＞
+  // {
+  //   file: 'Mongolian_Pickup.html',
+  //   json: 'mongolian.json',
+  // },
+  // // - [ ] Lao_Pickup3.html ＜ラオス語 拡張版＞
+  // {
+  //   file: 'Lao_Pickup3.html',
+  //   json: 'lao_ext.json',
+  // }
   {
-    file: 'Mongolian_Pickup.html',
-    json: 'mongolian.json',
+    file: 'korean_Pickup.html',
+    json: 'korean.json',
   },
-  // - [ ] Lao_Pickup3.html ＜ラオス語 拡張版＞
   {
-    file: 'Lao_Pickup3.html',
-    json: 'lao_ext.json',
-  }
+    file: 'korean_PickupV1.html',
+    json: 'korean_pro.json',
+  },
+  // - [ ] Arabic_Pickup.html ＜アラビア語サウジアラビア＞
+  {
+    file: 'Arabic_Pickup.html',
+    json: 'arabic.json',
+  },
+  // - [ ] Hebrew_Pickup.html ＜へブル語＞
+  {
+    file: 'Hebrew_Pickup.html',
+    json: 'hebrew.json',
+  },
 ];
 
 async function convert({ file, json }) {
