@@ -9,6 +9,7 @@ import CopyIcon from '@material-ui/icons/FileCopy';
 import Tooltip from '@material-ui/core/Tooltip';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { withNamespaces } from 'react-i18next';
+import { BASE_FONTS } from '../commons';
 
 const styles = theme => ({
   container: {
@@ -170,7 +171,7 @@ class TextArea extends Component {
   };
 
   render() {
-    const { classes, value } = this.props;
+    const { classes, value, direction, fontFamily } = this.props;
     const { message } = this.state;
 
     return (
@@ -180,6 +181,10 @@ class TextArea extends Component {
             classes={{
               input: classes.textArea,
             }}
+            style={{
+              fontFamily: fontFamily ? `"${fontFamily}", ${BASE_FONTS}`: BASE_FONTS,
+            }}
+            dir={direction}
             value={value}
             autoFocus
             fullWidth
@@ -227,11 +232,15 @@ TextArea.defaultProps = {
     end: 0,
     direction: 'none',
   },
+  direction: 'ltr',
+  fontFamily: '',
 };
 
 TextArea.propTypes = {
   value: PropTypes.string,
   caret: PropTypes.shape(),
+  direction: PropTypes.string,
+  fontFamily: PropTypes.string,
   onChangeValue: PropTypes.func.isRequired,
   onChangeCaret: PropTypes.func.isRequired,
   // material-ui

@@ -63,7 +63,10 @@ class DictionarySearchPanel extends Component {
   }
 
   render() {
-    const { classes, t, list } = this.props;
+    const {
+      classes, t, list,
+      fontFamily, direction,
+    } = this.props;
     return (
       <Paper className={classes.container}>
         {/* ツールバー */}
@@ -112,6 +115,8 @@ class DictionarySearchPanel extends Component {
               <Row
                 key={`${item.kana}`}
                 value={item}
+                fontFamily={fontFamily}
+                direction={direction}
                 onClick={this.handleClick}
               />
             ))}
@@ -122,12 +127,19 @@ class DictionarySearchPanel extends Component {
   }
 }
 
+DictionarySearchPanel.defaultProps = {
+  fontFamily: '',
+  direction: 'ltr',
+};
+
 DictionarySearchPanel.propTypes = {
   // material-ui
   classes: PropTypes.shape().isRequired,
   // i18next
   t: PropTypes.func.isRequired,
   // component properties
+  fontFamily: PropTypes.string,
+  direction: PropTypes.string,
   list: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   onClick: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,

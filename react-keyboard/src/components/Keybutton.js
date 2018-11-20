@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import withStyles from '@material-ui/core/styles/withStyles';
-
-const BASE_FONTS = '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
+import { BASE_FONTS } from '../commons';
 
 const styles = () => ({
   // Button
@@ -28,8 +27,7 @@ class Keybutton extends Component {
   };
 
   render() {
-    const { code, color, classes, fontFamily } = this.props;
-    // TODO: 韓国語の場合のラベル表示を確認
+    const { code, color, classes, fontFamily, direction } = this.props;
     const char = this.getCharFromCode(code);
 
     return (
@@ -39,8 +37,9 @@ class Keybutton extends Component {
         value={char}
         style={{
           backgroundColor: color,
-          fontFamily: fontFamily ? `"${fontFamily}", ${BASE_FONTS}`: BASE_FONTS
+          fontFamily: fontFamily ? `"${fontFamily}", ${BASE_FONTS}`: BASE_FONTS,
         }}
+        dir={direction}
         onClick={this.handleClick}
       >
         {char}
@@ -52,6 +51,7 @@ class Keybutton extends Component {
 Keybutton.defaultProps = {
   color: '#cccccc',
   fontFamily: '',
+  direction: 'ltr',
 };
 
 Keybutton.propTypes = {
@@ -59,6 +59,7 @@ Keybutton.propTypes = {
   classes: PropTypes.shape().isRequired,
   // component props
   fontFamily: PropTypes.string,
+  direction: PropTypes.string,
   code: PropTypes.arrayOf(PropTypes.number).isRequired,
   color: PropTypes.string,
   onClick: PropTypes.func.isRequired,

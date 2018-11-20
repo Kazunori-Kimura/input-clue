@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { TableRow, TableCell } from '@material-ui/core';
+import { BASE_FONTS } from '../commons';
 
 const styles = theme => ({
   cell: {
@@ -26,7 +27,7 @@ class Row extends Component {
   };
 
   render() {
-    const { classes, value } = this.props;
+    const { classes, value, fontFamily, direction } = this.props;
 
     return (
       <TableRow
@@ -36,7 +37,13 @@ class Row extends Component {
         <TableCell className={classes.cell}>
           {value.kana}
         </TableCell>
-        <TableCell className={classnames([classes.cell, classes.word])}>
+        <TableCell
+          className={classnames([classes.cell, classes.word])}
+          style={{
+            fontFamily: fontFamily ? `"${fontFamily}" ${BASE_FONTS}`: BASE_FONTS,
+          }}
+          dir={direction}
+        >
           {value.word}
         </TableCell>
         <TableCell className={classes.cell}>
@@ -50,12 +57,19 @@ class Row extends Component {
   }
 }
 
+Row.defaultProps = {
+  fontFamily: '',
+  direction: 'ltr',
+};
+
 Row.propTypes = {
   // material-ui
   classes: PropTypes.shape().isRequired,
   // component props
   value: PropTypes.shape().isRequired,
   onClick: PropTypes.func.isRequired,
+  fontFamily: PropTypes.string,
+  direction: PropTypes.string,
 };
 
 export default withStyles(styles)(Row);

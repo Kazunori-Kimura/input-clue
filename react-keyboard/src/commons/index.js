@@ -89,6 +89,7 @@ export const languages = {
   syrian: {
     keycode: 'syrian.json',
     fontFamily: 'Estragelo Edessa',
+    direction: 'rtl',
   },
   // トルコ語
   turkish: {
@@ -131,3 +132,8 @@ export const interfaceLanguages = [
   'ja', // 日本語
   'en', // 英語
 ];
+
+/**
+ * フォント指定
+ */
+export const BASE_FONTS = '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';

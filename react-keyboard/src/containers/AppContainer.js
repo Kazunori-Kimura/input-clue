@@ -47,6 +47,7 @@ class AppContainer extends Component {
     lang: '',
     keycode: '',
     fontFamily: '',
+    direction: 'ltr',
   };
 
   componentWillMount() {
@@ -90,6 +91,7 @@ class AppContainer extends Component {
         keycode: '',
         fontFamily: '',
         dictionary: '',
+        direction: 'ltr',
       },
       languages[lang],
     );
@@ -261,7 +263,7 @@ class AppContainer extends Component {
       },
     } = this.props;
     const {
-      value, caret, keycode, fontFamily,
+      value, caret, keycode, fontFamily, direction,
       searchWord, matchType,
     } = this.state;
 
@@ -275,12 +277,16 @@ class AppContainer extends Component {
             <TextArea
               value={value}
               caret={caret}
+              fontFamily={fontFamily}
+              direction={direction}
               onChangeValue={this.handleChangeValue}
               onChangeCaret={this.handleChangeCaret}
             />
             {list.length > 0 && (
               <SearchPanel
                 list={list}
+                fontFamily={fontFamily}
+                direction={direction}
                 onClick={this.handleSearchResultClick}
                 onClose={this.handleSearchResultClose}
               />
@@ -302,6 +308,7 @@ class AppContainer extends Component {
                   <Keyboard
                     keycode={keycode}
                     fontFamily={fontFamily}
+                    direction={direction}
                     onClick={this.handleKeyboardClick}
                     onBackspaceClick={this.handleKeyboardBackspaceClick}
                   />

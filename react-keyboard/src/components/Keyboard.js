@@ -78,7 +78,7 @@ class Keyboard extends Component {
   };
 
   renderKey = ({ code, color = '#cccccc', type = 'button', value = '' }, index) => {
-    const { onClick, fontFamily } = this.props;
+    const { onClick, fontFamily, direction } = this.props;
 
     if (type === 'hr') {
       return (
@@ -100,6 +100,7 @@ class Keyboard extends Component {
       <Keybutton
         key={`button_${code.join('')}_${index}`}
         fontFamily={fontFamily}
+        direction={direction}
         code={code}
         color={color}
         onClick={onClick}
@@ -147,6 +148,7 @@ class Keyboard extends Component {
 
 Keyboard.defaultProps = {
   fontFamily: '',
+  direction: 'ltr',
 };
 
 Keyboard.propTypes = {
@@ -155,6 +157,7 @@ Keyboard.propTypes = {
   // component props
   keycode: PropTypes.string.isRequired,
   fontFamily: PropTypes.string,
+  direction: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   onBackspaceClick: PropTypes.func.isRequired,
 };
