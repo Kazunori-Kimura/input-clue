@@ -85,6 +85,17 @@ export const languages = {
   hindi: {
     keycode: 'hindi.json',
   },
+  // アラビア語サウジアラビア
+  arabic: {
+    keycode: 'arabic.json',
+    direction: 'rtl',
+  },
+  // ヘブル語
+  hebrew: {
+    keycode: 'hebrew.json',
+    fontFamily: 'DejaVu Sans',
+    direction: 'rtl',
+  },
   // シリア語
   syrian: {
     keycode: 'syrian.json',

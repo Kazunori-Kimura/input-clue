@@ -28,7 +28,9 @@
     "cyrillic": "モンゴルキリル",
     "russian": "ロシア語",
     "suomi": "スオミ語",
-    "french_pho": "フランス語＆IPA"
+    "french_pho": "フランス語＆IPA",
+    "arabic": "アラビア語サウジアラビア",
+    "hebrew": "ヘブル語"
   },
   "interface": {
     "placeholder": "言語",

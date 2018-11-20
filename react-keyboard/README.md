@@ -18,9 +18,10 @@ https://kazunori-kimura.github.io/input-clue
   - 辞書更新時に前のデータを消去していなかった。追加前にDatabaseのクリア処理を実装
 
 - [x] シリア語 Mac GoogleChromeだと表示できない。Safariだと可能。
-- [x] 韓国語は後回し (キーボードそのものを独自実装する必要がある)
-- [ ] アラビア語は右から左になるが、カーソル位置の独自実装が必要。要調査。
-- [ ] ヘブライ語は右から左になるが、カーソル位置の独自実装が必要。要調査。
+- [x] 韓国語実装完了 (キーボード独自実装)
+  - PRO版と通常版を統合、スイッチでラベルの有無を切り替えられるようにしました。
+- [x] アラビア語は右から左になるが、カーソル位置の独自実装が必要。要調査。
+- [x] ヘブライ語は右から左になるが、カーソル位置の独自実装が必要。要調査。
 
 
 ## 実装完了ファイル一覧
@@ -53,10 +54,7 @@ https://kazunori-kimura.github.io/input-clue
 - [x] Russian_Pickup.html ＜ロシア語＞
 - [x] Suomi_Pickup.html ＜スオミ語＞
 - [x] French_Pho_Pickup.html ＜フランス語＆IPA＞
-
-## 後回し/対応なし
-
-- [ ] korean_Pickup.html ＜韓国語＞
-- [ ] korean_PickupV1.html ＜韓国語PRO＞
-- [ ] Arabic_Pickup.html ＜アラビア語サウジアラビア＞
-- [ ] Hebrew_Pickup.html ＜へブル語＞
+- [x] korean_Pickup.html ＜韓国語＞
+- [x] korean_PickupV1.html ＜韓国語PRO＞
+- [x] Arabic_Pickup.html ＜アラビア語サウジアラビア＞
+- [x] Hebrew_Pickup.html ＜へブル語＞
