@@ -1,0 +1,75 @@
+[
+  [
+    { "type": "button", "value": "는" },
+    { "type": "button", "value": "은", "color": "#FFDEAD" },
+    { "type": "label", "value": "〜は" }
+  ],
+  [
+    { "type": "button", "value": "가" },
+    { "type": "button", "value": "이", "color": "#FFDEAD" },
+    { "type": "label", "value": "〜が" }
+  ],
+  [
+    { "type": "button", "value": "를" },
+    { "type": "button", "value": "을", "color": "#FFDEAD" },
+    { "type": "label", "value": "〜を" }
+  ],
+  [
+    { "type": "button", "value": "하고" },
+    { "type": "button", "value": "와" },
+    { "type": "button", "value": "과", "color": "#FFDEAD" },
+    { "type": "label", "value": "〜と" }
+  ],
+  [
+    { "type": "button", "value": "랑" },
+    { "type": "button", "value": "이랑", "color": "#FFDEAD" },
+    { "type": "label", "value": "〜と" }
+  ],
+  [
+    { "type": "button", "value": "도" },
+    { "type": "label", "value": "〜も" }
+  ],
+  [
+    { "type": "button", "value": "에" },
+    { "type": "button", "value": "에게" },
+    { "type": "label", "value": "〜に" }
+  ],
+  [
+    { "type": "button", "value": "에게서" },
+    { "type": "button", "value": "한테" },
+    { "type": "button", "value": "에서" },
+    { "type": "button", "value": "한테서" },
+    { "type": "button", "value": "부터" },
+    { "type": "label", "value": "〜から" }
+  ],
+  [
+    { "type": "button", "value": "로" },
+    { "type": "button", "value": "으로", "color": "#FFDEAD" },
+    { "type": "label", "value": "〜で" }
+  ],
+  [
+    { "type": "button", "value": "보다" },
+    { "type": "label", "value": "〜より" }
+  ],
+  [
+    { "type": "button", "value": "까지" },
+    { "type": "label", "value": "〜まで" }
+  ],
+  [
+    { "type": "button", "value": "의" },
+    { "type": "label", "value": "〜の" }
+  ],
+  [
+    { "type": "button", "value": "만" },
+    { "type": "label", "value": "〜だけ" }
+  ],
+  [
+    { "type": "button", "value": "만큼" },
+    { "type": "label", "value": "〜ぐらい" }
+  ],
+  [
+    { "type": "button", "value": "라도" },
+    { "type": "button", "value": "이라도", "color": "#FFDEAD" },
+    { "type": "label", "value": "〜でも" }
+  ]
+]

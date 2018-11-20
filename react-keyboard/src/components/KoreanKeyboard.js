@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
-import Button from '@material-ui/core/Button';
+import { withNamespaces } from 'react-i18next';
+import { Button, Switch, FormControlLabel } from '@material-ui/core';
 import BackspaceIcon from '@material-ui/icons/Backspace';
-// import Keybutton from './Keybutton';
 import KoreanKey from './KoreanKey';
+import KoreanParticle from './KoreanParticle';
+
+// localStorageのキー
+const KEY_KOREAN_LABEL = 'korean_keyboard_label';
 
 const styles = theme => ({
   container: {
@@ -18,6 +22,13 @@ const styles = theme => ({
     alignItems: 'stretch',
   },
   topRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  spacer: {
+    flex: 1,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
@@ -46,6 +57,7 @@ const styles = theme => ({
 class KoreanKeyboard extends Component {
   state = {
     keys: [],
+    displayLabel: true,
     start: -1,  // 初声
     middle: -1, // 中声
     end: 0,    // 終声
@@ -55,6 +67,12 @@ class KoreanKeyboard extends Component {
     // keycode読み込み
     const { keycode } = this.props;
     this.fetchKeycode(keycode);
+
+    // ラベル表示
+    const value = localStorage.getItem(KEY_KOREAN_LABEL);
+    if (value) {
+      this.setState({ displayLabel: value === '1' });
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -112,6 +130,11 @@ class KoreanKeyboard extends Component {
     });
   };
 
+  handleKoreanParticleKeyClick = (value) => {
+    const { onClick } = this.props;
+    onClick(value);
+  };
+
   renderRow = (row, index) => {
     const { classes } = this.props;
     return (
@@ -124,6 +147,14 @@ class KoreanKeyboard extends Component {
     );
   };
 
+  handleLabelSwitch = () => {
+    // switchをトグルする
+    const { displayLabel } = this.state;
+    this.setState({ displayLabel: !displayLabel });
+
+    localStorage.setItem(KEY_KOREAN_LABEL, (!displayLabel) ? '1' : '0');
+  };
+
   renderKey = ({
     code,
     label,
@@ -133,6 +164,7 @@ class KoreanKeyboard extends Component {
     value = ''
   }, index) => {
     const { fontFamily } = this.props;
+    const { displayLabel } = this.state;
 
     if (type === 'hr') {
       return (
@@ -163,6 +195,7 @@ class KoreanKeyboard extends Component {
         code={code}
         color={color}
         labelText={label}
+        displayLabel={displayLabel}
         buttonText={button}
         active={active}
         onClick={this.handleKoreanKeyClick}
@@ -171,8 +204,8 @@ class KoreanKeyboard extends Component {
   };
 
   render() {
-    const { classes, onBackspaceClick } = this.props;
-    const { keys } = this.state;
+    const { classes, onBackspaceClick, t } = this.props;
+    const { keys, displayLabel } = this.state;
 
     const char = this.getKoreanChar();
 
@@ -205,6 +238,7 @@ class KoreanKeyboard extends Component {
           </Button>
         </div>
         <div className={classes.topRow}>
+          <div className={classes.spacer} />
           {/* 韓国語文字決定 */}
           <Button
             className={classes.submit}
@@ -214,16 +248,34 @@ class KoreanKeyboard extends Component {
           >
             {char}
           </Button>
-          <Button
-            className={classes.reset}
-            color="default"
-            variant="outlined"
-            onClick={this.handleReset}
-          >
-            Reset
-          </Button>
+          <div className={classes.spacer}>
+            <Button
+              className={classes.reset}
+              color="default"
+              variant="outlined"
+              onClick={this.handleReset}
+            >
+              Reset
+            </Button>
+            <div className={classes.spacer} />
+            <FormControlLabel
+              control={(
+                <Switch
+                  color="primary"
+                  checked={displayLabel}
+                  onChange={this.handleLabelSwitch}
+                />
+              )}
+              label={t('functions.show_label')}
+              labelPlacement="bottom"
+            />
+          </div>
         </div>
         {keys.map(this.renderRow)}
+        {/* 主要助詞 */}
+        <KoreanParticle
+          onClick={this.handleKoreanParticleKeyClick}
+        />
       </div>
     );
   }
@@ -236,6 +288,8 @@ KoreanKeyboard.defaultProps = {
 KoreanKeyboard.propTypes = {
   // material-ui
   classes: PropTypes.shape().isRequired,
+  // i18next
+  t: PropTypes.func.isRequired,
   // component props
   keycode: PropTypes.string.isRequired,
   fontFamily: PropTypes.string,
@@ -243,4 +297,4 @@ KoreanKeyboard.propTypes = {
   onBackspaceClick: PropTypes.func.isRequired,
 };
 
-export default withStyles(styles)(KoreanKeyboard);
+export default withNamespaces()(withStyles(styles)(KoreanKeyboard));

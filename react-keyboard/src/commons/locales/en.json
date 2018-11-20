@@ -43,7 +43,8 @@
     "trans": "Translate",
     "weblio": "Weblio",
     "tyakusu": "TYakusu",
-    "youtube": "YouTube"
+    "youtube": "YouTube",
+    "show_label": "ラベル表示"
   },
   "dictionary": {
     "placeholder": "search dictionary (ひらがな入力)",

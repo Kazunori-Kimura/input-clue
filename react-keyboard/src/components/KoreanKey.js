@@ -29,13 +29,13 @@ class KoreanKey extends Component {
 
   render() {
     const {
-      labelText, buttonText, color, classes,
+      labelText, buttonText, color, classes, displayLabel,
       fontFamily, active,
     } = this.props;
 
     return (
       <div className={classes.container}>
-        {labelText && (
+        {labelText && displayLabel && (
           <span className={classes.label}>
             {labelText}
           </span>
@@ -60,6 +60,7 @@ KoreanKey.defaultProps = {
   color: '#cccccc',
   fontFamily: '',
   labelText: null,
+  displayLabel: true,
   active: false,
 };
 
@@ -68,6 +69,7 @@ KoreanKey.propTypes = {
   classes: PropTypes.shape().isRequired,
   // component props
   labelText: PropTypes.string,
+  displayLabel: PropTypes.bool,
   buttonText: PropTypes.string.isRequired,
   code: PropTypes.shape().isRequired,
   color: PropTypes.string,
