@@ -2,7 +2,7 @@
 
 ブラウザひとつでらくらく多言語入力！
 
-![thai](./documents/images/Thai.png)
+![thai](./documents/docs/images/Thai.png)
 
 様々な言語のキーボードをブラウザ上に再現しました。
 これにより、特別な環境を構築することなく外国語の文章作成を行うことができます。
