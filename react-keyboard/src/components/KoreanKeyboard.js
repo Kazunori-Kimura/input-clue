@@ -93,7 +93,7 @@ class KoreanKeyboard extends Component {
       return '';
     }
     const codePoint = 44032 + (start * 28 * 21) + (middle * 28) + end;
-    return String.fromCharCode(codePoint);
+    return String.fromCodePoint(codePoint);
   }
 
   fetchKeycode = (keycode) => {

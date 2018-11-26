@@ -1,0 +1,44 @@
+# Project information
+site_name: 'WebKeyboard'
+site_description: 'WebKeyboardの使用方法、メンテナンス方法'
+site_author: 'Kazunori Kimura'
+site_url: 'https://kazunori-kimura.github.io/input-clue/docs/'
+
+# Documentation and theme
+docs_dir: 'docs'
+theme: 'material'
+nav:
+  - Overview: index.md
+  - Node.jsのインストール: install.md
+  - Download: download.md
+  - ビルド: build.md
+  - カスタマイズ(1)/辞書の追加: dictionary.md
+  - カスタマイズ(2)/翻訳: i18n.md
+  - カスタマイズ(3)/対応言語の追加: keys.md
+
+# Options
+extra:
+  palette:
+    primary: 'Light Blue'
+    accent: 'Orange'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  i18n:
+    prev: 'Previous'
+    next: 'Next'
+  author:
+    github: 'kazunori-kimura'
+    twitter: 'yourName'
+
+# Extensions
+markdown_extensions:
+  - fontawesome_markdown
+  - codehilite
+  - admonition
+  - pymdownx.keys
+  - toc:
+      permalink: '#'
+
+extra_css:
+  - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"

@@ -23,7 +23,8 @@ class Keybutton extends Component {
 
   getCharFromCode = (code) => {
     const params = code.filter(c => c !== 0).reverse();
-    return String.fromCharCode(...params);
+    //return String.fromCharCode(...params);
+    return String.fromCodePoint(...params);
   };
 
   render() {
